@@ -9,9 +9,13 @@
 
     @if ($icon)
         <span class="absolute left-0 top-0 flex h-full items-center justify-center pl-1.5 text-gray-400">
-            @svg($icon, [
-                'class' => 'size-5 p-0.5',
-            ])
+            <span class="size-5 p-0.5">
+                @if (is_string($icon))
+                    @svg($icon)
+                @else
+                    {!! $icon !!}
+                @endif
+            </span>
         </span>
     @endif
 
