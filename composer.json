@@ -77,7 +77,7 @@
                 "Elegantly\\Kit\\KitServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Elegantly\\Kit\\Facades\\Kit"
+                "Kit": "Elegantly\\Kit\\Facades\\Kit"
             }
         }
     },
