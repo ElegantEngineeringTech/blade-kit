@@ -51,6 +51,7 @@ class Button extends Base
             'black' => 'has-[:checked]:bg-black has-[:checked]:text-white',
             'emerald' => 'has-[:checked]:bg-emerald-500 has-[:checked]:text-white',
             'rose' => 'has-[:checked]:bg-rose-500 has-[:checked]:text-white',
+            'amber' => 'has-[:checked]:bg-amber-500 has-[:checked]:text-white',
             default => ''
         };
     }

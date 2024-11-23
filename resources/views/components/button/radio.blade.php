@@ -1,7 +1,7 @@
 @props([
     'checked' => false,
     'disabled' => false,
-    'colorChecked' => null,
+    'colorChecked' => 'black',
     'type' => 'radio',
 ])
 

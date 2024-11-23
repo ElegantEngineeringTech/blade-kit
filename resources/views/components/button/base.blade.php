@@ -9,7 +9,7 @@
 ])
 
 <{!! $tag !!} {!! $attributes->class([
-    \Elegantly\Kit\Facades\Kit::button()->size($size)->color($color)->font()->background()->outline()->spacing()->hover(),
+    \Elegantly\Kit\Facades\Kit::button()->size($size)->color($color)->font()->background()->outline()->border()->ring()->spacing()->hover(),
     'shrink-0 relative align-middle',
     'inline-flex items-center',
     'outline-2 outline-offset-2',

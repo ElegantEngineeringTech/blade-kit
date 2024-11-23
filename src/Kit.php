@@ -13,31 +13,49 @@ class Kit
 {
     public function base(): Base
     {
-        return Base::make();
+        /** @var class-string<Base> */
+        $class = config()->string('blade-kit.ui.base');
+
+        return $class::make();
     }
 
     public function button(): Button
     {
-        return Button::make();
+        /** @var class-string<Button> */
+        $class = config()->string('blade-kit.ui.button');
+
+        return $class::make();
     }
 
     public function input(): Input
     {
-        return Input::make();
+        /** @var class-string<Input> */
+        $class = config()->string('blade-kit.ui.input');
+
+        return $class::make();
     }
 
     public function select(): Select
     {
-        return Select::make();
+        /** @var class-string<Select> */
+        $class = config()->string('blade-kit.ui.select');
+
+        return $class::make();
     }
 
     public function tag(): Tag
     {
-        return Tag::make();
+        /** @var class-string<Tag> */
+        $class = config()->string('blade-kit.ui.tag');
+
+        return $class::make();
     }
 
     public function switch(): SwitchUi
     {
-        return SwitchUi::make();
+        /** @var class-string<SwitchUi> */
+        $class = config()->string('blade-kit.ui.switch');
+
+        return $class::make();
     }
 }
