@@ -11,7 +11,7 @@
         'relative align-middle',
         'inline-flex items-center',
         'whitespace-nowrap',
-        \Elegantly\Kit\Facades\Kit::tag()->size($size)->color($color)->font()->background()->outline()->spacing(),
+        \Elegantly\Kit\Facades\Kit::tag()->size($size)->color($color)->font()->background()->outline()->border()->ring()->spacing(),
     ]) }}
     @if ($tooltip) x-tooltip.raw="{!! $tooltip !!}" @endif>
     {{ $slot }}
