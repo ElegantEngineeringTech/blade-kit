@@ -21,23 +21,13 @@
         'wire:loading.class' => 'pointer-events-none',
     ]),
 )" :size="$size">
-    @if ($icon)
-        <span @class([
-            'relative shrink-0 leading-none',
-            '-mx-1' => $offset,
-            \Elegantly\Kit\Facades\Kit::button()->size($size)->icon(),
-            is_object($icon) ? $icon->attributes->get('class') : null,
-        ])>
-            @if (is_string($icon))
-                @svg($icon)
-            @else
-                {{ $icon }}
-            @endif
 
-            @if ($badge)
-                <x-kit::button.badge :count="$badge" />
-            @endif
-        </span>
+    @if ($icon)
+        @php
+            $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+
+        <x-kit::button.icon :icon="$icon" :offset="$offset" :size="$size" :badge="$badge" :attributes="$iconAttributes" />
     @endif
 
     @if ($slot->hasActualContent() || $content)
@@ -57,18 +47,13 @@
     @endif
 
     @if ($iconRight)
-        <span @class([
-            'relative shrink-0 leading-none',
-            '-mx-1' => $offset,
-            \Elegantly\Kit\Facades\Kit::button()->size($size)->icon(),
-            is_object($iconRight) ? $iconRight->attributes->get('class') : null,
-        ])>
-            @if (is_string($iconRight))
-                @svg($iconRight)
-            @else
-                {{ $iconRight }}
-            @endif
-        </span>
+        @php
+            $iconAttributes = is_object($iconRight)
+                ? $iconRight->attributes
+                : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+
+        <x-kit::button.icon :icon="$iconRight" :offset="$offset" :size="$size" :attributes="$iconAttributes" />
     @endif
 
     @if ($target || $loading)

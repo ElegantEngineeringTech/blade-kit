@@ -8,24 +8,14 @@
     'color' => 'white',
 ])
 
-@php
-    $input = $attributes->whereStartsWith(['wire:', 'x-on:', '']);
-@endphp
-
 <div @class([$class, 'relative w-full']) @style($style)>
 
     @if ($icon)
-        <span @class([
-            'absolute left-0 leading-none pointer-events-none',
-            \Elegantly\Kit\Facades\Kit::input()->size($size)->color($color)->icon(),
-            is_object($icon) ? $icon->attributes->get('class') : null,
-        ])>
-            @if (is_string($icon))
-                @svg($icon)
-            @else
-                {{ $icon }}
-            @endif
-        </span>
+        @php
+            $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+
+        <x-kit::input.icon :icon="$icon" :size="$size" :color="$color" :attributes="$iconAttributes->class(['left-0'])" />
     @endif
 
     <x-kit::input.base :size="$size" :color="$color" :attributes="$attributes->class([
@@ -37,16 +27,11 @@
     ])" />
 
     @if ($iconRight)
-        <span @class([
-            'absolute right-0 leading-none pointer-events-none',
-            \Elegantly\Kit\Facades\Kit::input()->size($size)->color($color)->icon(),
-            is_object($iconRight) ? $iconRight->attributes->get('class') : null,
-        ])>
-            @if (is_string($iconRight))
-                @svg($iconRight)
-            @else
-                {{ $iconRight }}
-            @endif
-        </span>
+        @php
+            $iconAttributes = is_object($icon) ? $iconRight->attributes : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+
+        <x-kit::input.icon :icon="$iconRight" :size="$size" :color="$color" :attributes="$iconAttributes->class(['right-0'])" />
     @endif
+
 </div>

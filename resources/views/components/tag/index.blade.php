@@ -12,17 +12,10 @@
     'flex-shrink-0' => !$truncate,
 ])" :size="$size">
     @if ($icon)
-        <span @class([
-            \Elegantly\Kit\Facades\Kit::tag()->size($size)->icon(),
-            '-mx-1' => !$unoffset,
-            'flex-shrink-0 inline-block leading-none',
-        ])>
-            @if (is_string($icon))
-                @svg($icon)
-            @else
-                {{ $icon }}
-            @endif
-        </span>
+        @php
+            $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+        <x-kit::tag.icon :icon="$icon" :unoffset="$unoffset" :size="$size" :attributes="$iconAttributes" />
     @endif
 
     @if ($slot->hasActualContent() || $content)
@@ -39,17 +32,10 @@
     @endif
 
     @if ($iconRight)
-        <span @class([
-            \Elegantly\Kit\Facades\Kit::tag()->size($size)->icon(),
-            '-mx-1' => !$unoffset,
-            'flex-shrink-0 leading-none',
-        ])>
-            @if (is_string($iconRight))
-                @svg($iconRight)
-            @else
-                {{ $iconRight }}
-            @endif
-        </span>
+        @php
+            $iconAttributes = is_object($icon) ? $iconRight->attributes : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+        <x-kit::tag.icon :icon="$iconRight" :unoffset="$unoffset" :size="$size" :attributes="$iconAttributes" />
     @endif
 
     @if ($button)
