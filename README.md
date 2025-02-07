@@ -15,13 +15,6 @@ You can install the package via composer:
 composer require elegantly/blade-kit
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="blade-kit-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -31,7 +24,24 @@ php artisan vendor:publish --tag="blade-kit-config"
 This is the contents of the published config file:
 
 ```php
+use Elegantly\Kit\Ui\Base;
+use Elegantly\Kit\Ui\Button;
+use Elegantly\Kit\Ui\Input;
+use Elegantly\Kit\Ui\Select;
+use Elegantly\Kit\Ui\SwitchUi;
+use Elegantly\Kit\Ui\Tag;
+
 return [
+
+    'ui' => [
+        'base' => Base::class,
+        'button' => Button::class,
+        'input' => Input::class,
+        'select' => Select::class,
+        'tag' => Tag::class,
+        'switch' => SwitchUi::class,
+    ],
+
 ];
 ```
 
@@ -43,10 +53,13 @@ php artisan vendor:publish --tag="blade-kit-views"
 
 ## Usage
 
-```php
-$kit = new Elegantly\Kit();
-echo $kit->echoPhrase('Hello, Elegantly!');
+```html
+<x-kit::button class="rounded-md font-semibold" color="white">
+    Button
+</x-kit::button>
 ```
+
+See full documentation [here](https://elegantengineering.tech/blade-kit#buttons).
 
 ## Testing
 
