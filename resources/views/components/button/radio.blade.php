@@ -26,7 +26,7 @@
     </x-slot:before>
 
     @if ($icon?->hasActualContent())
-        <x-slot:icon :attributes="$iconRight?->icon"> {{ $icon }} </x-slot:icon>
+        <x-slot:icon :attributes="$icon?->attributes"> {{ $icon }} </x-slot:icon>
     @endif
 
     {{ $slot }}
