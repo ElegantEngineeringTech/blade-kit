@@ -87,9 +87,11 @@
             </x-kit::switch>
         </div>
         <div class="flex items-center justify-center border-b">
-            <x-kit::button color="white">
-                Button
-            </x-kit::button>
+            <x-kit::input class="max-w-40" size="lg" color="white" placeholder="Search">
+                <x-slot:icon>
+                    <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>
+                </x-slot:icon>
+            </x-kit::input>
         </div>
 
     </div>

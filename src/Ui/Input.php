@@ -25,7 +25,7 @@ class Input extends Base
             'xs' => 'size-4 my-1.5 mx-1.5 text-base',
             'sm' => 'size-5 p-0.5 my-1.5 mx-1.5',
             'base', 'md' => 'size-5 p-0.5 my-2 mx-2 text-base',
-            'lg' => 'size-6 p-0.5 my-2 mx-2',
+            'lg' => 'size-6 p-0.5 my-2 mx-2 text-lg',
             'xl' => 'size-7 p-0.5 my-2 mx-2',
             default => ''
         });
@@ -64,7 +64,8 @@ class Input extends Base
             '2xs' => '',
             'xs' => 'pl-7',
             'sm' => 'pl-8',
-            'base', 'md', 'lg', 'xl' => 'pl-8',
+            'base', 'md' => 'pl-8',
+            'lg', 'xl' => 'pl-10',
             default => ''
         });
     }
