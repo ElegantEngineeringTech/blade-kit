@@ -9,7 +9,7 @@
 
 @php
     $input = $attributes->filter(function ($value, $key) {
-        return in_array($key, ['name', 'value']) || Str::startsWith($key, ['x-model', 'wire:model']);
+        return in_array($key, ['name', 'value']) || Str::startsWith($key, ['x-bind:value', 'x-model', 'wire:model']);
     });
     $label = $attributes->except(array_keys($input->all()))->class([
         //
