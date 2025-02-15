@@ -72,6 +72,13 @@
         <div class="flex items-center justify-center border-b">
             <x-kit::tag color="white">
                 Tag
+                <x-slot:button>
+                    <x-kit::button color="white" size="2xs" class="rounded-full">
+                        <x-slot:icon>
+                            <iconify-icon icon="heroicons:x-mark"></iconify-icon>
+                        </x-slot:icon>
+                    </x-kit::button>
+                </x-slot:button>
             </x-kit::tag>
         </div>
         <div class="flex items-center justify-center border-b">

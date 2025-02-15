@@ -34,7 +34,7 @@ class Button extends Base
     public function icon(): static
     {
         return $this->append(match ($this->size) {
-            '2xs' => 'size-4 p-px',
+            '2xs' => 'size-4 p-px text-sm',
             'xs' => 'size-4 text-base',
             'sm' => 'size-5 p-0.5 text-base',
             'base', 'md' => 'size-5 p-0.5 text-base',
