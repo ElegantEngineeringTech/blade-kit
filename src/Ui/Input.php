@@ -10,7 +10,7 @@ class Input extends Base
     public function text(): static
     {
         return $this->append(match ($this->color) {
-            'white' => 'text-black placeholder:text-gray-400',
+            'white' => 'text-black placeholder:text-black/40',
             default => ''
         });
     }
@@ -22,9 +22,9 @@ class Input extends Base
     {
         $this->append(match ($this->size) {
             '2xs' => 'size-4 p-px my-2 mx-2',
-            'xs' => 'size-4 my-2 mx-2',
-            'sm' => 'size-5 p-0.5 my-2 mx-2',
-            'base', 'md' => 'size-5 p-0.5 my-2 mx-2',
+            'xs' => 'size-4 my-1.5 mx-1.5 text-base',
+            'sm' => 'size-5 p-0.5 my-1.5 mx-1.5',
+            'base', 'md' => 'size-5 p-0.5 my-2 mx-2 text-base',
             'lg' => 'size-6 p-0.5 my-2 mx-2',
             'xl' => 'size-7 p-0.5 my-2 mx-2',
             default => ''
@@ -62,8 +62,8 @@ class Input extends Base
     {
         return $this->append(match ($this->size) {
             '2xs' => '',
-            'xs' => '',
-            'sm' => '',
+            'xs' => 'pl-7',
+            'sm' => 'pl-8',
             'base', 'md', 'lg', 'xl' => 'pl-8',
             default => ''
         });

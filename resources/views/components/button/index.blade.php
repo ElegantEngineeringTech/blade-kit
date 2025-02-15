@@ -7,11 +7,12 @@
     'loader' => null,
     'loading' => false,
     'badge' => null,
-    'extra' => null,
+    'before' => null,
+    'after' => null,
 ])
 
 @php
-    $target = $attributes->wire('target')->value;
+    $target = $attributes->get('wire:target');
 @endphp
 
 <x-kit::button.base :attributes="$attributes->when(
@@ -21,6 +22,7 @@
         'wire:loading.class' => 'pointer-events-none',
     ]),
 )" :size="$size">
+    {!! $before !!}
 
     @if ($icon)
         @php
@@ -31,13 +33,18 @@
     @endif
 
     @if ($slot->hasActualContent() || $content)
-        <span @class([
-            'relative',
-            'inline-flex min-w-0',
-            'ml-2' => $icon && $offset,
-            'mr-2' => $iconRight && $offset,
-            $content?->attributes->get('class'),
-        ])>
+        @php
+            $contentAttributes = is_object($content)
+                ? $content->attributes
+                : new \Illuminate\View\ComponentAttributeBag();
+        @endphp
+        <span
+            {{ $contentAttributes->class([
+                'relative',
+                'inline-flex min-w-0',
+                'ml-2' => $icon && $offset,
+                'mr-2' => $iconRight && $offset,
+            ]) }}>
             {{ $content ?? $slot }}
 
             @if (!$icon && $badge)
@@ -61,5 +68,5 @@
             wire:target="{{ $target }}">{{ $loader }}</x-kit::buttons.loader>
     @endif
 
-    {!! $extra !!}
+    {!! $after !!}
 </x-kit::button.base>

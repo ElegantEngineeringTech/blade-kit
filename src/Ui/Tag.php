@@ -9,8 +9,8 @@ class Tag extends Base
         $this->append(match ($this->size) {
             '2xs' => 'size-4 p-px',
             'xs' => 'size-4',
-            'sm' => 'size-5 p-0.5',
-            'base', 'md' => 'size-5 p-0.5',
+            'sm' => 'size-5 p-0.5 text-base',
+            'base', 'md' => 'size-5 p-0.5 text-base',
             'lg' => 'size-6 p-0.5',
             'xl' => 'size-6 p-0.5',
             default => ''

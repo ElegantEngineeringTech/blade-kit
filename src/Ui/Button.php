@@ -35,9 +35,9 @@ class Button extends Base
     {
         return $this->append(match ($this->size) {
             '2xs' => 'size-4 p-px',
-            'xs' => 'size-4',
-            'sm' => 'size-5 p-0.5',
-            'base', 'md' => 'size-5 p-0.5',
+            'xs' => 'size-4 text-base',
+            'sm' => 'size-5 p-0.5 text-base',
+            'base', 'md' => 'size-5 p-0.5 text-base',
             'lg' => 'size-6 p-0.5',
             'xl' => 'size-7 p-0.5',
             default => ''
@@ -46,13 +46,13 @@ class Button extends Base
 
     public function checked(): string
     {
-        return match ($this->color) {
+        return $this->append(match ($this->color) {
             'white' => 'has-[:checked]:bg-white has-[:checked]:text-black',
             'black' => 'has-[:checked]:bg-black has-[:checked]:text-white',
             'emerald' => 'has-[:checked]:bg-emerald-500 has-[:checked]:text-white',
             'rose' => 'has-[:checked]:bg-rose-500 has-[:checked]:text-white',
             'amber' => 'has-[:checked]:bg-amber-500 has-[:checked]:text-white',
             default => ''
-        };
+        });
     }
 }
