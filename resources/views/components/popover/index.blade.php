@@ -3,7 +3,7 @@
 ])
 
 <div {{ $attributes->class(['']) }} x-data="{
-    open: true,
+    open: false,
     ...{!! $xData !!}
 }">
     {{ $slot }}
