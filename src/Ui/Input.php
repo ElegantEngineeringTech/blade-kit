@@ -48,7 +48,7 @@ class Input extends Base
             'amber' => 'text-white/60',
             'amber-light' => 'text-amber-800/40',
             'glass' => 'text-white/60',
-            'transparent' => 'text-white/60',
+            'transparent' => 'text-inherit',
             default => ''
         });
 

@@ -34,7 +34,7 @@ class Base extends Ui
     public function background(): static
     {
         return $this->append(match ($this->color) {
-            'white' => 'bg-white text-black ring-gray-200 ring-1 ring-inset dark:bg-zinc-800 dark:text-white dark:ring-zinc-700',
+            'white' => 'bg-white text-black ring-gray-200 dark:bg-zinc-800 dark:text-white dark:ring-zinc-700',
             'black' => 'bg-black text-white ring-black dark:bg-white dark:text-black placeholder:text-white/60',
             'gray' => 'bg-gray-100 text-gray-600 ring-gray-100',
             'gray-light' => 'bg-gray-400/20 text-gray-800 ring-gray-400/20',
@@ -50,7 +50,6 @@ class Base extends Ui
             'yellow-light' => 'bg-yellow-400/20 text-yellow-800 ring-yellow-400/20 placeholder:text-yellow-800/40',
             'amber' => 'bg-amber-500 text-white ring-amber-400/20 placeholder:text-white/60',
             'amber-light' => 'bg-amber-400/20 text-amber-800 ring-amber-400/20 placeholder:text-amber-800/40',
-            'glass' => 'bg-white/50 text-black ring-white ring-1 ring-inset',
             'transparent' => 'bg-transparent text-inherit border-transparent',
             default => ''
         });
@@ -79,7 +78,7 @@ class Base extends Ui
             'amber' => 'outline-amber-500',
             'amber-light' => 'outline-amber-500',
             'glass' => 'outline-black',
-            'transparent' => 'outline-black',
+            'transparent' => 'outline-transparent',
             default => ''
         });
     }
@@ -120,7 +119,7 @@ class Base extends Ui
         return $this->append(match ($this->color) {
             'white' => '',
             'black' => 'ring-black',
-            'gray' => 'ring-gray-300',
+            'gray' => 'ring-gray-200',
             'gray-light' => 'ring-gray-100',
             'sky' => 'ring-sky-600',
             'sky-light' => 'ring-sky-500',

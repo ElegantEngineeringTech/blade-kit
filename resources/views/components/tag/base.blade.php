@@ -7,7 +7,7 @@
 
 <span
     {{ $attributes->class([
-        'rounded-full font-semibold',
+        'font-semibold',
         'relative align-middle',
         'inline-flex items-center',
         'whitespace-nowrap',
