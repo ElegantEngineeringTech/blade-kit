@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script defer src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js"></script>
@@ -33,6 +36,38 @@
                 <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
                     Button
                 </x-kit::button>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Button File</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b">
+                <x-kit::button.file name="upload" color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:icon>
+                        <iconify-icon icon="heroicons:arrow-up-tray"></iconify-icon>
+                    </x-slot:icon>
+                    Select a file
+                </x-kit::button.file>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Button Copy</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b">
+                <x-kit::button.copy tooltip="Copy" tooltip-checked="Copied" copy="Foo" color="white"
+                    class="rounded-md ring-1 ring-inset">
+                    <x-slot:icon>
+                        <iconify-icon icon="heroicons:clipboard"></iconify-icon>
+                    </x-slot:icon>
+                    <x-slot:icon-checked>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </x-slot:icon-checked>
+                    Copy
+                </x-kit::button.copy>
             </div>
         </div>
 
@@ -176,7 +211,8 @@
                             <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>
                         </x-slot:icon>
                     </x-kit::input>
-                    <x-kit::button color="white" class="m-0.5 rounded font-semibold ring-1 ring-inset" size="sm">
+                    <x-kit::button color="white" class="m-0.5 rounded font-semibold ring-1 ring-inset"
+                        size="sm">
                         <x-slot:icon-right>
                             <iconify-icon icon="heroicons:plus"></iconify-icon>
                         </x-slot:icon-right>

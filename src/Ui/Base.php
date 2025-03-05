@@ -163,7 +163,7 @@ class Base extends Ui
     public function spacing(): static
     {
         return $this->append(match ($this->size) {
-            '2xs' => 'px-2 py-1 min-w-5',
+            '2xs' => 'px-2 py-1 min-w-6',
             'xs' => 'px-2.5 py-1.5 min-w-7',
             'sm' => 'px-2.5 py-1.5 min-w-8',
             'base', 'md', 'lg', 'xl' => 'px-3 py-2 min-w-9',
