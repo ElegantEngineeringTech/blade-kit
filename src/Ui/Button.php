@@ -38,7 +38,7 @@ class Button extends Base
             'xs' => 'size-4 text-base',
             'sm' => 'size-5 p-0.5 text-base',
             'base', 'md' => 'size-5 p-0.5 text-base',
-            'lg' => 'size-6 p-0.5',
+            'lg' => 'size-6 p-0.5 text-xl',
             'xl' => 'size-7 p-0.5',
             default => ''
         });
