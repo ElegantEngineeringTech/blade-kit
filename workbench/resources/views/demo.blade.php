@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.min.css" />
 
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
@@ -174,7 +174,6 @@
                 </x-kit::popover>
             </div>
         </div>
-
 
         <div class="isolate flex flex-col">
             <div class="p-3">

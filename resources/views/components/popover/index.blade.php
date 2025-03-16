@@ -4,7 +4,7 @@
 
 <div {{ $attributes->class(['']) }} x-data="{
     open: false,
-    ...{!! $xData !!}
+    {!! str($xData)->ltrim('{')->rtrim('}') !!}
 }">
     {{ $slot }}
 </div>
