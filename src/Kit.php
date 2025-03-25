@@ -14,7 +14,7 @@ class Kit
     public function base(): Base
     {
         /** @var class-string<Base> */
-        $class = config()->string('blade-kit.ui.base');
+        $class = config('blade-kit.ui.base');
 
         return $class::make();
     }
@@ -22,7 +22,7 @@ class Kit
     public function button(): Button
     {
         /** @var class-string<Button> */
-        $class = config()->string('blade-kit.ui.button');
+        $class = config('blade-kit.ui.button');
 
         return $class::make();
     }
@@ -30,7 +30,7 @@ class Kit
     public function input(): Input
     {
         /** @var class-string<Input> */
-        $class = config()->string('blade-kit.ui.input');
+        $class = config('blade-kit.ui.input');
 
         return $class::make();
     }
@@ -38,7 +38,7 @@ class Kit
     public function select(): Select
     {
         /** @var class-string<Select> */
-        $class = config()->string('blade-kit.ui.select');
+        $class = config('blade-kit.ui.select');
 
         return $class::make();
     }
@@ -46,7 +46,7 @@ class Kit
     public function tag(): Tag
     {
         /** @var class-string<Tag> */
-        $class = config()->string('blade-kit.ui.tag');
+        $class = config('blade-kit.ui.tag');
 
         return $class::make();
     }
@@ -54,7 +54,7 @@ class Kit
     public function switch(): SwitchUi
     {
         /** @var class-string<SwitchUi> */
-        $class = config()->string('blade-kit.ui.switch');
+        $class = config('blade-kit.ui.switch');
 
         return $class::make();
     }
