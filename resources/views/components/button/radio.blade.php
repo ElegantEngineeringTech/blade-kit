@@ -11,7 +11,7 @@
     $input = $attributes->filter(function ($value, $key) {
         return in_array($key, ['name', 'value']) || Str::startsWith($key, ['x-bind:value', 'x-model', 'wire:model']);
     });
-    $label = $attributes->except(array_keys($input->all()))->class([
+    $label = $attributes->except(array_keys($input->getAttributes()))->class([
         //
         // 'has-[:focus-visible]:outline has-[:active]:outline',
         \Elegantly\Kit\Facades\Kit::button()->color($colorChecked)->checked(),
