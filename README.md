@@ -59,7 +59,7 @@ php artisan vendor:publish --tag="blade-kit-views"
 </x-kit::button>
 ```
 
-See full documentation [here](https://elegantengineering.tech/blade-kit#buttons).
+See full documentation [here](https://elegantly.dev/blade-kit#buttons).
 
 ## Testing
 
