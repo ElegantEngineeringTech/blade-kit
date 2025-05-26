@@ -2,7 +2,7 @@
     'xData' => '{}',
 ])
 
-<div {{ $attributes->class(['']) }} x-data="{
+<div {{ $attributes }} x-data="{
     open: false,
     {!! str($xData)->ltrim('{')->rtrim('}') !!}
 }">
