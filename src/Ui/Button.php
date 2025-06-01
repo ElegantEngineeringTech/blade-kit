@@ -47,11 +47,11 @@ class Button extends Base
     public function checked(): string
     {
         return $this->append(match ($this->color) {
-            'white' => 'has-[:checked]:bg-white has-[:checked]:text-black',
-            'black' => 'has-[:checked]:bg-black has-[:checked]:text-white',
-            'emerald' => 'has-[:checked]:bg-emerald-500 has-[:checked]:text-white',
-            'rose' => 'has-[:checked]:bg-rose-500 has-[:checked]:text-white',
-            'amber' => 'has-[:checked]:bg-amber-500 has-[:checked]:text-white',
+            'white' => 'has-checked:bg-white has-checked:text-black',
+            'black' => 'has-checked:bg-black has-checked:text-white',
+            'emerald' => 'has-checked:bg-emerald-500 has-checked:text-white',
+            'rose' => 'has-checked:bg-rose-500 has-checked:text-white',
+            'amber' => 'has-checked:bg-amber-500 has-checked:text-white',
             default => ''
         });
     }

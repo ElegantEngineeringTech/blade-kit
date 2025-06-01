@@ -9,7 +9,7 @@
 ])
 
 <x-kit::tag.base :attributes="$attributes->class([
-    'flex-shrink-0' => !$truncate,
+    'shrink-0' => !$truncate,
 ])" :size="$size">
     @if ($icon)
         @php

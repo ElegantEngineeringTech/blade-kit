@@ -5,8 +5,8 @@
 <div
     {{ $attributes->class([
         'flex',
-        'outline-2 outline-offset-2',
-        'has-[:focus-visible]:outline',
+        'outline-offset-2',
+        'has-focus-visible:outline-2',
         \Elegantly\Kit\Facades\Kit::input()->color($color)->font()->background()->border()->ring()->outline(),
     ]) }}>
 

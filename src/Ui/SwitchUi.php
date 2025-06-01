@@ -10,15 +10,15 @@ class SwitchUi extends Base
     public function background(): static
     {
         return $this->append(match ($this->color) {
-            'white' => 'before:bg-gray-300 before:checked:bg-white dark:before:bg-gray-600 dark:before:checked:bg-black',
-            'black' => 'before:bg-gray-300 before:checked:bg-black dark:before:bg-gray-600 dark:before:checked:bg-white',
-            'gray' => 'before:bg-gray-300 before:checked:bg-gray-500 dark:before:bg-gray-600 dark:before:checked:bg-white',
-            'emerald' => 'before:bg-gray-300 before:checked:bg-emerald-500 dark:before:bg-gray-600 dark:before:checked:bg-emerald-700',
-            'sky' => 'before:bg-gray-300 before:checked:bg-sky-500 dark:before:bg-gray-600 dark:before:checked:bg-sky-700',
-            'rose' => 'before:bg-gray-300 before:checked:bg-rose-500 dark:before:bg-gray-600 dark:before:checked:bg-rose-700',
-            'purple' => 'before:bg-gray-300 before:checked:bg-purple-500 dark:before:bg-gray-600 dark:before:checked:bg-purple-700',
-            'yellow' => 'before:bg-gray-300 before:checked:bg-yellow-500 dark:before:bg-gray-600 dark:before:checked:bg-yellow-700',
-            'amber' => 'before:bg-gray-300 before:checked:bg-amber-500 dark:before:bg-gray-600 dark:before:checked:bg-amber-700',
+            'white' => 'before:bg-gray-300 checked:before:bg-white dark:before:bg-gray-600 dark:checked:before:bg-black',
+            'black' => 'before:bg-gray-300 checked:before:bg-black dark:before:bg-gray-600 dark:checked:before:bg-white',
+            'gray' => 'before:bg-gray-300 checked:before:bg-gray-500 dark:before:bg-gray-600 dark:checked:before:bg-white',
+            'emerald' => 'before:bg-gray-300 checked:before:bg-emerald-500 dark:before:bg-gray-600 dark:checked:before:bg-emerald-700',
+            'sky' => 'before:bg-gray-300 checked:before:bg-sky-500 dark:before:bg-gray-600 dark:checked:before:bg-sky-700',
+            'rose' => 'before:bg-gray-300 checked:before:bg-rose-500 dark:before:bg-gray-600 dark:checked:before:bg-rose-700',
+            'purple' => 'before:bg-gray-300 checked:before:bg-purple-500 dark:before:bg-gray-600 dark:checked:before:bg-purple-700',
+            'yellow' => 'before:bg-gray-300 checked:before:bg-yellow-500 dark:before:bg-gray-600 dark:checked:before:bg-yellow-700',
+            'amber' => 'before:bg-gray-300 checked:before:bg-amber-500 dark:before:bg-gray-600 dark:checked:before:bg-amber-700',
             default => ''
         });
     }

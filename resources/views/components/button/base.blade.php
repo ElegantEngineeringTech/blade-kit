@@ -12,11 +12,11 @@
     \Elegantly\Kit\Facades\Kit::button()->size($size)->color($color)->font()->background()->outline()->border()->ring()->spacing()->hover(),
     'shrink-0 relative align-middle',
     'inline-flex items-center',
-    'outline-2 outline-offset-2',
+    'outline-offset-2',
     'transition-colors',
     'cursor-pointer',
     'disabled:cursor-not-allowed disabled:opacity-50',
-    'focus-visible:outline active:outline',
+    'focus-visible:outline-2 active:outline-2',
 ]) !!} @disabled($disabled)
     @if ($tag === 'button') type="{{ $type }}" @endif
     @if ($tooltip) x-tooltip.raw="{{ $tooltip }}" @endif
