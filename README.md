@@ -15,6 +15,14 @@ You can install the package via composer:
 composer require elegantly/blade-kit
 ```
 
+To make it work with tailwindcss v4, you must add the following lines to your `app.css`.
+
+```css
+@import "../../vendor/elegantly/blade-kit/theme.css";
+@source "../../vendor/elegantly/blade-kit/resources/views/**/*.blade.php";
+@source "../../vendor/elegantly/blade-kit/src/Ui/**/*.php";
+```
+
 You can publish the config file with:
 
 ```bash
