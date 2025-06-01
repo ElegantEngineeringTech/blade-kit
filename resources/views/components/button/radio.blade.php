@@ -16,7 +16,7 @@
     });
     $label = $attributes->except(array_keys($input->getAttributes()))->class([
         //
-        // 'has-[:focus-visible]:outline has-[:active]:outline',
+        // 'has-focus-visible:outline has-active:outline',
         \Elegantly\Kit\Facades\Kit::button()->color($colorChecked)->checked(),
     ]);
 @endphp

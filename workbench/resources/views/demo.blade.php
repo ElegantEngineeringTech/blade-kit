@@ -26,7 +26,7 @@
 
 <body class="">
 
-    <div class="grid grid-cols-1 divide-x md:grid-cols-3 [&>*]:h-60">
+    <div class="grid grid-cols-1 divide-x md:grid-cols-3 *:h-60">
 
         <div class="isolate flex flex-col">
             <div class="p-3">
@@ -108,7 +108,7 @@
                         <div class="mt-auto flex w-full flex-col rounded-lg border bg-white shadow-lg md:max-w-72">
 
                             <div class="p-1">
-                                <x-kit::input.parent color="gray" class="rounded-md !outline-0 ring-1 ring-inset">
+                                <x-kit::input.parent color="gray" class="rounded-md outline-0! ring-1 ring-inset">
                                     <x-kit::input size="sm" color="transparent" placeholder="Search">
                                         <x-slot:icon>
                                             <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>

@@ -6,7 +6,7 @@
 
 <x-kit::button.radio :color-checked="$color" :attributes="$attributes->class([
     'justify-center grow', //
-    'has-[:checked]:shadow-sm has-[:focus-visible]:outline',
+    'has-checked:shadow-sm has-focus-visible:outline',
 ])">
     @if ($icon?->hasActualContent())
         <x-slot:icon :attributes="$icon?->attributes"> {{ $icon }} </x-slot:icon>
