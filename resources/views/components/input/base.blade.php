@@ -12,7 +12,7 @@
 <input type="{{ $type }}"
     {{ $attributes->class([
         \Elegantly\Kit\Facades\Kit::input()->size($size)->color($color)->font()->spacing()->border()->ring()->background()->outline(),
-        'inline-block w-full ring-inset focus:outline focus-visible:outline outline-2',
+        'inline-block w-full ring-inset focus:outline-2 focus-visible:outline-2',
     ]) }}
     @if ($autofocus) autofocus @endif @disabled($disabled) @required($required)
     @if ($autocomplete) autocomplete="{{ $autocomplete }}" @endif
