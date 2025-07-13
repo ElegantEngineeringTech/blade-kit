@@ -5,6 +5,7 @@
     'type' => 'radio',
     'icon' => null,
     'iconRight' => null,
+    'required' => false,
 ])
 
 @php
@@ -25,7 +26,7 @@
     <x-slot:before>
         <input type="{{ $type }}" {{ $input }}
             class="peer/input pointer-events-none absolute left-0 top-0 size-full appearance-none opacity-0"
-            @checked($checked) @disabled($disabled)>
+            @checked($checked) @disabled($disabled) @required($required)>
     </x-slot:before>
 
     @if ($icon?->hasActualContent())
