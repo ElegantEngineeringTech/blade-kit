@@ -5,6 +5,7 @@
     'type' => 'radio',
     'icon' => null,
     'iconRight' => null,
+    'content' => null,
     'required' => false,
 ])
 
@@ -33,7 +34,11 @@
         <x-slot:icon :attributes="$icon?->attributes"> {{ $icon }} </x-slot:icon>
     @endif
 
-    {{ $slot }}
+    @if ($content?->hasActualContent())
+        <x-slot:content :attributes="$content?->attributes"> {{ $content }} </x-slot:content>
+    @else
+        {{ $slot }}
+    @endif
 
     @if ($iconRight?->hasActualContent())
         <x-slot:icon-right :attributes="$iconRight?->attributes"> {{ $iconRight }} </x-slot:icon-right>
