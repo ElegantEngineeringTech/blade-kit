@@ -4,17 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @custom-variant dark (&:where(.dark, .dark *));
-
-        @theme {
-            --animate-spin-loader: spin 0.5s linear infinite;
-
-            --background-image-select: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-            --background-image-checkbox: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-        }
-    </style>
 
     <script defer src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.min.css" />
@@ -32,6 +21,9 @@
             display: none !important;
         }
     </style>
+
+    {{ Vite::useHotFile('vendor/blade-kit/blade-kit.hot')->useBuildDirectory('vendor/blade-kit')->withEntryPoints('workbench/resources/css/demo.css') }}
+
 </head>
 
 <body class="">
@@ -43,8 +35,12 @@
                 <h1 class="font-semibold">Button</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                <x-kit::button color="rose" class="rounded-md ring-1 ring-inset">
                     Button
+
+                    <x-slot:icon>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </x-slot:icon>
                 </x-kit::button>
             </div>
         </div>
@@ -54,12 +50,16 @@
                 <h1 class="font-semibold">Button File</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::button.file name="upload" color="white" class="rounded-md ring-1 ring-inset">
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:input>
+                        <input type="file" multiple name="upload" />
+                    </x-slot:input>
+
                     <x-slot:icon>
                         <iconify-icon icon="heroicons:arrow-up-tray"></iconify-icon>
                     </x-slot:icon>
                     Select a file
-                </x-kit::button.file>
+                </x-kit::button>
             </div>
         </div>
 
@@ -83,10 +83,56 @@
 
         <div class="isolate flex flex-col">
             <div class="p-3">
+                <h1 class="font-semibold">Radio button</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:input>
+                        <input type="radio" name="button-radio" value="yes" />
+                    </x-slot:input>
+                    Yes
+                </x-kit::button>
+
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:input>
+                        <input type="radio" name="button-radio" value="no" />
+                    </x-slot:input>
+                    No
+                </x-kit::button>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Button checkbox</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:input>
+                        <input type="checkbox" name="button-checkbox" value="1" />
+                    </x-slot:input>
+                    Option 1
+                </x-kit::button>
+
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                    <x-slot:input>
+                        <input type="checkbox" name="button-checkbox" value="2" />
+                    </x-slot:input>
+                    Option 2
+                </x-kit::button>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
                 <h1 class="font-semibold">Tag</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
                 <x-kit::tag color="white" class="rounded-full ring-1 ring-inset">
+                    <x-slot:icon>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </x-slot:icon>
+
                     Tag
                     <x-slot:button>
                         <x-kit::button color="white" size="2xs" class="rounded-full ring-1 ring-inset">
@@ -119,20 +165,26 @@
                             class="mt-auto flex w-full flex-col rounded-lg border border-gray-200 bg-white shadow-lg md:max-w-72">
 
                             <div class="p-1">
-                                <x-kit::input.parent color="gray" class="outline-0! rounded-md ring-1 ring-inset">
-                                    <x-kit::input size="sm" color="transparent" placeholder="Search">
-                                        <x-slot:icon>
-                                            <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>
-                                        </x-slot:icon>
-                                    </x-kit::input>
-                                    <x-kit::button color="white" class="m-0.5 rounded font-semibold ring-1 ring-inset"
-                                        size="xs">
-                                        <x-slot:icon-right>
-                                            <iconify-icon icon="heroicons:plus"></iconify-icon>
-                                        </x-slot:icon-right>
-                                        New
-                                    </x-kit::button>
-                                </x-kit::input.parent>
+                                <x-kit::input color="white" size="sm"
+                                    class="items-center rounded-md outline-none ring-1 ring-inset">
+
+                                    <x-kit::input.icon>
+                                        <iconify-icon icon="lucide:search"></iconify-icon>
+                                    </x-kit::input.icon>
+
+                                    <input type="text" placeholder="Search" />
+
+                                    <x-slot:end>
+                                        <x-kit::button size="xs" color="gray"
+                                            class="mr-0.5 rounded ring-1 ring-inset">
+                                            New
+                                            <x-slot:icon-right>
+                                                <iconify-icon icon="heroicons:plus"></iconify-icon>
+                                            </x-slot:icon-right>
+                                        </x-kit::button>
+                                    </x-slot:end>
+
+                                </x-kit::input>
                             </div>
 
                             <div class="flex gap-0.5 overflow-auto p-1">
@@ -218,34 +270,41 @@
                             class="mt-auto flex w-full flex-col rounded-lg border border-gray-200 bg-white shadow-lg md:max-w-72">
 
                             <div class="p-1">
-                                <x-kit::input.parent color="gray" class="outline-0! rounded-md ring-1 ring-inset">
-                                    <x-kit::input size="sm" color="transparent" placeholder="Search"
-                                        x-model="search">
-                                        <x-slot:icon>
-                                            <iconify-icon icon="lucide:search"></iconify-icon>
-                                        </x-slot:icon>
-                                    </x-kit::input>
-                                    <x-kit::button color="white"
-                                        class="m-0.5 rounded font-semibold ring-1 ring-inset" size="xs">
-                                        <x-slot:icon-right>
-                                            <iconify-icon icon="lucide:plus"></iconify-icon>
-                                        </x-slot:icon-right>
-                                        New
-                                    </x-kit::button>
-                                </x-kit::input.parent>
+                                <x-kit::input color="white" size="sm"
+                                    class="items-center rounded outline-none ring-1 ring-inset">
+
+                                    <x-kit::input.icon>
+                                        <iconify-icon icon="lucide:search"></iconify-icon>
+                                    </x-kit::input.icon>
+
+                                    <input type="text" placeholder="Search" />
+
+                                    <x-slot:end>
+                                        <x-kit::button size="sm" color="gray"
+                                            class="rounded ring-1 ring-inset">
+                                            New
+                                            <x-slot:icon-right>
+                                                <iconify-icon icon="heroicons:plus"></iconify-icon>
+                                            </x-slot:icon-right>
+                                        </x-kit::button>
+                                    </x-slot:end>
+
+                                </x-kit::input>
                             </div>
 
                             <div class="flex max-h-full flex-col gap-0.5 overflow-auto p-1 md:max-h-56">
                                 <template x-for="option in filteredOptions" x-bind:key="option">
                                     <div class="flex gap-0.5">
-                                        <x-kit::button.radio class="w-full rounded-md" type="checkbox"
-                                            x-model="values" x-bind:value="option" name="combobox"
-                                            size="sm">
+                                        <x-kit::button class="w-full rounded-md" size="sm">
+                                            <x-slot:input>
+                                                <input type="checkbox" name="combobox" x-bind:value="option"
+                                                    x-model="values" />
+                                            </x-slot:input>
                                             <span x-text="option"></span>
                                             <x-slot:icon-right class="invisible ml-auto peer-checked/input:visible">
                                                 <iconify-icon icon="lucide:check"></iconify-icon>
                                             </x-slot:icon-right>
-                                        </x-kit::button.radio>
+                                        </x-kit::button>
                                     </div>
                                 </template>
                             </div>
@@ -262,9 +321,9 @@
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
                 <x-kit::select color="white" class="rounded ring-1 ring-inset">
-                    <option>
-                        Option 1
-                    </option>
+                    <option> Option 1</option>
+                    <option> Option 2</option>
+                    <option> Option 3</option>
                 </x-kit::select>
             </div>
         </div>
@@ -296,23 +355,78 @@
                 <h1 class="font-semibold">Input</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::input.parent color="gray" class="rounded-md ring-1 ring-inset">
-                    <x-kit::input color="transparent" placeholder="Search">
-                        <x-slot:icon>
-                            <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>
-                        </x-slot:icon>
-                    </x-kit::input>
-                    <x-kit::button color="white" class="m-0.5 rounded font-semibold ring-1 ring-inset"
-                        size="sm">
-                        <x-slot:icon-right>
-                            <iconify-icon icon="heroicons:plus"></iconify-icon>
-                        </x-slot:icon-right>
-                        New
-                    </x-kit::button>
-                </x-kit::input.parent>
+                <x-kit::input color="white" class="items-center rounded-md ring-1 ring-inset">
+
+                    <x-slot:start>
+                        <x-kit::tag size="xs" color="gray" class="ml-1 rounded">
+                            tag
+                        </x-kit::tag>
+                    </x-slot:start>
+
+                    <x-kit::input.icon>
+                        <iconify-icon icon="heroicons:magnifying-glass"></iconify-icon>
+                    </x-kit::input.icon>
+
+                    <input type="text" placeholder="Hello world" />
+
+                    <x-kit::input.icon>
+                        <iconify-icon icon="heroicons:x-mark"></iconify-icon>
+                    </x-kit::input.icon>
+
+                    <x-slot:end>
+                        <x-kit::button size="xs" color="black" class="mr-1 rounded">
+                            button
+
+                            <x-slot:icon-right>
+                                <iconify-icon icon="heroicons:plus"></iconify-icon>
+                            </x-slot:icon-right>
+                        </x-kit::button>
+                    </x-slot:end>
+
+                </x-kit::input>
             </div>
         </div>
 
+
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Textarea</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <x-kit::textarea color="white" autosized class="w-1/2 rounded-md ring-1 ring-inset" />
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Checkbox</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <label class="">
+                    <x-kit::checkbox />
+                    I accept
+                </label>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Radio</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <div class="flex gap-3">
+                    <label class="">
+                        <x-kit::radio name="demo-radio" value="yes" />
+                        Yes
+                    </label>
+                    <label class="">
+                        <x-kit::radio name="demo-radio" value="no" />
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
 
 
     </div>

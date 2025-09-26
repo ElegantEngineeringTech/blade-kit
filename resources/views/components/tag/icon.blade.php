@@ -1,14 +1,5 @@
 @props(['icon', 'size', 'unoffset'])
 
-<span
-    {{ $attributes->class([
-        \Elegantly\Kit\Facades\Kit::tag()->size($size)->icon(),
-        '-mx-1' => !$unoffset,
-        'shrink-0 inline-block leading-none',
-    ]) }}>
-    @if (is_string($icon))
-        @svg($icon)
-    @else
-        {{ $icon }}
-    @endif
+<span {{ $attributes->class(['el-tag-icon', '-mx-1' => !$unoffset]) }}>
+    {{ $icon }}
 </span>

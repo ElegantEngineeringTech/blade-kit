@@ -1,18 +1,15 @@
 @props([
+    'tag' => 'span',
     'color' => null,
     'size' => '2xs',
     'paddingless' => false,
     'tooltip' => null,
 ])
 
-<span
-    {{ $attributes->class([
-        'font-semibold',
-        'relative align-middle',
-        'inline-flex items-center',
-        'whitespace-nowrap',
-        \Elegantly\Kit\Facades\Kit::tag()->size($size)->color($color)->font()->background()->outline()->border()->ring()->spacing(),
-    ]) }}
+{{-- blade-formatter-disable --}}
+<{!! $tag !!} {{ $attributes->class(['el-tag el-spacing el-text el-bg el-ring el-outline el-border']) }}
+    data-size="{{ $size }}" data-color="{{ $color }}"
     @if ($tooltip) x-tooltip.raw="{!! $tooltip !!}" @endif>
     {{ $slot }}
-</span>
+</{!! $tag !!}>
+{{-- blade-formatter-enable --}}

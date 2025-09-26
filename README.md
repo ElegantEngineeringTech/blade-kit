@@ -18,9 +18,8 @@ composer require elegantly/blade-kit
 To make it work with tailwindcss v4, you must add the following lines to your `app.css`.
 
 ```css
-@import "../../vendor/elegantly/blade-kit/theme.css";
+@import "../../vendor/elegantly/blade-kit/styles.css";
 @source "../../vendor/elegantly/blade-kit/resources/views/**/*.blade.php";
-@source "../../vendor/elegantly/blade-kit/src/Ui/**/*.php";
 ```
 
 You can publish the config file with:
@@ -32,24 +31,8 @@ php artisan vendor:publish --tag="blade-kit-config"
 This is the contents of the published config file:
 
 ```php
-use Elegantly\Kit\Ui\Base;
-use Elegantly\Kit\Ui\Button;
-use Elegantly\Kit\Ui\Input;
-use Elegantly\Kit\Ui\Select;
-use Elegantly\Kit\Ui\SwitchUi;
-use Elegantly\Kit\Ui\Tag;
-
 return [
-
-    'ui' => [
-        'base' => Base::class,
-        'button' => Button::class,
-        'input' => Input::class,
-        'select' => Select::class,
-        'tag' => Tag::class,
-        'switch' => SwitchUi::class,
-    ],
-
+ //
 ];
 ```
 
@@ -62,12 +45,10 @@ php artisan vendor:publish --tag="blade-kit-views"
 ## Usage
 
 ```html
-<x-kit::button class="rounded-md font-semibold" color="white">
+<x-kit::button color="white" class="rounded-md font-semibold">
     Button
 </x-kit::button>
 ```
-
-See full documentation [here](https://elegantly.dev/blade-kit#buttons).
 
 ## Testing
 

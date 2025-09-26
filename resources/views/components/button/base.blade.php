@@ -1,27 +1,20 @@
 @props([
-    'tag' => 'button',
+    'tag' => null,
     'type' => 'button',
     'size' => 'base',
     'color' => null,
+    'colorChecked' => null,
     'disabled' => false,
     'tooltip' => null,
     'download' => false,
 ])
 
-<{!! $tag !!} {!! $attributes->class([
-    \Elegantly\Kit\Facades\Kit::button()->size($size)->color($color)->font()->background()->outline()->border()->ring()->spacing()->hover(),
-    'shrink-0 relative align-middle',
-    'inline-flex items-center',
-    'outline-offset-2',
-    'transition-colors',
-    'cursor-pointer',
-    'disabled:cursor-not-allowed disabled:opacity-50',
-    'focus-visible:outline-2 active:outline-2',
-]) !!} @disabled($disabled)
-    @if ($tag === 'button') type="{{ $type }}" @endif
+{{-- blade-formatter-disable --}}
+<{!! $tag ?? 'button' !!} {!! $attributes->class(['el-button el-spacing el-text el-bg el-ring el-outline el-border']) !!}
+    data-size="{{ $size }}" data-color="{{ $color }}" @if($colorChecked) data-color-checked="{{ $colorChecked }}" @endif
+    @disabled($disabled) @if ($tag === 'button') type="{{ $type }}" @endif
     @if ($tooltip) x-tooltip.raw="{{ $tooltip }}" @endif
     @if (is_string($download)) download="{{ $download }}" @elseif($download) download @endif>
     {{ $slot }}
-    {{-- blade-formatter-disable --}}
-</{!! $tag !!}>
+</{!! $tag ?? 'button' !!}>
 {{-- blade-formatter-enable --}}

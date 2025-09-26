@@ -27,7 +27,6 @@
     },
 }" x-bind="tooltip">
 
-
     <x-slot:icon>
         <span x-show="!copied" x-transition:enter>
             {{ $icon }}

@@ -1,0 +1,206 @@
+@layer components {
+    .el-input {
+        @apply flex has-focus-visible:outline-2;
+
+        & input {
+            @apply outline-none text-inherit placeholder:text-black/40;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        & .el-input-icon {
+            @apply absolute leading-none pointer-events-none;
+        }
+
+        & input + .el-input-icon {
+            @apply right-0;
+        }
+
+        &[data-size="2xs"] {
+            & input {
+                @apply px-2 py-1 min-w-6;
+            }
+
+            & .el-input-icon {
+                @apply size-4 p-px my-2 mx-2;
+            }
+        }
+
+        &[data-size="xs"] {
+            & input {
+                @apply px-2.5 py-1.5 min-w-7;
+            }
+
+            & .el-input-icon {
+                @apply size-4 my-1.5 mx-1.5 text-base;
+            }
+
+            & .el-input-icon + input {
+                @apply ps-7;
+            }
+        }
+
+        &[data-size="sm"] {
+            & input {
+                @apply px-2.5 py-1.5 min-w-8;
+            }
+
+            & .el-input-icon {
+                @apply size-5 p-0.5 my-1.5 mx-1.5;
+            }
+
+            & .el-input-icon + input {
+                @apply ps-8;
+            }
+
+            & input:has(+ .el-input-icon) {
+                @apply pe-8;
+            }
+        }
+
+        &[data-size="base"],
+        &[data-size="md"] {
+            & input {
+                @apply px-3 py-2 min-w-9;
+            }
+
+            & .el-input-icon {
+                @apply size-5 p-0.5 my-2 mx-2 text-base;
+            }
+
+            & .el-input-icon + input {
+                @apply ps-8;
+            }
+
+            & input:has(+ .el-input-icon) {
+                @apply pe-8;
+            }
+        }
+
+        &[data-size="lg"] {
+            & input {
+                @apply px-3 py-2 min-w-9;
+            }
+
+            & .el-input-icon {
+                @apply size-6 p-0.5 my-2 mx-2 text-lg;
+            }
+
+            & .el-input-icon + input {
+                @apply ps-10;
+            }
+
+            & input:has(+ .el-input-icon) {
+                @apply pe-10;
+            }
+        }
+        &[data-size="xl"] {
+            & input {
+                @apply px-3 py-2 min-w-9;
+            }
+
+            & .el-input-icon {
+                @apply size-7 p-0.5 my-2 mx-2;
+            }
+
+            & .el-input-icon + input {
+                @apply ps-10;
+            }
+
+            & input:has(+ .el-input-icon) {
+                @apply pe-10;
+            }
+        }
+
+        &[data-color="white"] {
+            & .el-input-icon {
+                @apply text-black/40;
+            }
+        }
+        &[data-color="black"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="gray"] {
+            & .el-input-icon {
+                @apply text-gray-600/60;
+            }
+        }
+        &[data-color="gray-light"] {
+            & .el-input-icon {
+                @apply bg-gray-400/20 text-gray-800 ring-gray-400/20;
+            }
+        }
+        &[data-color="sky"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="sky-light"] {
+            & .el-input-icon {
+                @apply text-sky-800/40;
+            }
+        }
+        &[data-color="emerald"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="emerald-light"] {
+            & .el-input-icon {
+                @apply text-emerald-800/40;
+            }
+        }
+        &[data-color="rose"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="rose-light"] {
+            & .el-input-icon {
+                @apply text-rose-800/40;
+            }
+        }
+        &[data-color="purple"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="purple-light"] {
+            & .el-input-icon {
+                @apply text-purple-800/40;
+            }
+        }
+        &[data-color="yellow"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="yellow-light"] {
+            & .el-input-icon {
+                @apply text-yellow-800/40;
+            }
+        }
+        &[data-color="amber"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="amber-light"] {
+            & .el-input-icon {
+                @apply text-amber-800/40;
+            }
+        }
+        &[data-color="glass"] {
+            & .el-input-icon {
+                @apply text-white/60;
+            }
+        }
+        &[data-color="transparent"] {
+            & .el-input-icon {
+                @apply text-inherit;
+            }
+        }
+    }
+}

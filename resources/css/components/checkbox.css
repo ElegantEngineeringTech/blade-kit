@@ -1,0 +1,15 @@
+@layer components {
+    .el-checkbox {
+        @apply appearance-none p-0 inline-block align-middle box-border shrink-0 text-black size-4 rounded border-1 shadow-sm border-black/20 transition-all 
+            focus:ring-1
+            checked:border-transparent checked:bg-current checked:bg-cover checked:bg-center checked:bg-no-repeat;
+
+        &[type="radio"] {
+            @apply checked:bg-radio;
+        }
+
+        &[type="checkbox"] {
+            @apply checked:bg-checkbox;
+        }
+    }
+}

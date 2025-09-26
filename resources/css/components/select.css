@@ -1,0 +1,29 @@
+@layer components {
+    .el-select {
+        @apply select-none bg-select bg-no-repeat appearance-none inline-block;
+
+        &[data-size="2xs"] {
+            @apply min-h-4 pl-2 pr-6 py-1 min-w-5 bg-size-[1rem] bg-position-[right_0.25rem_center];
+        }
+
+        &[data-size="xs"] {
+            @apply min-h-6 pl-2.5 pr-8 py-1.5 min-w-7 bg-size-[1rem] bg-position-[right_0.5rem_center];
+        }
+
+        &[data-size="sm"] {
+            @apply min-h-8 pl-2.5 pr-10 py-1.5 min-w-8 bg-size-[1.5rem] bg-position-[right_0.5rem_center];
+        }
+
+        &[data-size="base"],
+        &[data-size="md"] {
+            @apply min-h-9 pl-3 pr-10 py-2 min-w-9 bg-size-[1.5rem] bg-position-[right_0.5rem_center];
+        }
+
+        &[data-size="lg"] {
+            @apply min-h-10 pl-3 pr-10 py-2 min-w-9 bg-size-[1.5rem] bg-position-[right_0.5rem_center];
+        }
+        &[data-size="xl"] {
+            @apply min-h-11 pl-3 pr-10 py-2 min-w-9 bg-size-[1.5rem] bg-position-[right_0.5rem_center];
+        }
+    }
+}

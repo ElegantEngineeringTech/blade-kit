@@ -6,10 +6,8 @@
     'color' => 'white',
 ])
 
-<select {!! $attributes->class([
-    \Elegantly\Kit\Facades\Kit::select()->size($size)->color($color)->font()->text()->spacing()->background()->outline(),
-    'select-none bg-select bg-no-repeat appearance-none inline-block',
-]) !!} @disabled($disabled) @required($required)
+<select {!! $attributes->class(['el-select el-text el-bg el-outline el-ring']) !!} data-size="{{ $size }}" data-color="{{ $color }}"
+    @disabled($disabled) @required($required)
     @if ($tooltip) x-tooltip.raw="{!! $tooltip !!}" @endif>
     {{ $slot }}
 </select>

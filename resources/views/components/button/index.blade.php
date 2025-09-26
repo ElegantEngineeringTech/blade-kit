@@ -1,5 +1,7 @@
 @props([
+    'tag' => null,
     'size' => 'base',
+    'colorChecked' => 'black',
     'icon' => null,
     'iconRight' => null,
     'content' => null,
@@ -8,11 +10,14 @@
     'loading' => false,
     'badge' => null,
     'before' => null,
+    'input' => null,
     'after' => null,
 ])
 
 @php
     $target = $attributes->get('wire:target');
+    $tag = $input ? $tag ?? 'label' : null;
+    $colorChecked = $input ? $colorChecked : null;
 @endphp
 
 <x-kit::button.base :attributes="$attributes->when(
@@ -21,8 +26,9 @@
         'wire:loading.attr' => 'disabled',
         'wire:loading.class' => 'pointer-events-none',
     ]),
-)" :size="$size">
+)" :size="$size" :color-checked="$colorChecked" :tag="$tag">
     {!! $before !!}
+    {!! $input !!}
 
     @if ($icon)
         @php

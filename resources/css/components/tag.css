@@ -1,0 +1,76 @@
+@layer components {
+    .el-tag {
+        @apply font-semibold relative align-middle inline-flex items-center whitespace-nowrap;
+
+        & .el-tag-content {
+            @apply inline-block grow text-center;
+        }
+
+        & .el-tag-content + .el-tag-button {
+            @apply ml-1;
+        }
+
+        & .el-tag-icon {
+            @apply shrink-0 inline-block leading-none;
+        }
+
+        &[data-size="2xs"] {
+            & .el-tag-button {
+                @apply -my-1 -mr-2;
+            }
+            & .el-tag-icon {
+                @apply size-4 p-px text-sm;
+            }
+        }
+
+        &[data-size="xs"] {
+            & .el-tag-button {
+                @apply -my-1.5 -mr-2.5;
+            }
+
+            & .el-tag-icon {
+                @apply size-4 text-base;
+            }
+        }
+
+        &[data-size="sm"] {
+            & .el-tag-button {
+                @apply -my-1.5 -mr-2.5;
+            }
+
+            & .el-tag-icon {
+                @apply size-5 p-0.5 text-base;
+            }
+        }
+
+        &[data-size="md"] .el-tag-button,
+        &[data-size="base"] {
+            & .el-tag-button {
+                @apply -my-2 -mr-3;
+            }
+            & .el-tag-icon {
+                @apply size-5 p-0.5 text-base;
+            }
+        }
+
+        &[data-size="lg"] {
+            & .el-tag-button {
+                @apply -my-2 -mr-3;
+            }
+
+            & .el-tag-icon {
+                @apply size-6 p-0.5 text-xl;
+            }
+        }
+
+        &[data-size="xl"] {
+            & .el-tag-button {
+                @apply -my-2 -mr-3;
+            }
+
+            & .el-tag-icon {
+                @apply size-7 p-0.5;
+            }
+        }
+    }
+}

@@ -32,3 +32,5 @@ testbench.yaml
 /docs
 /coverage
 storage
+
+*.hot

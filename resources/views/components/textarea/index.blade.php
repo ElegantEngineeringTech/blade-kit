@@ -7,14 +7,9 @@
     'spellcheck' => 'true',
 ])
 
-<textarea
-    {{ $attributes->class([
-            \Elegantly\Kit\Facades\Kit::input()->size($size)->color($color)->font()->spacing()->background()->outline(),
-            //
-        ])->style([
-            'field-sizing: content' => $autosized,
-        ]) }}
-    rows="{{ $rows }}" autocomplete="{{ $autocomplete }}" spellcheck="{{ $spellcheck }}"
+<textarea {{ $attributes->class(['el-spacing el-bg el-outline']) }} data-size="{{ $size }}"
+    data-color="{{ $color }}" @if ($autosized) data-autosized @endif rows="{{ $rows }}"
+    autocomplete="{{ $autocomplete }}" spellcheck="{{ $spellcheck }}"
     {{ when($autocomplete === 'off', 'data-1p-ignore data-bwignore data-lpignore="true" data-form-type="other"') }}
     x-data="{
         native: false,

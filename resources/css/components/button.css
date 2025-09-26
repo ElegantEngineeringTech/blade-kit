@@ -1,0 +1,94 @@
+@layer components {
+    .el-button {
+        @apply shrink-0 relative align-middle inline-flex items-center outline-offset-2 transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 active:outline-2;
+
+        & input {
+            @apply pointer-events-none absolute left-0 top-0 size-full appearance-none opacity-0;
+        }
+
+        .el-button-icon {
+            @apply relative shrink-0 leading-none;
+        }
+
+        &[data-size="2xs"] .el-button-icon {
+            @apply size-4 p-px text-sm;
+        }
+
+        &[data-size="xs"] .el-button-icon {
+            @apply size-4 text-base;
+        }
+
+        &[data-size="sm"] .el-button-icon,
+        &[data-size="base"] .el-button-icon,
+        &[data-size="md"] .el-button-icon {
+            @apply size-5 p-0.5 text-base;
+        }
+
+        &[data-size="lg"] .el-button-icon {
+            @apply size-6 p-0.5 text-xl;
+        }
+
+        &[data-size="xl"] .el-button-icon {
+            @apply size-7 p-0.5;
+        }
+
+        &[data-color="black"] {
+            @apply hover:bg-gray-700 hover:text-white dark:hover:bg-zinc-300 dark:hover:text-black has-checked:bg-black has-checked:text-white;
+        }
+        &[data-color="white"] {
+            @apply hover:bg-gray-100 hover:text-black dark:hover:bg-zinc-900 dark:hover:text-white has-checked:bg-white has-checked:text-black;
+        }
+        &[data-color="gray"] {
+            @apply hover:bg-gray-200 hover:text-gray-900;
+        }
+        &[data-color="sky"] {
+            @apply hover:bg-sky-600 hover:text-white has-checked:bg-sky-500 has-checked:text-white;
+        }
+        &[data-color="sky-light"] {
+            @apply hover:bg-sky-400/40 hover:text-sky-800;
+        }
+        &[data-color="emerald"] {
+            @apply hover:bg-emerald-600 hover:text-white has-checked:bg-emerald-500 has-checked:text-white;
+        }
+        &[data-color="emerald-light"] {
+            @apply hover:bg-emerald-400/40 hover:text-emerald-800;
+        }
+        &[data-color="rose"] {
+            @apply hover:bg-rose-600 hover:text-white has-checked:bg-rose-500 has-checked:text-white;
+        }
+        &[data-color="rose-light"] {
+            @apply hover:bg-rose-400/40 hover:text-rose-800;
+        }
+        &[data-color="purple"] {
+            @apply hover:bg-purple-600 hover:text-white has-checked:bg-purple-500 has-checked:text-white;
+        }
+        &[data-color="purple-light"] {
+            @apply hover:bg-purple-400/40 hover:text-purple-800;
+        }
+        &[data-color="amber"] {
+            @apply hover:bg-amber-600 hover:text-white has-checked:bg-amber-500 has-checked:text-white;
+        }
+        &[data-color="amber-light"] {
+            @apply hover:bg-amber-400/40 hover:text-amber-800;
+        }
+
+        &[data-color-checked="black"] {
+            @apply has-checked:bg-black has-checked:text-white;
+        }
+        &[data-color-checked="white"] {
+            @apply has-checked:bg-white has-checked:text-black;
+        }
+        &[data-color-checked="sky"] {
+            @apply has-checked:bg-sky-500 has-checked:text-white;
+        }
+        &[data-color-checked="rose"] {
+            @apply has-checked:bg-rose-500 has-checked:text-white;
+        }
+        &[data-color-checked="amber"] {
+            @apply has-checked:bg-amber-500 has-checked:text-white;
+        }
+        &[data-color-checked="emerald"] {
+            @apply has-checked:bg-emerald-500 has-checked:text-white;
+        }
+    }
+}

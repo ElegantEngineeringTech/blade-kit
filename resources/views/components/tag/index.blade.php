@@ -20,11 +20,10 @@
 
     @if ($slot->hasActualContent() || $content)
         <span @class([
-            'inline-block grow text-center',
+            'el-tag-content',
             'truncate' => $truncate,
             'ml-2' => $icon,
             'mr-2' => $iconRight,
-            'mr-1' => $button,
             $content?->attributes->get('class'),
         ])>
             {{ $content ?? $slot }}
@@ -39,7 +38,7 @@
     @endif
 
     @if ($button)
-        <span @class([\Elegantly\Kit\Facades\Kit::tag()->size($size)->button()])>
+        <span class="el-tag-button">
             {{ $button }}
         </span>
     @endif

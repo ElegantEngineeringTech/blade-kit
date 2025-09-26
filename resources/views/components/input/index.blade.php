@@ -1,37 +1,49 @@
 @props([
     'icon' => null,
     'iconRight' => null,
-    'class' => null,
-    'classInput' => null,
-    'style' => null,
+    'start' => null,
+    'end' => null,
     'size' => 'base',
     'color' => 'white',
 ])
 
-<div @class([$class, 'relative w-full']) @style($style)>
+<div {{ $attributes->class(['el-input el-text el-bg el-outline el-border el-ring']) }} data-size="{{ $size }}"
+    data-color="{{ $color }}">
 
-    @if ($icon)
-        @php
-            $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
-        @endphp
+    {{ $start }}
 
-        <x-kit::input.icon :icon="$icon" :size="$size" :color="$color" :attributes="$iconAttributes->class(['left-0'])" />
-    @endif
+    <div class="relative flex">
 
-    <x-kit::input.base :size="$size" :color="$color" :attributes="$attributes->class([
-        \Elegantly\Kit\Facades\Kit::input()->size($size)->spacingIconLeft()->value() => $icon,
-        \Elegantly\Kit\Facades\Kit::input()->size($size)->spacingIconRight()->value() => $iconRight,
-        'rounded-[inherit]',
-        'w-full',
-        $classInput,
-    ])" />
+        @if ($icon)
+            @php
+                $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
+            @endphp
 
-    @if ($iconRight)
-        @php
-            $iconAttributes = is_object($icon) ? $iconRight->attributes : new \Illuminate\View\ComponentAttributeBag();
-        @endphp
+            <x-kit::input.icon :attributes="$iconAttributes">
+                {{ $icon }}
+            </x-kit::input.icon>
+        @endif
 
-        <x-kit::input.icon :icon="$iconRight" :size="$size" :color="$color" :attributes="$iconAttributes->class(['right-0'])" />
-    @endif
+        @if ($slot)
+            {{ $slot }}
+        @else
+            <input type="text" />
+        @endif
+
+        @if ($iconRight)
+            @php
+                $iconAttributes = is_object($icon)
+                    ? $iconRight->attributes
+                    : new \Illuminate\View\ComponentAttributeBag();
+            @endphp
+
+            <x-kit::input.icon :attributes="$iconAttributes">
+                {{ $iconRight }}
+            </x-kit::input.icon>
+        @endif
+
+    </div>
+
+    {{ $end }}
 
 </div>

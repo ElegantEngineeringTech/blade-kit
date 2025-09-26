@@ -1,0 +1,69 @@
+@layer components {
+    .el-switch {
+        @apply appearance-none w-10 h-0 cursor-pointer inline-block border-0 
+                before:absolute before:top-0 before:inline-block before:rounded-full before:outline-offset-2 before:w-10 before:h-full before:shadow-[inset_0_0_#000]
+                dark:before:bg-gray-600
+                after:absolute after:top-0 after:block after:rounded-full after:w-5 after:h-5 after:mt-0.5 after:ml-0.5 after:shadow-md after:duration-100 after:bg-white
+                dark:after:bg-gray-50
+                checked:after:duration-300 checked:after:translate-x-4
+                disabled:cursor-not-allowed disabled:opacity-50
+                focus:ring-offset-transparent focus:ring-transparent focus-within:ring-0 focus:shadow-none focus:before:outline-2
+                dark:border-0 dark:focus:ring-offset-transparent dark:focus:ring-transparent dark:focus-within:ring-0 dark:focus:shadow-none;
+
+        &[data-color="white"] {
+            @apply before:bg-gray-300 checked:before:bg-white dark:before:bg-gray-600 dark:checked:before:bg-black;
+        }
+        &[data-color="black"] {
+            @apply before:bg-gray-300 checked:before:bg-black dark:before:bg-gray-600 dark:checked:before:bg-white;
+        }
+        &[data-color="gray"] {
+            @apply before:bg-gray-300 checked:before:bg-gray-500 dark:before:bg-gray-600 dark:checked:before:bg-white;
+        }
+        &[data-color="emerald"] {
+            @apply before:bg-gray-300 checked:before:bg-emerald-500 dark:before:bg-gray-600 dark:checked:before:bg-emerald-700;
+        }
+        &[data-color="sky"] {
+            @apply before:bg-gray-300 checked:before:bg-sky-500 dark:before:bg-gray-600 dark:checked:before:bg-sky-700;
+        }
+        &[data-color="rose"] {
+            @apply before:bg-gray-300 checked:before:bg-rose-500 dark:before:bg-gray-600 dark:checked:before:bg-rose-700;
+        }
+        &[data-color="purple"] {
+            @apply before:bg-gray-300 checked:before:bg-purple-500 dark:before:bg-gray-600 dark:checked:before:bg-purple-700;
+        }
+        &[data-color="yellow"] {
+            @apply before:bg-gray-300 checked:before:bg-yellow-500 dark:before:bg-gray-600 dark:checked:before:bg-yellow-700;
+        }
+        &[data-color="amber"] {
+            @apply before:bg-gray-300 checked:before:bg-amber-500 dark:before:bg-gray-600 dark:checked:before:bg-amber-700;
+        }
+
+        &[data-color="white"] {
+            @apply before:outline-black;
+        }
+        &[data-color="black"] {
+            @apply before:outline-black;
+        }
+        &[data-color="gray"] {
+            @apply before:outline-gray-200;
+        }
+        &[data-color="sky"] {
+            @apply before:outline-sky-500;
+        }
+        &[data-color="emerald"] {
+            @apply before:outline-emerald-500;
+        }
+        &[data-color="rose"] {
+            @apply before:outline-rose-500;
+        }
+        &[data-color="purple"] {
+            @apply before:outline-purple-500;
+        }
+        &[data-color="yellow"] {
+            @apply before:outline-yellow-500;
+        }
+        &[data-color="amber"] {
+            @apply before:outline-amber-500;
+        }
+    }
+}
