@@ -16,7 +16,7 @@
 
 @php
     $target = $attributes->get('wire:target');
-    $tag = $input ? $tag ?? 'label' : null;
+    $tag = $tag ?? ($input ? 'label' : null);
     $colorChecked = $input ? $colorChecked : null;
 @endphp
 
