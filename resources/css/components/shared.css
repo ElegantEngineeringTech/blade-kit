@@ -29,8 +29,8 @@
 
     .el-text {
         &[data-size="2xs"],
-        &[data-size="xs"],
         &.el-size-2xs,
+        &[data-size="xs"],
         &.el-size-xs {
             @apply text-xs;
         }
@@ -69,236 +69,305 @@
     }
 
     .el-bg {
-        &[data-color="white"] {
+        &[data-color="white"],
+        &.el-color-white {
             @apply bg-white text-black ring-gray-200 dark:bg-zinc-800 dark:text-white dark:ring-zinc-700;
         }
 
-        &[data-color="black"] {
+        &[data-color="black"],
+        &.el-color-black {
             @apply bg-black text-white ring-black dark:bg-white dark:text-black placeholder:text-white/60;
         }
 
-        &[data-color="gray"] {
+        &[data-color="gray"],
+        &.el-color-gray {
             @apply bg-gray-100 text-gray-600 ring-gray-100;
         }
 
-        &[data-color="gray-light"] {
+        &[data-color="gray-light"],
+        &.el-color-gray-light {
             @apply bg-gray-400/20 text-gray-800 ring-gray-400/20;
         }
 
-        &[data-color="sky"] {
+        &[data-color="sky"],
+        &.el-color-sky {
             @apply bg-sky-500 text-white ring-sky-500 placeholder:text-white/60;
         }
 
-        &[data-color="sky-light"] {
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
             @apply bg-sky-400/20 text-sky-800 ring-sky-400/20 placeholder:text-sky-800/40;
         }
 
-        &[data-color="emerald"] {
+        &[data-color="emerald"],
+        &.el-color-emerald {
             @apply bg-emerald-500 text-white ring-emerald-500 placeholder:text-white/60;
         }
 
-        &[data-color="emerald-light"] {
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
             @apply bg-emerald-400/20 text-emerald-800 ring-emerald-400/20 placeholder:text-emerald-800/40;
         }
 
-        &[data-color="rose"] {
+        &[data-color="rose"],
+        &.el-color-rose {
             @apply bg-rose-500 text-white ring-rose-500 placeholder:text-white/60;
         }
 
-        &[data-color="rose-light"] {
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
             @apply bg-rose-400/20 text-rose-800 ring-rose-400/20 placeholder:text-rose-800/40;
         }
 
-        &[data-color="purple"] {
+        &[data-color="purple"],
+        &.el-color-purple {
             @apply bg-purple-500 text-white ring-purple-500 placeholder:text-white/60;
         }
 
-        &[data-color="purple-light"] {
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
             @apply bg-purple-400/20 text-purple-800 ring-purple-400/20 placeholder:text-purple-800/40;
         }
 
-        &[data-color="yellow"] {
+        &[data-color="yellow"],
+        &.el-color-yellow {
             @apply bg-yellow-500 text-white ring-yellow-400/20 placeholder:text-white/60;
         }
 
-        &[data-color="yellow-light"] {
+        &[data-color="yellow-light"],
+        &.el-color-yellow-light {
             @apply bg-yellow-400/20 text-yellow-800 ring-yellow-400/20 placeholder:text-yellow-800/40;
         }
 
-        &[data-color="amber"] {
+        &[data-color="amber"],
+        &.el-color-amber {
             @apply bg-amber-500 text-white ring-amber-400/20 placeholder:text-white/60;
         }
 
-        &[data-color="amber-light"] {
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
             @apply bg-amber-400/20 text-amber-800 ring-amber-400/20 placeholder:text-amber-800/40;
         }
 
-        &[data-color="transparent"] {
+        &[data-color="transparent"],
+        &.el-color-transparent {
             @apply bg-transparent text-inherit border-transparent;
         }
     }
 
     .el-ring {
-        &[data-color="black"] {
+        &[data-color="black"],
+        &.el-color-black {
             @apply ring-black;
         }
-        &[data-color="gray"] {
+        &[data-color="gray"],
+        &.el-color-gray {
             @apply ring-gray-200;
         }
-        &[data-color="gray-light"] {
+        &[data-color="gray-light"],
+        &.el-color-gray-light {
             @apply ring-gray-100;
         }
-        &[data-color="sky"] {
+        &[data-color="sky"],
+        &.el-color-sky {
             @apply ring-sky-600;
         }
-        &[data-color="sky-light"] {
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
             @apply ring-sky-500;
         }
-        &[data-color="emerald"] {
+        &[data-color="emerald"],
+        &.el-color-emerald {
             @apply ring-emerald-600;
         }
-        &[data-color="emerald-light"] {
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
             @apply ring-emerald-500;
         }
-        &[data-color="rose"] {
+        &[data-color="rose"],
+        &.el-color-rose {
             @apply ring-rose-600;
         }
-        &[data-color="rose-light"] {
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
             @apply ring-rose-500;
         }
-        &[data-color="purple"] {
+        &[data-color="purple"],
+        &.el-color-purple {
             @apply ring-purple-600;
         }
-        &[data-color="purple-light"] {
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
             @apply ring-purple-500;
         }
-        &[data-color="yellow"] {
+        &[data-color="yellow"],
+        &.el-color-yellow {
             @apply ring-yellow-600;
         }
-        &[data-color="yellow-light"] {
+        &[data-color="yellow-light"],
+        &.el-color-yellow-light {
             @apply ring-yellow-500;
         }
-        &[data-color="amber"] {
+        &[data-color="amber"],
+        &.el-color-amber {
             @apply ring-amber-600;
         }
-        &[data-color="amber-light"] {
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
             @apply ring-amber-500;
         }
-        &[data-color="glass"] {
+        &[data-color="glass"],
+        &.el-color-glass {
             @apply ring-white;
         }
-        &[data-color="transparent"] {
+        &[data-color="transparent"],
+        &.el-color-transparent {
             @apply ring-transparent;
         }
     }
 
     .el-outline {
-        &[data-color="white"] {
+        &[data-color="white"],
+        &.el-color-white {
             @apply outline-black;
         }
-        &[data-color="black"] {
+        &[data-color="black"],
+        &.el-color-black {
             @apply outline-black;
         }
-        &[data-color="gray"] {
+        &[data-color="gray"],
+        &.el-color-gray {
             @apply outline-gray-200;
         }
-        &[data-color="gray-light"] {
+        &[data-color="gray-light"],
+        &.el-color-gray-light {
             @apply outline-gray-100;
         }
-        &[data-color="sky"] {
+        &[data-color="sky"],
+        &.el-color-sky {
             @apply outline-sky-500;
         }
-        &[data-color="sky-light"] {
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
             @apply outline-sky-500;
         }
-        &[data-color="emerald"] {
+        &[data-color="emerald"],
+        &.el-color-emerald {
             @apply outline-emerald-500;
         }
-        &[data-color="emerald-light"] {
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
             @apply outline-emerald-500;
         }
-        &[data-color="rose"] {
+        &[data-color="rose"],
+        &.el-color-rose {
             @apply outline-rose-500;
         }
-        &[data-color="rose-light"] {
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
             @apply outline-rose-500;
         }
-        &[data-color="purple"] {
+        &[data-color="purple"],
+        &.el-color-purple {
             @apply outline-purple-500;
         }
-        &[data-color="purple-light"] {
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
             @apply outline-purple-500;
         }
-        &[data-color="yellow"] {
+        &[data-color="yellow"],
+        &.el-color-yellow {
             @apply outline-yellow-500;
         }
-        &[data-color="yellow-light"] {
+        &[data-color="yellow-light"],
+        &.el-color-yellow-light {
             @apply outline-yellow-500;
         }
-        &[data-color="amber"] {
+        &[data-color="amber"],
+        &.el-color-amber {
             @apply outline-amber-500;
         }
-        &[data-color="amber-light"] {
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
             @apply outline-amber-500;
         }
-        &[data-color="glass"] {
+        &[data-color="glass"],
+        &.el-color-glass {
             @apply outline-black;
         }
-        &[data-color="transparent"] {
+        &[data-color="transparent"],
+        &.el-color-transparent {
             @apply outline-transparent;
         }
     }
 
     .el-border {
-        &[data-color="black"] {
+        &[data-color="black"],
+        &.el-color-black {
             @apply border-black;
         }
-        &[data-color="gray"] {
+        &[data-color="gray"],
+        &.el-color-gray {
             @apply border-gray-200;
         }
-        &[data-color="gray-light"] {
+        &[data-color="gray-light"],
+        &.el-color-gray-light {
             @apply border-gray-100;
         }
-        &[data-color="sky"] {
+        &[data-color="sky"],
+        &.el-color-sky {
             @apply border-sky-600;
         }
-        &[data-color="sky-light"] {
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
             @apply border-sky-500;
         }
-        &[data-color="emerald"] {
+        &[data-color="emerald"],
+        &.el-color-emerald {
             @apply border-emerald-600;
         }
-        &[data-color="emerald-light"] {
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
             @apply border-emerald-500;
         }
-        &[data-color="rose"] {
+        &[data-color="rose"],
+        &.el-color-rose {
             @apply border-rose-600;
         }
-        &[data-color="rose-light"] {
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
             @apply border-rose-500;
         }
-        &[data-color="purple"] {
+        &[data-color="purple"],
+        &.el-color-purple {
             @apply border-purple-600;
         }
-        &[data-color="purple-light"] {
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
             @apply border-purple-500;
         }
-        &[data-color="yellow"] {
+        &[data-color="yellow"],
+        &.el-color-yellow {
             @apply border-yellow-600;
         }
-        &[data-color="yellow-light"] {
+        &[data-color="yellow-light"],
+        &.el-color-yellow-light {
             @apply border-yellow-500;
         }
-        &[data-color="amber"] {
+        &[data-color="amber"],
+        &.el-color-amber {
             @apply border-amber-600;
         }
-        &[data-color="amber-light"] {
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
             @apply border-amber-500;
         }
-        &[data-color="glass"] {
+        &[data-color="glass"],
+        &.el-color-glass {
             @apply border-white;
         }
-        &[data-color="transparent"] {
+        &[data-color="transparent"],
+        &.el-color-transparent {
             @apply border-transparent;
         }
     }

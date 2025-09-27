@@ -14,7 +14,8 @@
             @apply shrink-0 inline-block leading-none;
         }
 
-        &[data-size="2xs"] {
+        &[data-size="2xs"],
+        &.el-size-2xs {
             & .el-tag-button {
                 @apply -my-1 -mr-2;
             }
@@ -23,7 +24,8 @@
             }
         }
 
-        &[data-size="xs"] {
+        &[data-size="xs"],
+        &.el-size-xs {
             & .el-tag-button {
                 @apply -my-1.5 -mr-2.5;
             }
@@ -33,7 +35,8 @@
             }
         }
 
-        &[data-size="sm"] {
+        &[data-size="sm"],
+        &.el-size-sm {
             & .el-tag-button {
                 @apply -my-1.5 -mr-2.5;
             }
@@ -43,8 +46,10 @@
             }
         }
 
-        &[data-size="md"] .el-tag-button,
-        &[data-size="base"] {
+        &[data-size="md"],
+        &.el-size-md,
+        &[data-size="base"],
+        &.el-size-base {
             & .el-tag-button {
                 @apply -my-2 -mr-3;
             }
@@ -53,7 +58,8 @@
             }
         }
 
-        &[data-size="lg"] {
+        &[data-size="lg"],
+        &.el-size-lg {
             & .el-tag-button {
                 @apply -my-2 -mr-3;
             }
@@ -63,7 +69,8 @@
             }
         }
 
-        &[data-size="xl"] {
+        &[data-size="xl"],
+        &.el-size-xl {
             & .el-tag-button {
                 @apply -my-2 -mr-3;
             }
