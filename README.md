@@ -18,7 +18,7 @@ composer require elegantly/blade-kit
 To make it work with tailwindcss v4, you must add the following lines to your `app.css`.
 
 ```css
-@import "../../vendor/elegantly/blade-kit/styles.css";
+@import "../../vendor/elegantly/blade-kit/resources/css/styles.css";
 @source "../../vendor/elegantly/blade-kit/resources/views/**/*.blade.php";
 ```
 

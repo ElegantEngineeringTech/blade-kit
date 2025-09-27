@@ -125,6 +125,29 @@
 
         <div class="isolate flex flex-col">
             <div class="p-3">
+                <h1 class="font-semibold">Segments</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <div class="*:has-checked:shadow-sm flex rounded-lg bg-gray-100 p-1 *:rounded-md">
+                    <x-kit::button color-checked="white">
+                        <x-slot:input>
+                            <input type="radio" name="segment" value="1" checked />
+                        </x-slot:input>
+                        Home
+                    </x-kit::button>
+
+                    <x-kit::button color-checked="white">
+                        <x-slot:input>
+                            <input type="radio" name="segment" value="2" />
+                        </x-slot:input>
+                        Settings
+                    </x-kit::button>
+                </div>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
                 <h1 class="font-semibold">Tag</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
@@ -355,11 +378,11 @@
                 <h1 class="font-semibold">Input</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::input color="white" class="items-center rounded-md ring-1 ring-inset">
+                <x-kit::input color="white" size="lg" class="items-center rounded-md ring-1 ring-inset">
 
                     <x-slot:start>
-                        <x-kit::tag size="xs" color="gray" class="ml-1 rounded">
-                            tag
+                        <x-kit::tag size="sm" color="gray" class="ml-1 rounded">
+                            EUR
                         </x-kit::tag>
                     </x-slot:start>
 
@@ -374,8 +397,8 @@
                     </x-kit::input.icon>
 
                     <x-slot:end>
-                        <x-kit::button size="xs" color="black" class="mr-1 rounded">
-                            button
+                        <x-kit::button size="sm" color="black" class="mr-1 rounded">
+                            New
 
                             <x-slot:icon-right>
                                 <iconify-icon icon="heroicons:plus"></iconify-icon>
@@ -393,7 +416,8 @@
                 <h1 class="font-semibold">Input</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::input.base class="rounded-md ring-1 ring-inset" color="white" placeholder="Placeholder" />
+                <x-kit::input.base color="white" size="lg" class="rounded-md ring-1 ring-inset"
+                    placeholder="Placeholder" />
             </div>
         </div>
 
@@ -403,7 +427,8 @@
                 <h1 class="font-semibold">Textarea</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::textarea color="white" autosized class="w-1/2 rounded-md ring-1 ring-inset" />
+                <x-kit::textarea color="white" size="lg" autosized
+                    class="w-1/2 rounded-md ring-1 ring-inset" />
             </div>
         </div>
 

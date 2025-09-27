@@ -1,6 +1,10 @@
 @layer components {
     .el-button {
-        @apply shrink-0 relative align-middle inline-flex items-center outline-offset-2 transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 active:outline-2;
+        @apply shrink-0 relative align-middle inline-flex items-center outline-offset-2 transition-colors cursor-pointer
+                disabled:cursor-not-allowed disabled:opacity-50
+                focus-visible:outline-2
+                active:outline-2
+                has-focus-visible:outline-2;
 
         & input {
             @apply pointer-events-none absolute left-0 top-0 size-full appearance-none opacity-0;
@@ -40,62 +44,62 @@
         }
 
         &[data-color="black"] {
-            @apply hover:bg-gray-700 hover:text-white dark:hover:bg-zinc-300 dark:hover:text-black has-checked:bg-black has-checked:text-white;
+            @apply hover:bg-gray-700 hover:text-white dark:hover:bg-zinc-300 dark:hover:text-black;
         }
         &[data-color="white"] {
-            @apply hover:bg-gray-100 hover:text-black dark:hover:bg-zinc-900 dark:hover:text-white has-checked:bg-white has-checked:text-black;
+            @apply hover:bg-gray-100 hover:text-black dark:hover:bg-zinc-900 dark:hover:text-white;
         }
         &[data-color="gray"] {
             @apply hover:bg-gray-200 hover:text-gray-900;
         }
         &[data-color="sky"] {
-            @apply hover:bg-sky-600 hover:text-white has-checked:bg-sky-500 has-checked:text-white;
+            @apply hover:bg-sky-600 hover:text-white;
         }
         &[data-color="sky-light"] {
             @apply hover:bg-sky-400/40 hover:text-sky-800;
         }
         &[data-color="emerald"] {
-            @apply hover:bg-emerald-600 hover:text-white has-checked:bg-emerald-500 has-checked:text-white;
+            @apply hover:bg-emerald-600 hover:text-white;
         }
         &[data-color="emerald-light"] {
             @apply hover:bg-emerald-400/40 hover:text-emerald-800;
         }
         &[data-color="rose"] {
-            @apply hover:bg-rose-600 hover:text-white has-checked:bg-rose-500 has-checked:text-white;
+            @apply hover:bg-rose-600 hover:text-white;
         }
         &[data-color="rose-light"] {
             @apply hover:bg-rose-400/40 hover:text-rose-800;
         }
         &[data-color="purple"] {
-            @apply hover:bg-purple-600 hover:text-white has-checked:bg-purple-500 has-checked:text-white;
+            @apply hover:bg-purple-600 hover:text-white;
         }
         &[data-color="purple-light"] {
             @apply hover:bg-purple-400/40 hover:text-purple-800;
         }
         &[data-color="amber"] {
-            @apply hover:bg-amber-600 hover:text-white has-checked:bg-amber-500 has-checked:text-white;
+            @apply hover:bg-amber-600 hover:text-white;
         }
         &[data-color="amber-light"] {
             @apply hover:bg-amber-400/40 hover:text-amber-800;
         }
 
         &[data-color-checked="black"] {
-            @apply has-checked:bg-black has-checked:text-white;
+            @apply has-checked:bg-black has-checked:text-white has-checked:ring-black has-checked:border-black;
         }
         &[data-color-checked="white"] {
             @apply has-checked:bg-white has-checked:text-black;
         }
         &[data-color-checked="sky"] {
-            @apply has-checked:bg-sky-500 has-checked:text-white;
+            @apply has-checked:bg-sky-500 has-checked:text-white has-checked:ring-sky-600 has-checked:border-sky-600;
         }
         &[data-color-checked="rose"] {
-            @apply has-checked:bg-rose-500 has-checked:text-white;
+            @apply has-checked:bg-rose-500 has-checked:text-white has-checked:ring-rose-600 has-checked:border-rose-600;
         }
         &[data-color-checked="amber"] {
-            @apply has-checked:bg-amber-500 has-checked:text-white;
+            @apply has-checked:bg-amber-500 has-checked:text-white has-checked:ring-amber-600 has-checked:border-amber-600;
         }
         &[data-color-checked="emerald"] {
-            @apply has-checked:bg-emerald-500 has-checked:text-white;
+            @apply has-checked:bg-emerald-500 has-checked:text-white has-checked:ring-emerald-600 has-checked:border-emerald-600;
         }
     }
 }
