@@ -3,9 +3,14 @@
         @apply flex has-focus-visible:outline-2;
 
         & input {
-            @apply outline-none text-inherit placeholder:text-black/40;
+            @apply outline-none text-inherit;
             font-size: inherit;
             line-height: inherit;
+        }
+
+        & input,
+        input& {
+            @apply placeholder:text-black/40;
         }
 
         & .el-input-icon {
@@ -16,8 +21,10 @@
             @apply right-0;
         }
 
-        &[data-size="2xs"] {
-            & input {
+        &[data-size="2xs"],
+        &.el-size-2xs {
+            & input,
+            input& {
                 @apply px-2 py-1 min-w-6;
             }
 
@@ -26,8 +33,10 @@
             }
         }
 
-        &[data-size="xs"] {
-            & input {
+        &[data-size="xs"],
+        &.el-size-xs {
+            & input,
+            input& {
                 @apply px-2.5 py-1.5 min-w-7;
             }
 
@@ -40,8 +49,10 @@
             }
         }
 
-        &[data-size="sm"] {
-            & input {
+        &[data-size="sm"],
+        &.el-size-sm {
+            & input,
+            input& {
                 @apply px-2.5 py-1.5 min-w-8;
             }
 
@@ -59,8 +70,11 @@
         }
 
         &[data-size="base"],
-        &[data-size="md"] {
-            & input {
+        &.el-size-base,
+        &[data-size="md"],
+        &.el-size-md {
+            & input,
+            input& {
                 @apply px-3 py-2 min-w-9;
             }
 
@@ -77,8 +91,10 @@
             }
         }
 
-        &[data-size="lg"] {
-            & input {
+        &[data-size="lg"],
+        &.el-size-lg {
+            & input,
+            input& {
                 @apply px-3 py-2 min-w-9;
             }
 
@@ -94,8 +110,11 @@
                 @apply pe-10;
             }
         }
-        &[data-size="xl"] {
-            & input {
+
+        &[data-size="xl"],
+        &.el-size-xl {
+            & input,
+            input& {
                 @apply px-3 py-2 min-w-9;
             }
 

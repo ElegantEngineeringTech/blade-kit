@@ -1,52 +1,69 @@
 @layer components {
     .el-spacing {
-        &[data-size="2xs"] {
+        &[data-size="2xs"],
+        &.el-size-2xs {
             @apply px-2 py-1 min-w-6;
         }
 
-        &[data-size="xs"] {
+        &[data-size="xs"],
+        &.el-size-xs {
             @apply px-2.5 py-1.5 min-w-7;
         }
 
-        &[data-size="sm"] {
+        &[data-size="sm"],
+        &.el-size-sm {
             @apply px-2.5 py-1.5 min-w-8;
         }
 
         &[data-size="base"],
+        &.el-size-base,
         &[data-size="md"],
+        &.el-size-md,
         &[data-size="lg"],
-        &[data-size="xl"] {
+        &.el-size-lg,
+        &[data-size="xl"],
+        &.el-size-xl {
             @apply px-3 py-2 min-w-9;
         }
     }
 
     .el-text {
         &[data-size="2xs"],
-        &[data-size="xs"] {
+        &[data-size="xs"],
+        &.el-size-2xs,
+        &.el-size-xs {
             @apply text-xs;
         }
 
         &[data-size="sm"],
+        &.el-size-sm,
         &[data-size="base"],
-        &[data-size="md"] {
+        &.el-size-base,
+        &[data-size="md"],
+        &.el-size-md {
             @apply text-sm;
         }
 
-        &[data-size="lg"] {
+        &[data-size="lg"],
+        &.el-size-lg {
             @apply text-base;
         }
 
-        &[data-size="xl"] {
+        &[data-size="xl"],
+        &.el-size-xl {
             @apply text-lg;
         }
 
-        &[data-size="2xl"] {
+        &[data-size="2xl"],
+        &.el-size-2xl {
             @apply text-xl;
         }
-        &[data-size="3xl"] {
+        &[data-size="3xl"],
+        &.el-size-3xl {
             @apply text-2xl leading-normal;
         }
-        &[data-size="4xl"] {
+        &[data-size="4xl"],
+        &.el-size-4xl {
             @apply text-3xl leading-normal;
         }
     }

@@ -388,6 +388,15 @@
         </div>
 
 
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Input</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <x-kit::input.base class="rounded-md ring-1 ring-inset" color="white" placeholder="Placeholder" />
+            </div>
+        </div>
+
 
         <div class="isolate flex flex-col">
             <div class="p-3">

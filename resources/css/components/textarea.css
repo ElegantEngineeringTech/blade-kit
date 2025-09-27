@@ -1,5 +1,7 @@
 @layer components {
-    textarea[data-autosized] {
-        field-sizing: content;
+    .el-textarea {
+        &[autosized] {
+            field-sizing: content;
+        }
     }
 }

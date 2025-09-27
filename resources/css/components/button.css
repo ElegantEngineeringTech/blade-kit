@@ -10,25 +10,32 @@
             @apply relative shrink-0 leading-none;
         }
 
-        &[data-size="2xs"] .el-button-icon {
+        &[data-size="2xs"] .el-button-icon,
+        &.el-size-2xs .el-button-icon {
             @apply size-4 p-px text-sm;
         }
 
-        &[data-size="xs"] .el-button-icon {
+        &[data-size="xs"] .el-button-icon,
+        &.el-size-xs .el-button-icon {
             @apply size-4 text-base;
         }
 
         &[data-size="sm"] .el-button-icon,
+        &.el-size-sm .el-button-icon,
         &[data-size="base"] .el-button-icon,
-        &[data-size="md"] .el-button-icon {
+        &.el-size-base .el-button-icon,
+        &[data-size="md"] .el-button-icon,
+        &.el-size-md .el-button-icon {
             @apply size-5 p-0.5 text-base;
         }
 
-        &[data-size="lg"] .el-button-icon {
+        &[data-size="lg"] .el-button-icon,
+        &.el-size-lg .el-button-icon {
             @apply size-6 p-0.5 text-xl;
         }
 
-        &[data-size="xl"] .el-button-icon {
+        &[data-size="xl"] .el-button-icon,
+        &.el-size-xl .el-button-icon {
             @apply size-7 p-0.5;
         }
 
