@@ -3,7 +3,7 @@
         @apply flex has-focus-visible:outline-2;
 
         & input {
-            @apply outline-none text-inherit;
+            @apply outline-none text-inherit w-full;
             font-size: inherit;
             line-height: inherit;
         }
