@@ -12,7 +12,7 @@
 
     {{ $start }}
 
-    <div class="relative flex">
+    <div class="relative flex min-w-0 grow">
 
         @if ($icon)
             @php
