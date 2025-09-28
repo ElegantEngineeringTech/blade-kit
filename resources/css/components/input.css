@@ -8,6 +8,10 @@
             line-height: inherit;
         }
 
+        input& {
+            @apply block;
+        }
+
         & input,
         input& {
             @apply placeholder:text-black/40;

@@ -1,5 +1,7 @@
 @layer components {
     .el-textarea {
+        @apply block;
+
         &[autosized] {
             field-sizing: content;
         }
