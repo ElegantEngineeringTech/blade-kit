@@ -355,16 +355,25 @@
             <div class="p-3">
                 <h1 class="font-semibold">Switch</h1>
             </div>
-            <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::switch>
-                    Switch
-                </x-kit::switch>
-                <x-kit::switch class="text-sm">
-                    Switch
-                </x-kit::switch>
-                <x-kit::switch>
-                    Switch
-                </x-kit::switch>
+            <div class="flex grow flex-col items-center justify-center gap-3 border-b border-gray-200">
+                <div>
+                    <x-kit::switch class="" checked />
+                    <x-kit::switch class="" checked disabled />
+                    <x-kit::switch class="" disabled />
+                </div>
+                <div>
+                    <x-kit::switch class="rounded" />
+                    <x-kit::switch class="rounded-md" />
+                    <x-kit::switch class="rounded-lg" />
+                    <x-kit::switch class="" />
+
+                </div>
+                <div>
+                    <x-kit::switch class="text-xs" />
+                    <x-kit::switch class="text-sm" />
+                    <x-kit::switch class="text-base" />
+                    <x-kit::switch class="text-lg" />
+                </div>
             </div>
         </div>
 
@@ -373,9 +382,10 @@
                 <h1 class="font-semibold">Disabled Switch</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::switch disabled checked>
+                <label class="">
+                    <x-kit::switch checked class="text-sm" />
                     Switch
-                </x-kit::switch>
+                </label>
             </div>
         </div>
 

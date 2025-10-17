@@ -1,14 +1,39 @@
 @layer components {
     .el-switch {
-        @apply appearance-none w-10 cursor-pointer inline-block border-0 h-3
-                before:absolute before:top-0 before:inline-block before:rounded-xl before:outline-offset-2 before:w-10 before:h-full before:shadow-[inset_0_0_#000]
+        @apply appearance-none cursor-pointer inline-block border-0 w-10 h-lh relative rounded-xl align-text-bottom
+                before:absolute before:top-0 before:inline-block before:outline-offset-2 before:w-full before:h-full before:shadow-[inset_0_0_#000]
                 dark:before:bg-gray-600
-                after:absolute after:top-0 after:block after:rounded-xl after:w-5 after:h-[calc(100%-4px)] after:mt-0.5 after:ml-0.5 after:shadow-md after:duration-100 after:bg-white
+                after:absolute after:top-0 after:block after:w-1/2 after:m-0.5 after:shadow-md after:duration-100 after:bg-white
                 dark:after:bg-gray-50
-                checked:after:duration-300 checked:after:translate-x-4
+                checked:after:duration-300
                 disabled:cursor-not-allowed disabled:opacity-50
                 focus:ring-offset-transparent focus:ring-transparent focus-within:ring-0 focus:shadow-none focus:before:outline-2
                 dark:border-0 dark:focus:ring-offset-transparent dark:focus:ring-transparent dark:focus-within:ring-0 dark:focus:shadow-none;
+
+        &::before {
+            border-radius: inherit;
+        }
+
+        &::after {
+            border-radius: inherit;
+            height: calc(100% - calc(var(--spacing)));
+        }
+
+        &:checked::after {
+            transform: translateX(calc(100% - calc(var(--spacing))));
+        }
+
+        &.rounded::after {
+            @apply rounded-xs;
+        }
+
+        &.rounded-md::after {
+            @apply rounded;
+        }
+
+        &.rounded-lg::after {
+            @apply rounded-md;
+        }
 
         &[data-color="white"] {
             @apply before:bg-gray-300 checked:before:bg-white dark:before:bg-gray-600 dark:checked:before:bg-black;

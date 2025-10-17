@@ -1,13 +1,9 @@
 @props([
-    'class' => null,
-    'style' => null,
-    'id' => null,
+    'disabled' => false,
+    'checked' => false,
+    'required' => false,
+    'color' => 'emerald',
 ])
 
-<label @class(['flex items-start gap-2 cursor-pointer', $class]) @style($style)
-    @if ($id) for="{{ $id }}" @endif>
-    <span class="relative">
-        <x-kit::switch.base :attributes="$attributes" :id="$id" />
-    </span>
-    {{ $slot }}
-</label>
+<input {!! $attributes->class(['el-switch']) !!} data-color="{{ $color }}" type="checkbox" @disabled($disabled)
+    @checked($checked) @required($required)>
