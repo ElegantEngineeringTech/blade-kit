@@ -359,6 +359,12 @@
                 <x-kit::switch>
                     Switch
                 </x-kit::switch>
+                <x-kit::switch class="text-sm">
+                    Switch
+                </x-kit::switch>
+                <x-kit::switch>
+                    Switch
+                </x-kit::switch>
             </div>
         </div>
 
