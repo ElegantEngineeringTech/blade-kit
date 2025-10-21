@@ -7,7 +7,6 @@
     'content' => null,
     'offset' => true,
     'loader' => null,
-    'loading' => false,
     'badge' => null,
     'before' => null,
     'input' => null,
@@ -24,7 +23,7 @@
     $target,
     fn($a) => $a->merge([
         'wire:loading.attr' => 'disabled',
-        'wire:loading.class' => 'pointer-events-none',
+        'wire:loading.class' => 'el-loading',
     ]),
 )" :size="$size" :color-checked="$_colorChecked" :tag="$_tag">
     {!! $before !!}
@@ -69,10 +68,11 @@
         <x-kit::button.icon :icon="$iconRight" :offset="$offset" :size="$size" :attributes="$iconAttributes" />
     @endif
 
-    @if ($target || $loading)
-        <x-kit::button.loader :loading="$loading"
-            wire:target="{{ $target }}">{{ $loader }}</x-kit::buttons.loader>
-    @endif
+    <span class="el-loader">
+        <span
+            class="animate-spin-loader size-4 rounded-full border-2 border-current border-r-transparent border-t-transparent"></span>
+        {{ $loader }}
+    </span>
 
     {!! $after !!}
 </x-kit::button.base>

@@ -174,7 +174,7 @@
         }
         &[data-color="sky-light"],
         &.el-color-sky-light {
-            @apply ring-sky-500;
+            @apply ring-sky-200;
         }
         &[data-color="emerald"],
         &.el-color-emerald {
@@ -182,7 +182,7 @@
         }
         &[data-color="emerald-light"],
         &.el-color-emerald-light {
-            @apply ring-emerald-500;
+            @apply ring-emerald-200;
         }
         &[data-color="rose"],
         &.el-color-rose {
@@ -190,7 +190,7 @@
         }
         &[data-color="rose-light"],
         &.el-color-rose-light {
-            @apply ring-rose-500;
+            @apply ring-rose-200;
         }
         &[data-color="purple"],
         &.el-color-purple {
@@ -198,7 +198,7 @@
         }
         &[data-color="purple-light"],
         &.el-color-purple-light {
-            @apply ring-purple-500;
+            @apply ring-purple-200;
         }
         &[data-color="yellow"],
         &.el-color-yellow {
@@ -206,7 +206,7 @@
         }
         &[data-color="yellow-light"],
         &.el-color-yellow-light {
-            @apply ring-yellow-500;
+            @apply ring-yellow-200;
         }
         &[data-color="amber"],
         &.el-color-amber {
@@ -214,7 +214,7 @@
         }
         &[data-color="amber-light"],
         &.el-color-amber-light {
-            @apply ring-amber-500;
+            @apply ring-amber-200;
         }
         &[data-color="glass"],
         &.el-color-glass {

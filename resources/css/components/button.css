@@ -6,6 +6,24 @@
                 active:outline-2
                 has-focus-visible:outline-2;
 
+        &[data-loading],
+        &[loading],
+        &.el-loading {
+            @apply pointer-events-none;
+        }
+
+        & .el-loader {
+            @apply hidden absolute left-0 top-0 gap-2 h-full w-full items-center justify-center;
+            border-radius: inherit;
+            background: inherit;
+        }
+
+        &[data-loading] .el-loader,
+        &[loading] .el-loader,
+        &.el-loading .el-loader {
+            @apply flex;
+        }
+
         & input {
             @apply pointer-events-none absolute left-0 top-0 size-full appearance-none opacity-0;
         }

@@ -34,14 +34,39 @@
             <div class="p-3">
                 <h1 class="font-semibold">Button</h1>
             </div>
-            <div class="flex grow items-center justify-center border-b border-gray-200">
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
                 <x-kit::button color="rose" class="rounded-md ring-1 ring-inset">
                     Button
-
-                    <x-slot:icon>
+                    <x-slot:icon-right>
                         <iconify-icon icon="heroicons:check"></iconify-icon>
-                    </x-slot:icon>
+                    </x-slot:icon-right>
                 </x-kit::button>
+
+                <x-kit::button color="rose-light" class="rounded-md ring-1 ring-inset">
+                    Button
+                </x-kit::button>
+
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Loading button</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+
+                <x-kit::button color="white" class="rounded-md ring-1 ring-inset" data-loading>
+                    Button
+                </x-kit::button>
+
+                <x-kit::button color="sky-light" class="el-loading rounded-md ring-1 ring-inset">
+                    Button
+                </x-kit::button>
+
+                <x-kit::button color="sky-light" class="rounded-md ring-1 ring-inset" loading>
+                    Button
+                </x-kit::button>
+
             </div>
         </div>
 
