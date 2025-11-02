@@ -34,7 +34,7 @@
             $iconAttributes = is_object($icon) ? $icon->attributes : new \Illuminate\View\ComponentAttributeBag();
         @endphp
 
-        <x-kit::button.icon :icon="$icon" :offset="$offset" :size="$size" :badge="$badge" :attributes="$iconAttributes" />
+        <x-kit::button.icon :icon="$icon" :offset="$offset" :badge="$badge" :attributes="$iconAttributes" />
     @endif
 
     @if ($slot->hasActualContent() || $content)
@@ -65,7 +65,7 @@
                 : new \Illuminate\View\ComponentAttributeBag();
         @endphp
 
-        <x-kit::button.icon :icon="$iconRight" :offset="$offset" :size="$size" :attributes="$iconAttributes" />
+        <x-kit::button.icon :icon="$iconRight" :offset="$offset" :attributes="$iconAttributes" />
     @endif
 
     <span class="el-loader">

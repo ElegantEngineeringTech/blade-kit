@@ -503,6 +503,14 @@
             </div>
         </div>
 
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Range</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+                <x-kit::range color="transparent" class="rounded-md" />
+            </div>
+        </div>
 
     </div>
 </body>

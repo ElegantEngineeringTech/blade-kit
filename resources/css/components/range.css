@@ -1,0 +1,54 @@
+@layer components {
+    .el-range {
+        @apply appearance-none inline-block border-0 h-1.5;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            @apply appearance-none pointer-events-auto cursor-pointer size-5 bg-white border-black border-3 rounded-full;
+        }
+
+        &::-moz-range-thumb {
+            -moz-appearance: none;
+            @apply appearance-none pointer-events-auto cursor-pointer size-5 bg-white border-black border-3 rounded-full;
+        }
+
+        &[data-color="transparent"] {
+            @apply bg-transparent;
+
+            &::-webkit-slider-thumb {
+                @apply bg-transparent border-transparent;
+            }
+            &::-moz-range-thumb {
+                @apply bg-transparent border-transparent;
+            }
+        }
+
+        &[data-color="white"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="black"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="gray"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="emerald"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="sky"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="rose"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="purple"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="yellow"] {
+            @apply bg-gray-300;
+        }
+        &[data-color="amber"] {
+            @apply bg-gray-300;
+        }
+    }
+}
