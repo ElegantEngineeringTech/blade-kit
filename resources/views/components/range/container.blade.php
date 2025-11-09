@@ -3,13 +3,13 @@
 <div {{ $attributes->class(['el-range-container']) }} x-data="{
     value: 0,
     get min() {
-        return this.input.min || 0;
+        return parseInt(this.input.min || 0);
     },
     get max() {
-        return this.input.max || 1;
+        return parseInt(this.input.max || 1);
     },
     get step() {
-        return this.input.step || 1;
+        return parseInt(this.input.step || 1);
     },
     get input() {
         return this.$refs.input;

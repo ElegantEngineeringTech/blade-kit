@@ -68,7 +68,7 @@
     }
 
     .el-range-tooltip-container {
-        @apply absolute bottom-full pb-2 -translate-x-1/2 left-0 min-w-3;
+        @apply absolute bottom-full pb-2.5 -translate-x-1/2 left-0 min-w-3;
         will-change: left;
     }
 
@@ -79,7 +79,7 @@
     .el-range-ticks {
         @apply flex flex-row justify-between w-full min-h-1;
 
-        option {
+        & > * {
             @apply bg-gray-300 w-px flex-none min-h-0;
         }
     }

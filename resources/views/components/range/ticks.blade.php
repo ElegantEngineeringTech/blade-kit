@@ -1,10 +1,10 @@
-<datalist {{ $attributes->class('el-range-ticks') }}>
+<div {{ $attributes->class('el-range-ticks') }}>
 
     @if ($slot->isEmpty())
         <template x-for="i in ticks" x-bind:key="i">
-            <option x-bind:value="i"></option>
+            <div x-bind:value="i"></div>
         </template>
     @else
         {{ $slot }}
     @endif
-</datalist>
+</div>
