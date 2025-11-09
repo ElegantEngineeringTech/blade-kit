@@ -508,7 +508,50 @@
                 <h1 class="font-semibold">Range</h1>
             </div>
             <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
-                <x-kit::range color="transparent" class="rounded-md" />
+                <x-kit::range color="black" min="-50" max="50" step="10" value="0"
+                    class="relative rounded-full" />
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Range</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+                <x-kit::range.container class="w-52 rounded-full">
+                    <x-kit::range color="black" min="-50" max="50" step="10" value="0"
+                        class="mb-1 w-full" list="range-values" x-model="value" x-ref="input" />
+
+                    <x-kit::range.ticks class="px-2.5" id="range-values" />
+
+                    <x-kit::range.tooltip.container>
+                        <x-kit::range.tooltip class="rounded" />
+                    </x-kit::range.tooltip.container>
+
+                    <x-kit::range.progress />
+
+                </x-kit::range.container>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Colored Range</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
+                <x-kit::range.container color="emerald" class="w-52 rounded-full">
+                    <x-kit::range min="-50" max="50" step="10" value="0" class="mb-1 w-full"
+                        x-model="value" x-ref="input" />
+
+                    <x-kit::range.ticks class="px-2.5" />
+
+                    <x-kit::range.tooltip.container>
+                        <x-kit::range.tooltip class="rounded" />
+                    </x-kit::range.tooltip.container>
+
+                    <x-kit::range.progress />
+
+                </x-kit::range.container>
             </div>
         </div>
 
