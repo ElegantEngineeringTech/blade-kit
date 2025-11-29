@@ -527,7 +527,7 @@
                         </div>
                     </x-kit::input.card>
 
-                    <x-kit::input.card color="emerald" class="rounded-md ring-1 ring-inset">
+                    <x-kit::input.card class="rounded-md ring-1 ring-inset">
                         <x-kit::radio name="demo-radio" value="no" />
                         <div>
                             <p class="font-bold">
