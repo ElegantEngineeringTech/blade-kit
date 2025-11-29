@@ -1,6 +1,6 @@
 @layer components {
     .el-switch {
-        @apply appearance-none cursor-pointer inline-block border-0 w-10 h-lh relative rounded-xl align-text-bottom
+        @apply appearance-none cursor-pointer inline-block border-0 w-10 relative rounded-xl align-bottom
                 before:absolute before:top-0 before:inline-block before:outline-offset-2 before:w-full before:h-full before:shadow-[inset_0_0_#000]
                 dark:before:bg-gray-600
                 after:absolute after:top-0 after:block after:w-1/2 after:m-0.5 after:shadow-md after:duration-100 after:bg-white
@@ -9,6 +9,11 @@
                 disabled:cursor-not-allowed disabled:opacity-50
                 focus:ring-offset-transparent focus:ring-transparent focus-within:ring-0 focus:shadow-none focus:before:outline-2
                 dark:border-0 dark:focus:ring-offset-transparent dark:focus:ring-transparent dark:focus-within:ring-0 dark:focus:shadow-none;
+
+        --height: 1.2em;
+        height: var(--height, 1em);
+        margin-top: calc((1lh - var(--height, 1em)) / 2);
+        margin-bottom: calc((1lh - var(--height, 1em)) / 2);
 
         &::before {
             border-radius: inherit;

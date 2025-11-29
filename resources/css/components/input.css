@@ -227,3 +227,11 @@
         }
     }
 }
+
+@layer components {
+    .el-input-card {
+        @apply flex cursor-pointer items-start gap-3 p-3
+        bg-white ring-gray-200 border-gray-200
+        hover:bg-gray-50 has-checked:ring-black has-checked:border-black;
+    }
+}

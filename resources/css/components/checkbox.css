@@ -1,8 +1,13 @@
 @layer components {
     .el-checkbox {
-        @apply appearance-none p-0 inline-block align-middle box-border shrink-0 text-black size-4 rounded border-1 shadow-sm border-black/20 transition-all 
+        @apply appearance-none p-0 inline-block align-bottom box-border shrink-0 text-black size-4 rounded border-1 shadow-sm border-black/20 transition-all 
             focus:ring-1
             checked:border-transparent checked:bg-current checked:bg-cover checked:bg-center checked:bg-no-repeat;
+
+        height: 1em;
+        width: 1em;
+        margin-top: calc((1lh - 1em) / 2);
+        margin-bottom: calc((1lh - 1em) / 2);
 
         &[type="radio"] {
             @apply checked:bg-radio;

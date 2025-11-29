@@ -407,9 +407,11 @@
                 <h1 class="font-semibold">Disabled Switch</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <label class="">
-                    <x-kit::switch checked class="text-sm" />
-                    Switch
+                <label>
+                    <x-kit::switch checked />
+                    <span>
+                        Switch
+                    </span>
                 </label>
             </div>
         </div>
@@ -491,14 +493,51 @@
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
                 <div class="flex gap-3">
-                    <label class="">
+                    <label>
                         <x-kit::radio name="demo-radio" value="yes" />
-                        Yes
+                        <span>
+                            Yes
+                        </span>
                     </label>
-                    <label class="">
+                    <label>
                         <x-kit::radio name="demo-radio" value="no" />
-                        No
+                        <span>
+                            No
+                        </span>
                     </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Radio cards</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <div class="flex grow flex-col gap-1 p-3 *:w-full">
+                    <x-kit::input.card class="rounded-md ring-1 ring-inset">
+                        <x-kit::radio name="demo-radio" value="yes" />
+                        <div>
+                            <p class="font-bold">
+                                Yes
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                I do
+                            </p>
+                        </div>
+                    </x-kit::input.card>
+
+                    <x-kit::input.card color="emerald" class="rounded-md ring-1 ring-inset">
+                        <x-kit::radio name="demo-radio" value="no" />
+                        <div>
+                            <p class="font-bold">
+                                No
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                I do not
+                            </p>
+                        </div>
+                    </x-kit::input.card>
                 </div>
             </div>
         </div>

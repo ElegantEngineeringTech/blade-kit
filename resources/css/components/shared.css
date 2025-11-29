@@ -302,6 +302,10 @@
     }
 
     .el-border {
+        &[data-color="white"],
+        &.el-color-white {
+            @apply border-gray-200;
+        }
         &[data-color="black"],
         &.el-color-black {
             @apply border-black;
