@@ -14,27 +14,25 @@
     x-data="{
         native: false,
         minHeight: null,
-        height: null,
         init() {
             this.native = CSS.supports('field-sizing: content');
     
+            this.minHeight = this.$el.getBoundingClientRect().height;
+    
             if (!this.native) {
                 this.$nextTick(() => {
-                    this.minHeight = this.$el.getBoundingClientRect().height;
-                    this.height = this.$el.scrollHeight;
+                    this.resize();
                 });
             }
     
         },
+        resize() {
+            this.$el.style.height = `${this.minHeight}px`;
+            this.$el.style.height = `${this.$el.scrollHeight}px`;
+        },
         onInput(event) {
             if (!this.native) {
-                this.height = this.minHeight;
-                this.$nextTick(() => {
-                    this.height = this.$el.scrollHeight;
-                });
+                this.resize();
             }
         },
-    }" x-on:input="onInput" x-on:focus="onInput"
-    x-bind:style="{
-        'height': height ? `${height}px` : '',
-    }">{{ $slot }}</textarea>
+    }" x-on:input="onInput" x-intersect="onInput">{{ $slot }}</textarea>
