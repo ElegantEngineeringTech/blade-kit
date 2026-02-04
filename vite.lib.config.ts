@@ -8,7 +8,7 @@ export default defineConfig({
         vue(),
         dts({
             insertTypesEntry: true,
-            tsconfigPath: "./tsconfig.json",
+            tsconfigPath: "./tsconfig.lib.json",
         }),
     ],
     build: {
