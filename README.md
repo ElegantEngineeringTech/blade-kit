@@ -45,9 +45,7 @@ php artisan vendor:publish --tag="blade-kit-views"
 ## Usage
 
 ```html
-<x-kit::button color="white" class="rounded-md font-semibold">
-    Button
-</x-kit::button>
+<x-kit::button color="white" class="rounded-md font-semibold"> Button </x-kit::button>
 ```
 
 ## Testing
@@ -70,8 +68,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
--   [Quentin Gabriele](https://github.com/QuentinGab)
--   [All Contributors](../../contributors)
+- [Quentin Gabriele](https://github.com/QuentinGab)
+- [All Contributors](../../contributors)
 
 ## License
 

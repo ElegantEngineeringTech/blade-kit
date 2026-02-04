@@ -7,3 +7,7 @@ Route::get('/', function () {
         'styles' => __DIR__.'/../../resources/css/styles.css',
     ]);
 });
+
+Route::get('/vue', function () {
+    return view('vue');
+});

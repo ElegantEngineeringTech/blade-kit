@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="">
+<body class="antialiased">
 
     <div class="grid grid-cols-1 divide-x divide-gray-200 *:h-60 md:grid-cols-3">
 

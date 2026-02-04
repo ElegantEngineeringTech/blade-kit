@@ -1,14 +1,45 @@
 {
     "name": "blade-kit",
+    "version": "0.0.1",
+    "private": false,
+    "files": [
+        "dist"
+    ],
     "type": "module",
-    "private": true,
+    "main": "./dist/blade-kit.js",
+    "module": "./dist/blade-kit.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/blade-kit.js"
+        }
+    },
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build:lib": "vue-tsc && vite build -c vite.lib.config.ts",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "fmt": "oxfmt",
+        "fmt:check": "oxfmt --check"
     },
     "dependencies": {
-        "@tailwindcss/vite": "^4.1.13",
-        "laravel-vite-plugin": "^2.0.1",
-        "tailwindcss": "^4.1.13"
+        "@tailwindcss/vite": "^4.1.18",
+        "laravel-vite-plugin": "^2.1.0",
+        "tailwindcss": "^4.1.18"
+    },
+    "devDependencies": {
+        "@types/node": "^25.2.0",
+        "@vitejs/plugin-vue": "^6.0.4",
+        "oxfmt": "^0.28.0",
+        "oxlint": "^1.43.0",
+        "typescript": "^5.9.3",
+        "vite-plugin-dts": "^4.5.4",
+        "vue": "^3.5.27",
+        "vue-tsc": "^3.2.4"
+    },
+    "peerDependencies": {
+        "vue": "^3.0.0"
     }
 }
