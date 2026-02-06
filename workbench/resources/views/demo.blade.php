@@ -453,7 +453,6 @@
             </div>
         </div>
 
-
         <div class="isolate flex flex-col">
             <div class="p-3">
                 <h1 class="font-semibold">Input</h1>
@@ -463,7 +462,6 @@
                     placeholder="Placeholder" />
             </div>
         </div>
-
 
         <div class="isolate flex flex-col">
             <div class="p-3">
