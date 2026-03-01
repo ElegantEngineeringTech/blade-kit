@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '@/index';
+import { Button, Textarea } from '@/index';
 </script>
 
 <template>
@@ -21,6 +21,21 @@ import { Button } from '@/index';
                     Button
                 </Button>
 
+            </div>
+        </div>
+
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Button</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3">
+                <Button color="rose" class="rounded-md ring-1 ring-inset w-full">
+                    Button
+                    <template v-slot:icon-right class="ml-auto">
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </template>
+                </Button>
             </div>
         </div>
 
@@ -60,6 +75,15 @@ import { Button } from '@/index';
                     </template>
                     Select a file
                 </Button>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Textarea</h1>
+            </div>
+            <div class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3">
+                <Textarea autosized color="white" class="rounded-md ring-1 ring-inset w-full" />
             </div>
         </div>
 
