@@ -32,14 +32,14 @@ const autocompleteAttributes = computed(() => {
     };
 });
 
-const native = ref(CSS.supports('field-sizing: content'));
+const autosizedNative = ref(false);
 
 const minHeight = ref(0);
 
 const textarea = useTemplateRef('textarea');
 
 function resize() {
-    if (native.value === false && textarea.value) {
+    if (textarea.value) {
         textarea.value.style.height = `${minHeight}px`;
         textarea.value.style.height = `${textarea.value.scrollHeight}px`;
     }
@@ -50,11 +50,17 @@ const attributes = computed(() => {
 });
 
 const listeners = computed(() => {
-    return native.value ? {} : { input: resize };
+    if (props.autosized && !autosizedNative.value) {
+        return { input: resize };
+    }
+
+    return {};
 });
 
 onMounted(() => {
-    if (native.value === false) {
+    autosizedNative.value = CSS.supports('field-sizing: content');
+
+    if (props.autosized && !autosizedNative.value) {
         minHeight.value = textarea.value?.getBoundingClientRect().height ?? 0;
 
         resize();
