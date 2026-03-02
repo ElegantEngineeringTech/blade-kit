@@ -227,7 +227,8 @@
         }
     }
 
-    .el-checkbox,.el-radio{
+    .el-checkbox,
+    .el-radio {
         @apply appearance-none p-0 inline-block align-bottom box-border shrink-0 text-black size-4 border shadow-sm border-black/20 transition-all 
             focus:ring-1
             checked:border-transparent checked:bg-current checked:bg-cover checked:bg-center checked:bg-no-repeat;
