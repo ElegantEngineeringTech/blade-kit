@@ -226,11 +226,22 @@
             }
         }
     }
+
+    .el-checkbox,.el-radio{
+        @apply appearance-none p-0 inline-block align-bottom box-border shrink-0 text-black size-4 border shadow-sm border-black/20 transition-all 
+            focus:ring-1
+            checked:border-transparent checked:bg-current checked:bg-cover checked:bg-center checked:bg-no-repeat;
+
+        height: 1em;
+        width: 1em;
+        margin-top: calc((1lh - 1em) / 2);
+        margin-bottom: calc((1lh - 1em) / 2);
+    }
 }
 
 @layer components {
     .el-input-card {
-        @apply flex cursor-pointer items-start gap-3 p-3
+        @apply flex cursor-pointer items-start gap-3 p-3 relative
         bg-white ring-gray-200 border-gray-200
         hover:bg-gray-50 has-checked:ring-black has-checked:border-black;
     }
