@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Textarea } from "@/index";
+import { Button, Checkbox, Radio, Switch, Textarea } from "@/index";
 </script>
 
 <template>
@@ -77,6 +77,75 @@ import { Button, Textarea } from "@/index";
             </div>
             <div class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3">
                 <Textarea autosized color="white" class="rounded-md ring-1 ring-inset w-full" />
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Switch</h1>
+            </div>
+            <div
+                class="flex grow flex-col items-center justify-center gap-3 border-b border-gray-200"
+            >
+                <div>
+                    <Switch class="" checked />
+                    <Switch class="" checked disabled />
+                    <Switch class="" disabled />
+                </div>
+                <div>
+                    <Switch class="rounded" />
+                    <Switch class="rounded-md" />
+                    <Switch class="rounded-lg" />
+                    <Switch class="" />
+                </div>
+                <div>
+                    <Switch class="text-xs" />
+                    <Switch class="text-sm" />
+                    <Switch class="text-base" />
+                    <Switch class="text-lg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Disabled Switch</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <label>
+                    <Switch checked />
+                    <span> Switch </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Radio</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <div class="flex gap-3">
+                    <label>
+                        <Radio name="demo-radio" value="yes" />
+                        <span> Yes </span>
+                    </label>
+                    <label>
+                        <Radio name="demo-radio" value="no" />
+                        <span> No </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Checkbox</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <label class="">
+                    <Checkbox />
+                    I accept
+                </label>
             </div>
         </div>
     </div>

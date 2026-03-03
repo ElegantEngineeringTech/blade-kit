@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('demo', [
-        'styles' => __DIR__.'/../../resources/css/styles.css',
-    ]);
+    return view('blade');
 });
 
 Route::get('/vue', function () {
