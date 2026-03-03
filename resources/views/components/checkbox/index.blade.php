@@ -2,8 +2,9 @@
     'disabled' => false,
     'checked' => false,
     'required' => false,
+    'readonly' => false,
     'type' => 'checkbox',
 ])
 
 <input {!! $attributes->class(['el-checkbox']) !!} type="{{ $type }}" @disabled($disabled) @checked($checked)
-    @required($required)>
+    @required($required) @readonly($readonly)>
