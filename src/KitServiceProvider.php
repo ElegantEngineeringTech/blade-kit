@@ -27,11 +27,13 @@ class KitServiceProvider extends PackageServiceProvider
     }
 
     /**
-     * @source https://github.com/livewire/flux/blob/ca26ab81b07f6f1c9e76cc0f5937f575075fc50c/src/FluxServiceProvider.php#L47
+     * @source https://github.com/livewire/blaze/blob/main/src/BlazeServiceProvider.php
      */
     public function bootFallbackBlazeDirectivesIfBlazeIsNotInstalled()
     {
-        Blade::directive('blaze', fn () => '');
+        Blade::directive('blaze', function () {
+            return '';
+        });
 
         Blade::directive('unblaze', function ($expression) {
             return ''
