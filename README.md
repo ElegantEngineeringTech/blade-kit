@@ -51,6 +51,20 @@ php artisan vendor:publish --tag="blade-kit-views"
 
 ## Testing
 
+You can see all components by running:
+
+```bash
+bun run dev
+```
+
+and
+
+```bash
+composer serve
+```
+
+You can run test with:
+
 ```bash
 composer test
 ```
