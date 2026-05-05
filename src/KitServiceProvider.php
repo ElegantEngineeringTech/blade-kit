@@ -21,6 +21,11 @@ class KitServiceProvider extends PackageServiceProvider
             ->hasViews('kit');
     }
 
+    public function bootingPackage()
+    {
+        $this->bootFallbackBlazeDirectivesIfBlazeIsNotInstalled();
+    }
+
     /**
      * @source https://github.com/livewire/flux/blob/ca26ab81b07f6f1c9e76cc0f5937f575075fc50c/src/FluxServiceProvider.php#L47
      */
