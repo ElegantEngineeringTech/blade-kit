@@ -1,3 +1,5 @@
+@blaze()
+
 @props([
     'tag' => null,
     'type' => null,

@@ -1,3 +1,5 @@
+@blaze()
+
 @props([
     'rows' => 1,
     'size' => 'base',

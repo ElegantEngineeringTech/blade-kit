@@ -1,9 +1,10 @@
 # Laravel Blade UI Kit
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/elegantly/blade-kit.svg?style=flat-square)](https://packagist.org/packages/elegantly/blade-kit)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ElegantEngineeringTech/blade-kit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ElegantEngineeringTech/blade-kit/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ElegantEngineeringTech/blade-kit/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ElegantEngineeringTech/blade-kit/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/elegantly/blade-kit.svg?style=flat-square)](https://packagist.org/packages/elegantly/blade-kit)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/elegantly/blade-kit.svg)](https://packagist.org/packages/elegantly/blade-kit)
+[![Total Downloads](https://img.shields.io/packagist/dt/elegantly/blade-kit.svg)](https://packagist.org/packages/elegantly/blade-kit)
+[![Tests](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/run-tests.yml/badge.svg)](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/run-tests.yml)
+[![Laravel Pint](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/pint.yml/badge.svg)](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/pint.yml)
+[![PHPStan](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/phpstan.yml/badge.svg)](https://github.com/ElegantEngineeringTech/blade-kit/actions/workflows/phpstan.yml)
 
 A simple UI kit for Laravel. Based on Tailwind and AlpineJS.
 

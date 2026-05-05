@@ -1,3 +1,5 @@
+@blaze()
+
 <div {{ $attributes->class('el-range-ticks') }}>
 
     @if ($slot->isEmpty())

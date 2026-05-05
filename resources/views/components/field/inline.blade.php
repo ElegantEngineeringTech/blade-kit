@@ -1,3 +1,5 @@
+@blaze()
+
 @props([
     'error' => null,
     'tooltip' => null,

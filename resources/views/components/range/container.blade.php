@@ -1,3 +1,5 @@
+@blaze()
+
 @props(['color' => 'black'])
 
 <div {{ $attributes->class(['el-range-container']) }} x-data="{

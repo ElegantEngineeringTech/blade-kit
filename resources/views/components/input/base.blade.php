@@ -1,3 +1,5 @@
+@blaze()
+
 @props([
     'size' => 'base',
     'color' => null,

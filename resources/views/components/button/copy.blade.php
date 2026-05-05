@@ -1,3 +1,5 @@
+@blaze()
+
 @props([
     'copy' => null,
     'icon' => null,
