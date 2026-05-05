@@ -1,5 +1,3 @@
-@blaze()
-
 @props([
     'disabled' => false,
     'required' => false,

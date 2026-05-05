@@ -1,5 +1,3 @@
-@blaze()
-
 @props([
     'tag' => 'span',
     'color' => null,

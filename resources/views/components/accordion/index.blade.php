@@ -1,5 +1,3 @@
-@blaze()
-
 @props([
     'expanded' => false,
     'button' => null,

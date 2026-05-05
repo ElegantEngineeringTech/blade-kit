@@ -1,5 +1,3 @@
-@blaze()
-
 @props([
     'size' => '2xs',
     'icon' => null,
