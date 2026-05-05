@@ -21,7 +21,7 @@ class KitServiceProvider extends PackageServiceProvider
             ->hasViews('kit');
     }
 
-    public function bootingPackage()
+    public function bootingPackage(): void
     {
         $this->bootFallbackBlazeDirectivesIfBlazeIsNotInstalled();
     }
@@ -29,7 +29,7 @@ class KitServiceProvider extends PackageServiceProvider
     /**
      * @source https://github.com/livewire/blaze/blob/main/src/BlazeServiceProvider.php
      */
-    public function bootFallbackBlazeDirectivesIfBlazeIsNotInstalled()
+    public function bootFallbackBlazeDirectivesIfBlazeIsNotInstalled(): void
     {
         Blade::directive('blaze', function () {
             return '';
