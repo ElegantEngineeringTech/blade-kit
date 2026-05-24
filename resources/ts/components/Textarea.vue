@@ -19,6 +19,14 @@ const props = withDefaults(
     },
 );
 
+const model = defineModel({ default: "" });
+
+const autosizedNative = ref(false);
+
+const minHeight = ref(0);
+
+const textarea = useTemplateRef("textarea");
+
 const autocompleteAttributes = computed(() => {
     if (props.autocomplete === "off") {
         return {
@@ -34,22 +42,12 @@ const autocompleteAttributes = computed(() => {
     };
 });
 
-const autosizedNative = ref(false);
-
-const minHeight = ref(0);
-
-const textarea = useTemplateRef("textarea");
-
 function resize() {
     if (textarea.value) {
-        textarea.value.style.height = `${minHeight}px`;
+        textarea.value.style.height = `${minHeight.value}px`;
         textarea.value.style.height = `${textarea.value.scrollHeight}px`;
     }
 }
-
-const attributes = computed(() => {
-    return autocompleteAttributes.value;
-});
 
 const listeners = computed(() => {
     if (props.autosized && !autosizedNative.value) {
@@ -76,9 +74,11 @@ onMounted(() => {
         class="el-textarea el-text el-spacing el-bg el-outline"
         :data-size="size"
         :data-color="color"
+        :rows="rows"
         :autosized="autosized"
         :spellcheck="spellcheck"
-        v-bind="attributes"
+        v-bind="autocompleteAttributes"
         v-on="listeners"
+        v-model="model"
     />
 </template>
