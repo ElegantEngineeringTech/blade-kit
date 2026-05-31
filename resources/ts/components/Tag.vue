@@ -39,7 +39,7 @@ const slots = defineSlots<{
 
         <span
             v-if="slots.default"
-            class="relative inline-flex min-w-0 el-tag-content"
+            class="el-tag-content"
             :class="{
                 truncate: truncate,
                 'ml-2': slots.icon && offset,
