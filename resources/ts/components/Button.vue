@@ -13,7 +13,6 @@ const props = withDefaults(
         disabled?: boolean;
         loading?: boolean;
         download?: boolean | string;
-        tooltip?: string;
         offset?: boolean;
         badge?: number;
     }>(),

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Checkbox, Radio, Switch, Textarea } from "@/index";
+import { Button, Checkbox, Radio, Switch, Textarea, Tag } from "@/index";
 </script>
 
 <template>
@@ -68,6 +68,29 @@ import { Button, Checkbox, Radio, Switch, Textarea } from "@/index";
                     </template>
                     Select a file
                 </Button>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Tag</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200">
+                <Tag color="white" class="rounded-full ring-1 ring-inset">
+                    <template v-slot:icon>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </template>
+
+                    Tag
+
+                    <template v-slot:button>
+                        <Button color="white" size="2xs" class="rounded-full ring-1 ring-inset">
+                            <template v-slot:icon>
+                                <iconify-icon icon="heroicons:x-mark"></iconify-icon>
+                            </template>
+                        </Button>
+                    </template>
+                </Tag>
             </div>
         </div>
 
