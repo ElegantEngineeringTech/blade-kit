@@ -7,5 +7,6 @@ import Radio from "./components/Radio.vue";
 import Switch from "./components/Switch.vue";
 import Textarea from "./components/Textarea.vue";
 import Tag from "./components/Tag.vue";
+import Select from "./components/Select.vue";
 
-export { Badge, Checkbox, Button, ButtonBadge, ButtonIcon, Radio, Switch, Textarea, Tag };
+export { Badge, Checkbox, Button, ButtonBadge, ButtonIcon, Radio, Switch, Textarea, Tag, Select };
