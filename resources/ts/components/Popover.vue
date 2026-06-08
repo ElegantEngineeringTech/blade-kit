@@ -2,9 +2,11 @@
 import {
     type ComponentPublicInstance,
     computed,
+    type MaybeRefOrGetter,
     nextTick,
     ref,
     Teleport,
+    toValue,
     useTemplateRef,
     watch,
 } from "vue";
@@ -28,11 +30,11 @@ defineOptions({
 
 const props = withDefaults(
     defineProps<{
-        trap?: boolean | UseFocusTrapOptions;
-        placement?: Placement;
-        offset?: OffsetOptions;
-        flip?: FlipOptions;
-        shift?: ShiftOptions;
+        trap?: MaybeRefOrGetter<boolean | UseFocusTrapOptions>;
+        placement?: MaybeRefOrGetter<Placement>;
+        offset?: MaybeRefOrGetter<OffsetOptions>;
+        flip?: MaybeRefOrGetter<FlipOptions>;
+        shift?: MaybeRefOrGetter<ShiftOptions>;
     }>(),
     {
         trap: true,
@@ -53,8 +55,14 @@ const { activate, deactivate } = useFocusTrap(floating, {
     allowOutsideClick: true,
 });
 
+const middleware = computed(() => [
+    offset(toValue(props.offset)),
+    flip(toValue(props.flip)),
+    shift(toValue(props.shift)),
+]);
+
 const { isPositioned, floatingStyles } = useFloating(trigger, floating, {
-    middleware: [offset(props.offset), flip(props.flip), shift(props.shift)],
+    middleware: middleware,
     whileElementsMounted: autoUpdate,
     open: open,
     placement: props.placement,
@@ -65,7 +73,7 @@ const setTrigger = (el: Element | ComponentPublicInstance | null) => {
 };
 
 watch(isPositioned, (value) => {
-    if (props.trap) {
+    if (toValue(props.trap)) {
         if (value) {
             nextTick(() => activate());
         } else {
@@ -123,7 +131,14 @@ onClickOutside(
     <slot :trigger="triggerAttrs" :show="show" :hide="hide" :toggle="toggle"></slot>
 
     <Teleport to="body">
-        <div v-if="open" v-bind="$attrs" :style="floatingStyles" ref="floating" class="el-popover">
+        <div
+            v-if="open"
+            v-bind="$attrs"
+            :style="floatingStyles"
+            ref="floating"
+            class="el-popover"
+            :data-placement="placement"
+        >
             <slot name="popover" :show="show" :hide="hide" :toggle="toggle"></slot>
         </div>
     </Teleport>

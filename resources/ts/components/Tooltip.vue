@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { computed } from "vue";
-
+import { type MaybeRefOrGetter } from "vue";
 import Popover from "./Popover.vue";
 import { type Placement } from "@floating-ui/vue";
 
 const props = withDefaults(
     defineProps<{
-        trap?: boolean;
-        placement?: Placement;
+        trap?: MaybeRefOrGetter<boolean>;
+        placement?: MaybeRefOrGetter<Placement>;
     }>(),
     {
         trap: false,
@@ -18,10 +17,6 @@ const props = withDefaults(
 const open = defineModel({
     default: false,
 });
-
-const triggerAttrs = computed(() => ({
-    //...
-}));
 </script>
 
 <template>
@@ -29,7 +24,6 @@ const triggerAttrs = computed(() => ({
         <template v-slot:default="{ show, hide, trigger }">
             <slot
                 :trigger="{
-                    ...triggerAttrs,
                     ...trigger,
                     onMouseenter: show,
                     onMouseleave: hide,
