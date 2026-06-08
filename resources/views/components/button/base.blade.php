@@ -15,7 +15,7 @@
 @endphp
 
 {{-- blade-formatter-disable --}}
-<{!! $_tag !!} {!! $attributes->class(['el-button el-spacing el-text el-bg el-ring el-outline el-border']) !!}
+<{!! $_tag !!} {!! $attributes->class(['el-button el-spacing el-text el-bg el-ring el-outline el-border el-shadow']) !!}
     data-size="{{ $size }}" data-color="{{ $color }}" @if($colorChecked) data-color-checked="{{ $colorChecked }}" @endif
     @disabled($disabled) @if ($_type) type="{{ $_type }}" @endif
     @if ($tooltip) x-tooltip.raw="{{ $tooltip }}" @endif

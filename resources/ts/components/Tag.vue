@@ -29,7 +29,7 @@ const slots = defineSlots<{
 <template>
     <component
         :is="tag"
-        class="el-tag el-spacing el-text el-bg el-ring el-outline el-border"
+        class="el-tag el-spacing el-text el-bg el-ring el-outline el-border el-shadow"
         :data-size="size"
         :data-color="color"
     >

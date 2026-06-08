@@ -1,0 +1,5 @@
+@layer components {
+    .el-popover {
+        @apply w-max absolute z-40 max-w-full;
+    }
+}

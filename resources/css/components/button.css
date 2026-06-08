@@ -6,22 +6,22 @@
                 active:outline-2
                 has-focus-visible:outline-2;
 
-        &[data-loading],
+        & .el-loader {
+            @apply hidden absolute left-px top-px bottom-px right-px gap-2 items-center justify-center;
+        }
+
         &[loading],
+        &[data-loading],
         &.el-loading {
             @apply pointer-events-none;
-        }
 
-        & .el-loader {
-            @apply hidden absolute left-0 top-0 gap-2 h-full w-full items-center justify-center;
-            border-radius: inherit;
-            background: inherit;
-        }
+            & > * {
+                @apply opacity-0;
+            }
 
-        &[data-loading] .el-loader,
-        &[loading] .el-loader,
-        &.el-loading .el-loader {
-            @apply flex;
+            & .el-loader {
+                @apply flex opacity-100;
+            }
         }
 
         & input {

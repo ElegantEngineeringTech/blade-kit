@@ -7,7 +7,7 @@
 ])
 
 {{-- blade-formatter-disable --}}
-<{!! $tag !!} {{ $attributes->class(['el-tag el-spacing el-text el-bg el-ring el-outline el-border']) }}
+<{!! $tag !!} {{ $attributes->class(['el-tag el-spacing el-text el-bg el-ring el-outline el-border el-shadow']) }}
     data-size="{{ $size }}" data-color="{{ $color }}"
     @if ($tooltip) x-tooltip.raw="{!! $tooltip !!}" @endif>
     {{ $slot }}

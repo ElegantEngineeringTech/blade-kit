@@ -50,7 +50,7 @@ const computedType = computed(() => {
 <template>
     <component
         :is="computedTag"
-        class="el-button el-spacing el-text el-bg el-ring el-outline el-border"
+        class="el-button el-spacing el-text el-bg el-ring el-outline el-border el-shadow"
         :data-size="size"
         :data-color="color"
         :data-color-checked="colorChecked"

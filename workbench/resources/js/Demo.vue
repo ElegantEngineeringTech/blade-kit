@@ -1,9 +1,29 @@
 <script setup lang="ts">
-import { Button, Checkbox, Radio, Switch, Textarea, Tag } from "@/index";
+import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert } from "@/index";
 </script>
 
 <template>
     <div class="grid grid-cols-1 divide-x divide-gray-200 *:h-60 md:grid-cols-3">
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Alert</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <Alert class="rounded-md shadow-sm">
+                    <template v-slot:icon>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </template>
+
+                    Aliquip deserunt exercitation laboris culpa est do.
+                </Alert>
+                <Alert class="rounded-md shadow-sm" color="rose-light">
+                    Aliquip deserunt exercitation laboris culpa est do.
+                </Alert>
+            </div>
+        </div>
+
         <div class="isolate flex flex-col">
             <div class="p-3">
                 <h1 class="font-semibold">Button</h1>

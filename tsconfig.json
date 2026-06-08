@@ -1,27 +1,18 @@
 {
+    "extends": ["@vue/tsconfig/tsconfig.dom.json", "@vue/tsconfig/tsconfig.lib.json"],
     "compilerOptions": {
-        "target": "ES2022",
-        "useDefineForClassFields": true,
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "lib": ["ES2022", "DOM", "DOM.Iterable"],
-        "jsx": "preserve",
-        "strict": true,
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "baseUrl": ".",
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
         "paths": {
-            "@/*": ["resources/ts/*"]
-        },
-        "types": ["vite/client"]
+            "@/*": ["./resources/ts/*"],
+            "@workbench/*": ["./workbench/resources/js/*"]
+        }
     },
     "include": [
-        "resources/ts/env.d.ts",
+        "workbench/resources/js/**/*.ts",
+        "workbench/resources/js/**/*.vue",
         "resources/ts/**/*.ts",
         "resources/ts/**/*.d.ts",
-        "resources/ts/**/*.vue",
-        "workbench/resources/js/**/*.ts",
-        "workbench/resources/js/**/*.vue"
+        "resources/ts/**/*.tsx",
+        "resources/ts/**/*.vue"
     ]
 }

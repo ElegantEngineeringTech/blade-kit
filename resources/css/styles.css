@@ -17,3 +17,6 @@
 @import "./components/radio.css";
 @import "./components/select.css";
 @import "./components/range.css";
+@import "./components/alert.css";
+@import "./components/popover.css";
+@import "./components/tooltip.css";

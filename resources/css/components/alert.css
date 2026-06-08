@@ -1,0 +1,92 @@
+@layer components {
+    .el-alert {
+        @apply flex items-start gap-2;
+
+        & a:not(.el-button) {
+            @apply underline;
+        }
+
+        & .el-alert-icon {
+            @apply shrink-0 inline-block leading-none;
+        }
+
+        &[data-size="2xs"],
+        &.el-size-2xs {
+            & .el-alert-icon {
+                @apply size-4 p-px text-sm;
+            }
+        }
+
+        &[data-size="xs"],
+        &.el-size-xs {
+            & .el-alert-icon {
+                @apply size-4 text-base;
+            }
+        }
+
+        &[data-size="sm"],
+        &.el-size-sm {
+            & .el-alert-icon {
+                @apply size-5 p-0.5 text-base;
+            }
+        }
+
+        &[data-size="md"],
+        &.el-size-md,
+        &[data-size="base"],
+        &.el-size-base {
+            & .el-alert-icon {
+                @apply size-5 p-0.5 text-base;
+            }
+        }
+
+        &[data-size="lg"],
+        &.el-size-lg {
+            & .el-alert-icon {
+                @apply size-6 p-0.5 text-xl;
+            }
+        }
+
+        &[data-size="xl"],
+        &.el-size-xl {
+            & .el-alert-icon {
+                @apply size-7 p-0.5;
+            }
+        }
+
+        /* &[data-size="sm"],
+        &.el-size-sm {
+            @apply gap-1 text-sm;
+        }
+
+        &[data-size="lg"],
+        &.el-size-lg {
+            @apply gap-2 text-lg;
+        }
+
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
+            @apply bg-sky-50 text-sky-700 shadow-sky-600/30 border-sky-500;
+        }
+
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
+            @apply bg-emerald-50 text-emerald-700 shadow-emerald-600/30 border-emerald-500;
+        }
+
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
+            @apply bg-amber-50 text-amber-700 shadow-amber-600/30 border-amber-500;
+        }
+
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
+            @apply bg-rose-50 text-rose-700 shadow-rose-600/30 border-rose-500;
+        }
+
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
+            @apply bg-purple-50 text-purple-700 shadow-purple-600/30 border-purple-500;
+        } */
+    }
+}

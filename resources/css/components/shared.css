@@ -375,4 +375,43 @@
             @apply border-transparent;
         }
     }
+
+    .el-shadow {
+        &[data-color="sky"],
+        &.el-color-sky,
+        &[data-color="sky-light"],
+        &.el-color-sky-light {
+            @apply shadow-sky-600/30;
+        }
+        &[data-color="emerald"],
+        &.el-color-emerald,
+        &[data-color="emerald-light"],
+        &.el-color-emerald-light {
+            @apply shadow-emerald-600/30;
+        }
+        &[data-color="rose"],
+        &.el-color-rose,
+        &[data-color="rose-light"],
+        &.el-color-rose-light {
+            @apply shadow-rose-600/30;
+        }
+        &[data-color="purple"],
+        &.el-color-purple,
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
+            @apply shadow-purple-600/30;
+        }
+        &[data-color="yellow"],
+        &.el-color-yellow,
+        &[data-color="yellow-light"],
+        &.el-color-yellow-light {
+            @apply shadow-yellow-600/30;
+        }
+        &[data-color="amber"],
+        &.el-color-amber,
+        &[data-color="amber-light"],
+        &.el-color-amber-light {
+            @apply shadow-amber-600/30;
+        }
+    }
 }

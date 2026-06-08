@@ -32,6 +32,24 @@
 
         <div class="isolate flex flex-col">
             <div class="p-3">
+                <h1 class="font-semibold">Alert</h1>
+            </div>
+            <div class="flex grow flex-col items-center justify-center gap-2 border-b border-gray-200 p-3">
+                <x-kit::alert class="rounded-md shadow-sm">
+                    <x-slot:icon v-slot:icon>
+                        <iconify-icon icon="heroicons:check"></iconify-icon>
+                    </x-slot:icon>
+
+                    Aliquip deserunt exercitation laboris culpa est do.
+                </x-kit::alert>
+                <x-kit::alert class="rounded-md shadow-sm" color="rose-light">
+                    Aliquip deserunt exercitation laboris culpa est do.
+                </x-kit::alert>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
                 <h1 class="font-semibold">Button</h1>
             </div>
             <div class="flex grow items-center justify-center gap-2 border-b border-gray-200">
