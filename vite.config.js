@@ -1,11 +1,18 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import laravel from "laravel-vite-plugin";
 import { defineConfig } from "vite";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 export default defineConfig({
     resolve: {
-        tsconfigPaths: true,
+        alias: {
+            "@": path.resolve(__dirname, "./resources/ts"),
+            "@workbench": path.resolve(__dirname, "./workbench/resources/js"),
+        },
     },
     plugins: [
         vue(),
