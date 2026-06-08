@@ -9,6 +9,8 @@ import Textarea from "./components/Textarea.vue";
 import Tag from "./components/Tag.vue";
 import Select from "./components/Select.vue";
 import Alert from "./components/Alert.vue";
+import Popover from "./components/Popover.vue";
+import Tooltip from "./components/Tooltip.vue";
 
 export {
     Badge,
@@ -22,4 +24,6 @@ export {
     Tag,
     Select,
     Alert,
+    Popover,
+    Tooltip,
 };
