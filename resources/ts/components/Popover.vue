@@ -128,7 +128,7 @@ onClickOutside(
 </script>
 
 <template>
-    <slot :trigger="triggerAttrs" :show="show" :hide="hide" :toggle="toggle"></slot>
+    <slot :trigger="triggerAttrs" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
 
     <Teleport to="body">
         <div
@@ -139,7 +139,7 @@ onClickOutside(
             class="el-popover"
             :data-placement="placement"
         >
-            <slot name="popover" :show="show" :hide="hide" :toggle="toggle"></slot>
+            <slot name="popover" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
         </div>
     </Teleport>
 </template>
