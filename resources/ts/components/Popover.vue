@@ -38,7 +38,7 @@ const props = withDefaults(
     }>(),
     {
         trap: true,
-        offset: 4,
+        offset: 0,
         placement: "bottom",
     },
 );

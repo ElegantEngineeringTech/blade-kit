@@ -23,7 +23,11 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover } from "
                         </Button>
                     </template>
                     <template v-slot:popover>
-                        <div class="bg-white rounded-md p-2 shadow">hello world</div>
+                        <div class="bg-white rounded-md p-2 shadow">
+                            Occaecat incididunt tempor elit consequat aute Lorem anim minim. Et
+                            aliquip tempor aute aute ullamco adipisicing Lorem pariatur sint
+                            proident.
+                        </div>
                     </template>
                 </Popover>
             </div>

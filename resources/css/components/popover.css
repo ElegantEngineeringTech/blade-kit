@@ -1,10 +1,26 @@
 @layer components {
     .el-popover {
-        @apply w-max absolute z-40 max-w-full;
+        @apply w-max absolute z-40 max-w-full p-1;
     }
 
     .el-popover > * {
         animation: el-popover-enter 0.15s ease-out both;
+    }
+
+    .el-popover[data-placement^="top"] > * {
+        transform-origin: bottom;
+    }
+
+    .el-popover[data-placement^="bottom"] > * {
+        transform-origin: top;
+    }
+
+    .el-popover[data-placement^="left"] > * {
+        transform-origin: right;
+    }
+
+    .el-popover[data-placement^="right"] > * {
+        transform-origin: left;
     }
 }
 
