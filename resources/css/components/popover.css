@@ -1,6 +1,21 @@
 @layer components {
     .el-popover {
-        @apply w-max absolute z-40 max-w-full p-1;
+        @apply w-max absolute z-40 max-w-full;
+    }
+
+    .el-popover-backdrop {
+        @apply md:hidden fixed top-0 bottom-0 left-0 right-0 bg-black/10 z-40 pointer-events-none;
+    }
+
+    @media (width < theme(--breakpoint-md)) {
+        .el-popover {
+            @apply fixed! bottom-1! left-1! right-1! top-auto! transform-none! w-full!;
+
+            max-width: calc(100% - var(--spacing) * 2) !important;
+        }
+        .el-popover > * {
+            transform-origin: bottom !important;
+        }
     }
 
     .el-popover[data-animation="default"] > * {

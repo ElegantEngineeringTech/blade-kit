@@ -32,7 +32,7 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                 class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
             >
                 <div class="flex flex-wrap gap-1">
-                    <Popover placement="bottom-start" :trap="false">
+                    <Popover placement="bottom-start" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -44,13 +44,13 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>
                     </Popover>
 
-                    <Popover placement="bottom" :trap="false">
+                    <Popover placement="bottom" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -62,13 +62,13 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>
                     </Popover>
 
-                    <Popover placement="bottom-end" :trap="false">
+                    <Popover placement="bottom-end" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -80,14 +80,14 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>
                     </Popover>
                 </div>
                 <div class="flex flex-wrap gap-1">
-                    <Popover placement="top-start" :trap="false">
+                    <Popover placement="top-start" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -99,13 +99,13 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>
                     </Popover>
 
-                    <Popover placement="top" :trap="false">
+                    <Popover placement="top" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -117,13 +117,13 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>
                     </Popover>
 
-                    <Popover placement="top-end" :trap="false">
+                    <Popover placement="top-end" :trap="false" class="max-w-52">
                         <template v-slot:default="{ toggle, trigger }">
                             <Button
                                 color="white"
@@ -135,7 +135,7 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip
                             </Button>
                         </template>
                         <template v-slot:popover>
-                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                            <div class="bg-white rounded-md p-2 shadow">
                                 Occaecat incididunt tempor elit consequat aute Lorem anim minim.
                             </div>
                         </template>

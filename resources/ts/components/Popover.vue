@@ -39,7 +39,7 @@ const props = withDefaults(
     }>(),
     {
         trap: true,
-        offset: 0,
+        offset: 4,
         placement: "bottom",
         animation: "default",
     },
@@ -136,6 +136,7 @@ onClickOutside(
     <slot :trigger="triggerAttrs" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
 
     <Teleport to="body">
+        <div v-if="open" class="el-popover-backdrop"></div>
         <div
             v-if="open"
             v-bind="$attrs"
