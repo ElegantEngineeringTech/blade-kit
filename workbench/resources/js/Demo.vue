@@ -1,9 +1,34 @@
 <script setup lang="ts">
-import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert } from "@/index";
+import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover } from "@/index";
 </script>
 
 <template>
     <div class="grid grid-cols-1 divide-x divide-gray-200 *:h-60 md:grid-cols-3">
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Popover</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <Popover>
+                    <template v-slot:default="{ toggle, trigger }">
+                        <Button
+                            color="white"
+                            class="rounded-md ring-1 ring-inset"
+                            v-bind="trigger"
+                            v-on:click="toggle"
+                        >
+                            Toogle
+                        </Button>
+                    </template>
+                    <template v-slot:popover>
+                        <div class="bg-white rounded-md p-2 shadow">hello world</div>
+                    </template>
+                </Popover>
+            </div>
+        </div>
+
         <div class="isolate flex flex-col">
             <div class="p-3">
                 <h1 class="font-semibold">Alert</h1>
