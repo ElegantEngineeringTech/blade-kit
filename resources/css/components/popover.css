@@ -3,28 +3,60 @@
         @apply w-max absolute z-40 max-w-full p-1;
     }
 
-    .el-popover > * {
-        animation: el-popover-enter 0.15s ease-out both;
+    .el-popover[data-animation="default"] > * {
+        animation: el-popover-enter-default 0.15s ease-out both;
     }
 
-    .el-popover[data-placement^="top"] > * {
+    .el-popover[data-placement="top"] > * {
         transform-origin: bottom;
     }
 
-    .el-popover[data-placement^="bottom"] > * {
+    .el-popover[data-placement="top-start"] > * {
+        transform-origin: bottom left;
+    }
+
+    .el-popover[data-placement="top-end"] > * {
+        transform-origin: bottom right;
+    }
+
+    .el-popover[data-placement="bottom"] > * {
         transform-origin: top;
     }
 
-    .el-popover[data-placement^="left"] > * {
+    .el-popover[data-placement="bottom-start"] > * {
+        transform-origin: top left;
+    }
+
+    .el-popover[data-placement="bottom-end"] > * {
+        transform-origin: top right;
+    }
+
+    .el-popover[data-placement="left"] > * {
         transform-origin: right;
     }
 
-    .el-popover[data-placement^="right"] > * {
+    .el-popover[data-placement="left-start"] > * {
+        transform-origin: right top;
+    }
+
+    .el-popover[data-placement="left-end"] > * {
+        transform-origin: right bottom;
+    }
+
+    .el-popover[data-placement="right"] > * {
         transform-origin: left;
+    }
+
+    .el-popover[data-placement="right-start"] > * {
+        transform-origin: left top;
+    }
+
+    .el-popover[data-placement="right-end"] > * {
+        transform-origin: left bottom;
     }
 }
 
-@keyframes el-popover-enter {
+@keyframes el-popover-enter-default {
     from {
         opacity: 0;
         transform: scale(0.95);

@@ -1,5 +1,5 @@
 @layer components {
     .el-tooltip {
-        @apply bg-gray-700 text-white text-sm rounded-sm py-1 px-2 max-w-full shadow;
+        @apply bg-gray-700 text-white text-sm rounded-sm py-1 px-2 shadow text-center;
     }
 }

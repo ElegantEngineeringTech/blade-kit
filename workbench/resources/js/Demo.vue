@@ -1,9 +1,29 @@
 <script setup lang="ts">
-import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover } from "@/index";
+import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip } from "@/index";
 </script>
 
 <template>
     <div class="grid grid-cols-1 divide-x divide-gray-200 *:h-60 md:grid-cols-3">
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Tooltip</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <Tooltip class="max-w-52">
+                    <template v-slot:default="{ trigger }">
+                        <Button color="white" class="rounded-md ring-1 ring-inset" v-bind="trigger">
+                            hover me
+                        </Button>
+                    </template>
+                    <template v-slot:tooltip>
+                        Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                    </template>
+                </Tooltip>
+            </div>
+        </div>
+
         <div class="isolate flex flex-col">
             <div class="p-3">
                 <h1 class="font-semibold">Popover</h1>
@@ -11,25 +31,116 @@ import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover } from "
             <div
                 class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
             >
-                <Popover>
-                    <template v-slot:default="{ toggle, trigger }">
-                        <Button
-                            color="white"
-                            class="rounded-md ring-1 ring-inset"
-                            v-bind="trigger"
-                            v-on:click="toggle"
-                        >
-                            Toogle
-                        </Button>
-                    </template>
-                    <template v-slot:popover>
-                        <div class="bg-white rounded-md p-2 shadow">
-                            Occaecat incididunt tempor elit consequat aute Lorem anim minim. Et
-                            aliquip tempor aute aute ullamco adipisicing Lorem pariatur sint
-                            proident.
-                        </div>
-                    </template>
-                </Popover>
+                <div class="flex flex-wrap gap-1">
+                    <Popover placement="bottom-start" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+
+                    <Popover placement="bottom" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+
+                    <Popover placement="bottom-end" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    <Popover placement="top-start" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+
+                    <Popover placement="top" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+
+                    <Popover placement="top-end" :trap="false">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow max-w-52">
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </div>
+                        </template>
+                    </Popover>
+                </div>
             </div>
         </div>
 

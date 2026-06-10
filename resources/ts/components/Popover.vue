@@ -30,16 +30,18 @@ defineOptions({
 
 const props = withDefaults(
     defineProps<{
-        trap?: MaybeRefOrGetter<boolean | UseFocusTrapOptions>;
+        trap?: MaybeRefOrGetter<UseFocusTrapOptions | boolean>;
         placement?: MaybeRefOrGetter<Placement>;
         offset?: MaybeRefOrGetter<OffsetOptions>;
         flip?: MaybeRefOrGetter<FlipOptions>;
         shift?: MaybeRefOrGetter<ShiftOptions>;
+        animation?: MaybeRefOrGetter<false | string>;
     }>(),
     {
         trap: true,
         offset: 0,
         placement: "bottom",
+        animation: "default",
     },
 );
 
@@ -57,11 +59,14 @@ const { activate, deactivate } = useFocusTrap(floating, {
 
 const middleware = computed(() => [
     offset(toValue(props.offset)),
-    flip(toValue(props.flip)),
+    flip({
+        crossAxis: false,
+        ...toValue(props.flip),
+    }),
     shift(toValue(props.shift)),
 ]);
 
-const { isPositioned, floatingStyles } = useFloating(trigger, floating, {
+const { isPositioned, floatingStyles, placement } = useFloating(trigger, floating, {
     middleware: middleware,
     whileElementsMounted: autoUpdate,
     open: open,
@@ -138,6 +143,7 @@ onClickOutside(
             ref="floating"
             class="el-popover"
             :data-placement="placement"
+            :data-animation="animation || undefined"
         >
             <slot name="popover" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
         </div>
