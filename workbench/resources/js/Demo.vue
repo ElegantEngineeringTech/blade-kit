@@ -1,9 +1,59 @@
 <script setup lang="ts">
-import { Button, Checkbox, Radio, Switch, Textarea, Tag, Alert, Popover, Tooltip } from "@/index";
+import {
+    Button,
+    Checkbox,
+    Radio,
+    Switch,
+    Textarea,
+    Tag,
+    Alert,
+    Popover,
+    Tooltip,
+    Input,
+    InputCard,
+    InputGroup,
+} from "@/index";
 </script>
 
 <template>
     <div class="grid grid-cols-1 divide-x divide-gray-200 *:h-60 md:grid-cols-3">
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Input Card</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <InputCard class="rounded-md ring-1 ring-inset">
+                    <Radio name="input-card" value="1" />
+
+                    Hello world
+                </InputCard>
+
+                <InputCard class="rounded-md ring-1 ring-inset">
+                    <Radio name="input-card" value="2" />
+
+                    Hello France
+                </InputCard>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Input</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <InputGroup class="rounded-md ring-1 ring-inset">
+                    <template v-slot:icon>
+                        <iconify-icon icon="lucide:search"></iconify-icon>
+                    </template>
+                    <input type="text" placeholder="Hello World" />
+                </InputGroup>
+            </div>
+        </div>
+
         <div class="isolate flex flex-col">
             <div class="p-3">
                 <h1 class="font-semibold">Tooltip</h1>

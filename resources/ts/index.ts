@@ -11,6 +11,9 @@ import Select from "./components/Select.vue";
 import Alert from "./components/Alert.vue";
 import Popover from "./components/Popover.vue";
 import Tooltip from "./components/Tooltip.vue";
+import Input from "./components/Input.vue";
+import InputGroup from "./components/InputGroup.vue";
+import InputCard from "./components/InputCard.vue";
 
 export {
     Badge,
@@ -26,4 +29,7 @@ export {
     Alert,
     Popover,
     Tooltip,
+    Input,
+    InputGroup,
+    InputCard,
 };
