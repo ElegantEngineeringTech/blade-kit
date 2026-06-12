@@ -20,7 +20,7 @@ const open = defineModel({
 </script>
 
 <template>
-    <Popover v-model="open" :trap="trap" :placement="placement">
+    <Popover v-model="open" :trap="trap" :placement="placement" :backdrop="false">
         <template v-slot:default="{ show, hide, trigger }">
             <slot
                 :trigger="{

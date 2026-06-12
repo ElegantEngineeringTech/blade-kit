@@ -4,7 +4,7 @@
     }
 
     .el-popover-backdrop {
-        @apply md:hidden fixed top-0 bottom-0 left-0 right-0 bg-black/10 z-40 pointer-events-none;
+        @apply md:hidden fixed top-0 bottom-0 left-0 right-0 bg-black/10 z-40;
     }
 
     @media (width < theme(--breakpoint-md)) {
