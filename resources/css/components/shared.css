@@ -71,82 +71,82 @@
     .el-bg {
         &[data-color="white"],
         &.el-color-white {
-            @apply bg-white text-black ring-gray-200 dark:bg-zinc-800 dark:text-white dark:ring-zinc-700;
+            @apply bg-white text-black;
         }
 
         &[data-color="black"],
         &.el-color-black {
-            @apply bg-black text-white ring-black dark:bg-white dark:text-black placeholder:text-white/60;
+            @apply bg-black text-white placeholder:text-white/60;
         }
 
         &[data-color="gray"],
         &.el-color-gray {
-            @apply bg-gray-100 text-gray-600 ring-gray-100;
+            @apply bg-gray-100 text-gray-600;
         }
 
         &[data-color="gray-light"],
         &.el-color-gray-light {
-            @apply bg-gray-400/20 text-gray-800 ring-gray-400/20;
+            @apply bg-gray-400/20 text-gray-800;
         }
 
         &[data-color="sky"],
         &.el-color-sky {
-            @apply bg-sky-500 text-white ring-sky-500 placeholder:text-white/60;
+            @apply bg-sky-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="sky-light"],
         &.el-color-sky-light {
-            @apply bg-sky-400/20 text-sky-800 ring-sky-400/20 placeholder:text-sky-800/40;
+            @apply bg-sky-400/20 text-sky-800 placeholder:text-sky-800/40;
         }
 
         &[data-color="emerald"],
         &.el-color-emerald {
-            @apply bg-emerald-500 text-white ring-emerald-500 placeholder:text-white/60;
+            @apply bg-emerald-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="emerald-light"],
         &.el-color-emerald-light {
-            @apply bg-emerald-400/20 text-emerald-800 ring-emerald-400/20 placeholder:text-emerald-800/40;
+            @apply bg-emerald-400/20 text-emerald-800 placeholder:text-emerald-800/40;
         }
 
         &[data-color="rose"],
         &.el-color-rose {
-            @apply bg-rose-500 text-white ring-rose-500 placeholder:text-white/60;
+            @apply bg-rose-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="rose-light"],
         &.el-color-rose-light {
-            @apply bg-rose-400/20 text-rose-800 ring-rose-400/20 placeholder:text-rose-800/40;
+            @apply bg-rose-400/20 text-rose-800 placeholder:text-rose-800/40;
         }
 
         &[data-color="purple"],
         &.el-color-purple {
-            @apply bg-purple-500 text-white ring-purple-500 placeholder:text-white/60;
+            @apply bg-purple-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="purple-light"],
         &.el-color-purple-light {
-            @apply bg-purple-400/20 text-purple-800 ring-purple-400/20 placeholder:text-purple-800/40;
+            @apply bg-purple-400/20 text-purple-800 placeholder:text-purple-800/40;
         }
 
         &[data-color="yellow"],
         &.el-color-yellow {
-            @apply bg-yellow-500 text-white ring-yellow-400/20 placeholder:text-white/60;
+            @apply bg-yellow-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="yellow-light"],
         &.el-color-yellow-light {
-            @apply bg-yellow-400/20 text-yellow-800 ring-yellow-400/20 placeholder:text-yellow-800/40;
+            @apply bg-yellow-400/20 text-yellow-800 placeholder:text-yellow-800/40;
         }
 
         &[data-color="amber"],
         &.el-color-amber {
-            @apply bg-amber-500 text-white ring-amber-400/20 placeholder:text-white/60;
+            @apply bg-amber-500 text-white placeholder:text-white/60;
         }
 
         &[data-color="amber-light"],
         &.el-color-amber-light {
-            @apply bg-amber-400/20 text-amber-800 ring-amber-400/20 placeholder:text-amber-800/40;
+            @apply bg-amber-400/20 text-amber-800 placeholder:text-amber-800/40;
         }
 
         &[data-color="transparent"],

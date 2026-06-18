@@ -101,23 +101,69 @@
             @apply hover:bg-amber-400/40 hover:text-amber-800;
         }
 
-        &[data-color-checked="black"] {
-            @apply has-checked:bg-black has-checked:text-white has-checked:ring-black has-checked:border-black;
-        }
         &[data-color-checked="white"] {
-            @apply has-checked:bg-white has-checked:text-black;
+            @apply has-checked:bg-white has-checked:text-black has-checked:ring-gray-200 has-checked:border-gray-200 has-checked:outline-gray-200;
         }
+
+        &[data-color-checked="black"] {
+            @apply has-checked:bg-black has-checked:text-white has-checked:ring-black has-checked:border-black has-checked:outline-black;
+        }
+
+        &[data-color-checked="gray"] {
+            @apply has-checked:bg-gray-100 has-checked:text-gray-600 has-checked:ring-gray-100 has-checked:border-gray-100 has-checked:outline-gray-100;
+        }
+
+        &[data-color-checked="gray-light"] {
+            @apply has-checked:bg-gray-400/20 has-checked:text-gray-800 has-checked:ring-gray-400/20 has-checked:border-gray-400/20 has-checked:outline-gray-400/20;
+        }
+
         &[data-color-checked="sky"] {
-            @apply has-checked:bg-sky-500 has-checked:text-white has-checked:ring-sky-600 has-checked:border-sky-600;
+            @apply has-checked:bg-sky-500 has-checked:text-white has-checked:ring-sky-500 has-checked:border-sky-500 has-checked:outline-sky-500;
         }
-        &[data-color-checked="rose"] {
-            @apply has-checked:bg-rose-500 has-checked:text-white has-checked:ring-rose-600 has-checked:border-rose-600;
+
+        &[data-color-checked="sky-light"] {
+            @apply has-checked:bg-sky-400/20 has-checked:text-sky-800 has-checked:ring-sky-400/20 has-checked:border-sky-400/20 has-checked:outline-sky-400/20;
         }
-        &[data-color-checked="amber"] {
-            @apply has-checked:bg-amber-500 has-checked:text-white has-checked:ring-amber-600 has-checked:border-amber-600;
-        }
+
         &[data-color-checked="emerald"] {
-            @apply has-checked:bg-emerald-500 has-checked:text-white has-checked:ring-emerald-600 has-checked:border-emerald-600;
+            @apply has-checked:bg-emerald-500 has-checked:text-white has-checked:ring-emerald-500 has-checked:border-emerald-500 has-checked:outline-emerald-500;
+        }
+
+        &[data-color-checked="emerald-light"] {
+            @apply has-checked:bg-emerald-400/20 has-checked:text-emerald-800 has-checked:ring-emerald-400/20 has-checked:border-emerald-400/20 has-checked:outline-emerald-400/20;
+        }
+
+        &[data-color-checked="rose"] {
+            @apply has-checked:bg-rose-500 has-checked:text-white has-checked:ring-rose-500 has-checked:border-rose-500 has-checked:outline-rose-500;
+        }
+
+        &[data-color-checked="rose-light"] {
+            @apply has-checked:bg-rose-400/20 has-checked:text-rose-800 has-checked:ring-rose-400/20 has-checked:border-rose-400/20 has-checked:outline-rose-400/20;
+        }
+
+        &[data-color-checked="purple"] {
+            @apply has-checked:bg-purple-500 has-checked:text-white has-checked:ring-purple-500 has-checked:border-purple-500 has-checked:outline-purple-500;
+        }
+
+        &[data-color="purple-light"],
+        &.el-color-purple-light {
+            @apply bg-purple-400/20 has-checked:text-purple-800 has-checked:ring-purple-400/20 has-checked:border-purple-400/20 has-checked:outline-purple-400/20;
+        }
+
+        &[data-color-checked="yellow"] {
+            @apply has-checked:bg-yellow-500 has-checked:text-white has-checked:ring-yellow-400/20 has-checked:border-yellow-400/20 has-checked:outline-yellow-400/20;
+        }
+
+        &[data-color-checked="yellow-light"] {
+            @apply has-checked:bg-yellow-400/20 has-checked:text-yellow-800 has-checked:ring-yellow-400/20 has-checked:border-yellow-400/20 has-checked:outline-yellow-400/20;
+        }
+
+        &[data-color-checked="amber"] {
+            @apply has-checked:bg-amber-500 has-checked:text-white has-checked:ring-amber-400/20 has-checked:border-amber-400/20 has-checked:outline-amber-400/20;
+        }
+
+        &[data-color-checked="amber-light"] {
+            @apply has-checked:bg-amber-400/20 has-checked:text-amber-800 has-checked:ring-amber-400/20 has-checked:border-amber-400/20 has-checked:outline-amber-400/20;
         }
     }
 }
