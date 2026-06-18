@@ -25,23 +25,23 @@
         "fmt:check": "oxfmt --check"
     },
     "dependencies": {
-        "@tailwindcss/vite": "^4.3.0",
+        "@tailwindcss/vite": "^4.3.1",
         "laravel-vite-plugin": "^3.1.0",
-        "tailwindcss": "^4.3.0"
+        "tailwindcss": "^4.3.1"
     },
     "devDependencies": {
-        "@types/node": "^25.9.2",
+        "@types/node": "^25.9.3",
         "@vitejs/plugin-vue": "^6.0.7",
         "@vue/tsconfig": "^0.9.1",
-        "oxfmt": "^0.54.0",
-        "oxlint": "^1.69.0",
+        "oxfmt": "^0.55.0",
+        "oxlint": "^1.70.0",
         "typescript": "^6.0.3",
         "vite-plugin-dts": "^5.0.2",
-        "vue": "^3.5.35",
-        "vue-tsc": "^3.3.4"
+        "vue": "^3.5.38",
+        "vue-tsc": "^3.3.5"
     },
     "peerDependencies": {
-        "@floating-ui/vue": "^1.1.11",
+        "@floating-ui/vue": "^2.0.0",
         "@vueuse/core": "^14.3.0",
         "@vueuse/integrations": "^14.3.0",
         "focus-trap": "^8.2.1",
