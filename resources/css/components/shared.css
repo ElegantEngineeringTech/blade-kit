@@ -160,6 +160,10 @@
         &.el-color-black {
             @apply ring-black;
         }
+        &[data-color="white"],
+        &.el-color-white {
+            @apply ring-gray-200;
+        }
         &[data-color="gray"],
         &.el-color-gray {
             @apply ring-gray-200;
