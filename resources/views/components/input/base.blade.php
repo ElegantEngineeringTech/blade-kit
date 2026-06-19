@@ -6,5 +6,5 @@
     'disabled' => false,
 ])
 
-<input {{ $attributes->class(['el-input el-text el-bg el-outline el-ring']) }} data-color="{{ $color }}"
+<input {{ $attributes->class(['el-input el-text el-bg el-ring el-outline el-border']) }} data-color="{{ $color }}"
     data-size="{{ $size }}" @disabled($disabled) />

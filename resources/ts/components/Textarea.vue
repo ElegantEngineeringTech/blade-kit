@@ -71,7 +71,7 @@ onMounted(() => {
 <template>
     <textarea
         ref="textarea"
-        class="el-textarea el-text el-spacing el-bg el-outline"
+        class="el-textarea el-spacing el-text el-bg el-ring el-outline el-border"
         :data-size="size"
         :data-color="color"
         :rows="rows"

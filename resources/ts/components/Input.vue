@@ -13,7 +13,7 @@ withDefaults(
 
 <template>
     <input
-        class="el-input el-text el-bg el-outline el-ring"
+        class="el-input el-text el-bg el-ring el-outline el-border"
         :data-color="color"
         :data-size="size"
     />
