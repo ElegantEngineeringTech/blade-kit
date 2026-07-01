@@ -9,15 +9,13 @@ defineOptions({
 
 const props = defineProps<{
     copy?: MaybeRefOrGetter<string>;
-    tooltip?: MaybeRefOrGetter<string>;
-    tooltipCopied?: MaybeRefOrGetter<string>;
 }>();
 
 const slots = defineSlots<{
     default?(props: {}): any;
     icon?(props: {}): any;
     "icon-right"?(props: {}): any;
-    "icon-copied"?(props: {}): any;
+    "tooltip"?(props: {}): any;
 }>();
 
 const copied = ref(false);
@@ -35,28 +33,25 @@ function onCopy() {
         navigator.clipboard.writeText(value); // require https
     }
 }
-
-const tooltipValue = computed(() => toValue(props.tooltip));
-const tooltipCopiedValue = computed(() => toValue(props.tooltipCopied));
 </script>
 
 <template>
     <Tooltip>
         <template v-slot:default="{ trigger }">
             <Button v-bind="{ ...trigger, ...$attrs }" v-on:click="onCopy">
-                <template v-slot:icon v-if="slots.icon || slots['icon-right']">
-                    <span>
-                        <slot v-show="copied" name="icon-copied"></slot>
-                        <slot v-show="!copied" name="icon"></slot>
-                    </span>
+                <template v-slot:icon v-if="slots.icon">
+                    <slot :copied="copied" name="icon"></slot>
+                </template>
+
+                <template v-slot:icon-right v-if="slots['icon-right']">
+                    <slot :copied="copied" name="icon-right"></slot>
                 </template>
 
                 <slot></slot>
             </Button>
         </template>
-        <template v-slot:tooltip v-if="tooltipValue || tooltipCopiedValue">
-            <span v-show="copied" v-html="tooltipCopiedValue"></span>
-            <span v-show="!copied" v-html="tooltipValue"></span>
+        <template v-slot:tooltip v-if="slots.tooltip">
+            <slot :copied="copied" name="tooltip"></slot>
         </template>
     </Tooltip>
 </template>
