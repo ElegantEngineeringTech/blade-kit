@@ -3,6 +3,7 @@ import Checkbox from "./components/Checkbox.vue";
 import Button from "./components/Button.vue";
 import ButtonBadge from "./components/ButtonBadge.vue";
 import ButtonIcon from "./components/ButtonIcon.vue";
+import ButtonCopy from "./components/ButtonCopy.vue";
 import Radio from "./components/Radio.vue";
 import Switch from "./components/Switch.vue";
 import Textarea from "./components/Textarea.vue";
@@ -21,6 +22,7 @@ export {
     Button,
     ButtonBadge,
     ButtonIcon,
+    ButtonCopy,
     Radio,
     Switch,
     Textarea,
