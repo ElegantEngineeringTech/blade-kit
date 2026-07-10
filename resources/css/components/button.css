@@ -145,9 +145,8 @@
             @apply has-checked:bg-purple-500 has-checked:text-white has-checked:ring-purple-500 has-checked:border-purple-500 has-checked:outline-purple-500;
         }
 
-        &[data-color="purple-light"],
-        &.el-color-purple-light {
-            @apply bg-purple-400/20 has-checked:text-purple-800 has-checked:ring-purple-400/20 has-checked:border-purple-400/20 has-checked:outline-purple-400/20;
+        &[data-color-checked="purple-light"] {
+            @apply has-checked:bg-purple-400/20 has-checked:text-purple-800 has-checked:ring-purple-400/20 has-checked:border-purple-400/20 has-checked:outline-purple-400/20;
         }
 
         &[data-color-checked="yellow"] {
