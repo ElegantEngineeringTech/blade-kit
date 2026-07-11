@@ -256,10 +256,6 @@ import {
                 <Button color="sky-light" class="el-loading rounded-md ring-1 ring-inset">
                     Button
                 </Button>
-
-                <Button color="sky-light" class="rounded-md ring-1 ring-inset" loading>
-                    Button
-                </Button>
             </div>
         </div>
 

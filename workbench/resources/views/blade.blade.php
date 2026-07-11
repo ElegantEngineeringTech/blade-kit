@@ -81,10 +81,6 @@
                     Button
                 </x-kit::button>
 
-                <x-kit::button color="sky-light" class="rounded-md ring-1 ring-inset" loading>
-                    Button
-                </x-kit::button>
-
             </div>
         </div>
 
