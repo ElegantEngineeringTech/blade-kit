@@ -7,6 +7,7 @@ import {
     ref,
     Teleport,
     toValue,
+    useId,
     useTemplateRef,
     watch,
 } from "vue";
@@ -22,7 +23,7 @@ import {
     useFloating,
 } from "@floating-ui/vue";
 import { onClickOutside } from "@vueuse/core";
-import { useFocusTrap, type UseFocusTrapOptions } from "@vueuse/integrations/useFocusTrap";
+import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
 
 defineOptions({
     inheritAttrs: false,
@@ -30,13 +31,14 @@ defineOptions({
 
 const props = withDefaults(
     defineProps<{
-        trap?: MaybeRefOrGetter<UseFocusTrapOptions | boolean>;
+        trap?: MaybeRefOrGetter<boolean>;
         placement?: MaybeRefOrGetter<Placement>;
         offset?: MaybeRefOrGetter<OffsetOptions>;
         flip?: MaybeRefOrGetter<FlipOptions>;
         shift?: MaybeRefOrGetter<ShiftOptions>;
         animation?: MaybeRefOrGetter<false | string>;
         backdrop?: MaybeRefOrGetter<boolean>;
+        role?: "dialog" | "menu" | "tooltip" | "listbox";
     }>(),
     {
         trap: true,
@@ -44,20 +46,19 @@ const props = withDefaults(
         placement: "bottom",
         animation: "default",
         backdrop: true,
+        role: "dialog",
     },
 );
 
-const open = defineModel({
+const id = useId();
+
+const open = defineModel<boolean>({
     default: false,
 });
 
-const trigger = ref<Element | ComponentPublicInstance | null>(null);
-
-const floating = useTemplateRef("floating");
-
-const { activate, deactivate } = useFocusTrap(floating, {
-    allowOutsideClick: true,
-});
+const trap = computed(() => toValue(props.trap));
+const backdrop = computed(() => toValue(props.backdrop));
+const animation = computed(() => toValue(props.animation));
 
 const middleware = computed(() => [
     offset(toValue(props.offset)),
@@ -68,24 +69,34 @@ const middleware = computed(() => [
     shift(toValue(props.shift)),
 ]);
 
+const trigger = ref<Element | ComponentPublicInstance | null>(null);
+
+const floating = useTemplateRef("floating");
+
+const { activate, deactivate } = useFocusTrap(floating, {
+    allowOutsideClick: true,
+});
+
 const { isPositioned, floatingStyles, placement } = useFloating(trigger, floating, {
     middleware: middleware,
     whileElementsMounted: autoUpdate,
     open: open,
-    placement: props.placement,
+    placement: () => toValue(props.placement),
 });
 
 const setTrigger = (el: Element | ComponentPublicInstance | null) => {
     trigger.value = el;
 };
 
-watch(isPositioned, (value) => {
-    if (toValue(props.trap)) {
+watch([isPositioned, trap], ([value, trap], [oldValue, oldTrap]) => {
+    if (trap) {
         if (value) {
             nextTick(() => activate());
         } else {
             nextTick(() => deactivate());
         }
+    } else if (oldTrap) {
+        nextTick(() => deactivate());
     }
 });
 
@@ -103,9 +114,21 @@ function toggle() {
     }
 }
 
-const triggerAttrs = computed(() => ({
-    ref: setTrigger,
-}));
+const triggerAttrs = computed(() => {
+    if (props.role === "tooltip") {
+        return {
+            ref: setTrigger,
+            "aria-describedby": open.value ? id : undefined,
+        };
+    }
+
+    return {
+        ref: setTrigger,
+        "aria-haspopup": props.role,
+        "aria-expanded": open.value,
+        "aria-controls": id,
+    };
+});
 
 const triggerElement = computed(() => {
     if (trigger.value === null) {
@@ -147,6 +170,9 @@ onClickOutside(
             class="el-popover"
             :data-placement="placement"
             :data-animation="animation || undefined"
+            :role="role"
+            :id="id"
+            v-on:keydown.escape="hide"
         >
             <slot name="popover" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
         </div>
