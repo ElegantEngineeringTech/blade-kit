@@ -196,6 +196,47 @@ import {
 
         <div class="isolate flex flex-col">
             <div class="p-3">
+                <h1 class="font-semibold">Trapped Popover</h1>
+            </div>
+            <div
+                class="flex grow items-center justify-center gap-2 border-b border-gray-200 p-3 flex-col"
+            >
+                <div class="flex flex-wrap gap-1">
+                    <Popover placement="bottom-start" :trap="true" class="max-w-52">
+                        <template v-slot:default="{ toggle, trigger }">
+                            <Button
+                                color="white"
+                                class="rounded-md ring-1 ring-inset"
+                                v-bind="trigger"
+                                v-on:click="toggle"
+                            >
+                                toggle
+                            </Button>
+                        </template>
+                        <template v-slot:popover>
+                            <div class="bg-white rounded-md p-2 shadow flex flex-col gap-1">
+                                <p>
+                                    Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                                </p>
+
+                                <Textarea
+                                    autosized
+                                    color="white"
+                                    class="rounded-md ring-1 ring-inset w-full"
+                                />
+
+                                <Button color="white" class="rounded-md ring-1 ring-inset">
+                                    Button
+                                </Button>
+                            </div>
+                        </template>
+                    </Popover>
+                </div>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
                 <h1 class="font-semibold">Alert</h1>
             </div>
             <div

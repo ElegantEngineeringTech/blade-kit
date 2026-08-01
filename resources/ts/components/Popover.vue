@@ -122,11 +122,25 @@ const triggerAttrs = computed(() => {
         };
     }
 
-    return {
+    const attrs = {
         ref: setTrigger,
         "aria-haspopup": props.role,
         "aria-expanded": open.value,
         "aria-controls": id,
+    };
+
+    if (trap.value) {
+        return attrs;
+    }
+
+    return {
+        ...attrs,
+        onKeydown: (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                e.preventDefault();
+                hide();
+            }
+        },
     };
 });
 
@@ -164,15 +178,15 @@ onClickOutside(
         <div v-if="backdrop && open" class="el-popover-backdrop"></div>
         <div
             v-if="open"
-            v-bind="$attrs"
-            :style="floatingStyles"
             ref="floating"
             class="el-popover"
+            v-bind="$attrs"
+            :id="id"
+            :role="role"
+            :style="floatingStyles"
             :data-placement="placement"
             :data-animation="animation || undefined"
-            :role="role"
-            :id="id"
-            v-on:keydown.escape="hide"
+            v-on:keydown.escape.prevent="hide"
         >
             <slot name="popover" :show="show" :hide="hide" :toggle="toggle" :open="open"></slot>
         </div>
