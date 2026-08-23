@@ -220,6 +220,8 @@
                         Click me
                     </x-kit::button>
 
+                    <x-kit::popover.backdrop />
+
                     <x-kit::popover.content class="max-w-52">
 
                         <div class="flex flex-col gap-1 rounded-md bg-white p-2 shadow">
