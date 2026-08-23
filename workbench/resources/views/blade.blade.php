@@ -11,6 +11,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -212,89 +213,27 @@
                 <h1 class="font-semibold">Popover</h1>
             </div>
             <div class="flex grow items-center justify-center border-b border-gray-200">
-                <x-kit::popover class="">
-                    <x-kit::button class="rounded-md ring-1 ring-inset" color="white" x-ref="trigger"
-                        x-on:click="open = !open">
+
+                <x-kit::popover placement="bottom-start" trap>
+                    <x-kit::button color="white" class="rounded-md ring-1 ring-inset" x-ref="trigger"
+                        x-on:click="toggle">
                         Click me
-                        <x-slot:icon-right>
-                            <iconify-icon icon="heroicons:chevron-up-down"></iconify-icon>
-                        </x-slot:icon-right>
                     </x-kit::button>
 
-                    <x-kit::popover.content class="z-20 p-3 md:p-0" x-anchor.bottom-end.offset.5="$refs.trigger"
-                        x-transition.origin.top="">
-                        <div
-                            class="mt-auto flex w-full flex-col rounded-lg border border-gray-200 bg-white shadow-lg md:max-w-72">
+                    <x-kit::popover.content class="max-w-52">
 
-                            <div class="p-1">
-                                <x-kit::input color="white" size="sm"
-                                    class="items-center rounded-md outline-none ring-1 ring-inset">
+                        <div class="flex flex-col gap-1 rounded-md bg-white p-2 shadow">
+                            <p>
+                                Occaecat incididunt tempor elit consequat aute Lorem anim minim.
+                            </p>
 
-                                    <x-kit::input.icon>
-                                        <iconify-icon icon="lucide:search"></iconify-icon>
-                                    </x-kit::input.icon>
+                            <x-kit::textarea autosized color="white" class="w-full rounded-md ring-1 ring-inset" />
 
-                                    <input type="text" placeholder="Search" />
-
-                                    <x-slot:end>
-                                        <x-kit::button size="xs" color="gray"
-                                            class="mr-0.5 rounded ring-1 ring-inset">
-                                            New
-                                            <x-slot:icon-right>
-                                                <iconify-icon icon="heroicons:plus"></iconify-icon>
-                                            </x-slot:icon-right>
-                                        </x-kit::button>
-                                    </x-slot:end>
-
-                                </x-kit::input>
-                            </div>
-
-                            <div class="flex gap-0.5 overflow-auto p-1">
-                                <x-kit::tag color="gray" size="2xs" class="rounded">
-                                    Tag
-                                    <x-slot:button>
-                                        <x-kit::button color="gray" size="2xs" class="rounded">
-                                            <x-slot:icon>
-                                                <iconify-icon icon="heroicons:x-mark"></iconify-icon>
-                                            </x-slot:icon>
-                                        </x-kit::button>
-                                    </x-slot:button>
-                                </x-kit::tag>
-                            </div>
-
-                            <div class="flex items-center">
-                                <p class="px-2.5 py-0.5 text-sm font-semibold">
-                                    Recent
-                                </p>
-                                <span class="grow border-b border-gray-200"></span>
-                            </div>
-
-                            <div class="flex max-h-full flex-col gap-0.5 overflow-auto p-1 md:max-h-56">
-                                @for ($i = 0; $i < 10; $i++)
-                                    <div class="flex gap-0.5">
-                                        <x-kit::button color="white" size="sm" class="flex-1 rounded">
-                                            <x-slot:icon class="text-gray-400">
-                                                <iconify-icon icon="heroicons:bookmark"></iconify-icon>
-                                            </x-slot:icon>
-                                            <x-slot:content class="grow">
-                                                <span class="min-w-0 truncate">
-                                                    Name {{ $i }}
-                                                </span>
-                                                <small class="ml-auto whitespace-nowrap text-gray-400">
-                                                    helper
-                                                </small>
-                                            </x-slot:content>
-                                        </x-kit::button>
-                                        <x-kit::button color="white" size="sm" class="rounded">
-                                            <x-slot:icon class="text-gray-400">
-                                                <iconify-icon icon="lucide:arrow-up-right"></iconify-icon>
-                                            </x-slot:icon>
-                                        </x-kit::button>
-                                    </div>
-                                @endfor
-                            </div>
-
+                            <x-kit::button color="white" class="rounded-md ring-1 ring-inset">
+                                Button
+                            </x-kit::button>
                         </div>
+
                     </x-kit::popover.content>
                 </x-kit::popover>
             </div>
@@ -317,19 +256,18 @@
                 
                         return this.options;
                     }
-                }">
+                }" placement="bottom-end" trap>
                     <x-kit::button class="rounded-md ring-1 ring-inset" color="white" x-ref="trigger"
-                        x-on:click="open = !open">
+                        x-on:click="toggle">
                         Click me
                         <x-slot:icon-right>
                             <iconify-icon icon="heroicons:chevron-up-down"></iconify-icon>
                         </x-slot:icon-right>
                     </x-kit::button>
 
-                    <x-kit::popover.content class="z-20 p-3 md:p-0" x-anchor.bottom-end.offset.5="$refs.trigger"
-                        x-transition.origin.top="">
-                        <div
-                            class="mt-auto flex w-full flex-col rounded-lg border border-gray-200 bg-white shadow-lg md:max-w-72">
+                    <x-kit::popover.content class="md:max-w-72">
+
+                        <div class="flex w-full flex-col rounded-lg border border-gray-200 bg-white shadow-lg">
 
                             <div class="p-1">
                                 <x-kit::input color="white" size="sm"
@@ -372,7 +310,9 @@
                             </div>
 
                         </div>
+
                     </x-kit::popover.content>
+
                 </x-kit::popover>
             </div>
         </div>

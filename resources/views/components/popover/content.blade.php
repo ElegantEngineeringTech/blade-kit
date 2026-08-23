@@ -1,7 +1,14 @@
-@blaze(fold: true)
+@blaze()
 
-<div {{ $attributes->class(['flex items-center justify-center max-sm:fixed! max-sm:left-0! max-sm:top-0! max-sm:bottom-0 max-sm:right-0 max-sm:bg-black/30']) }}
-    x-cloak x-show="open" x-trap="open" x-on:click.outside="open = false" x-on:click.self="open = false"
-    x-on:keyup.escape.prevent.stop="open = false">
+@props([
+    'offset' => 4,
+    'placement' => 'bottom',
+    'animation' => 'default',
+    'role' => 'dialog',
+])
+
+<div {{ $attributes->class(['el-popover']) }} data-placement="{{ $placement }}" data-animation="{{ $animation }}"
+    role="{{ $role }}" x-cloak x-show="open" x-trap="trap && open" x-on:click.outside="hide" x-on:click.self="hide"
+    x-on:keydown.escape.prevent="hide" x-anchor.{{ $placement }}.offset.{{ $offset }}="$refs.trigger">
     {{ $slot }}
 </div>
