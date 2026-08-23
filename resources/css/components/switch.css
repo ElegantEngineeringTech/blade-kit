@@ -1,6 +1,6 @@
 @layer components {
     .el-switch {
-        @apply appearance-none cursor-pointer inline-block border-0 w-10 relative rounded-xl align-bottom
+        @apply appearance-none cursor-pointer inline-block border-0 w-10 relative rounded-xl align-bottom flex-none
                 before:absolute before:top-0 before:inline-block before:outline-offset-2 before:w-full before:h-full before:shadow-[inset_0_0_#000]
                 dark:before:bg-gray-600
                 after:absolute after:top-0 after:block after:w-1/2 after:m-0.5 after:shadow-md after:duration-100 after:bg-white
