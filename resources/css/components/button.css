@@ -1,10 +1,11 @@
 @layer components {
     .el-button {
-        @apply shrink-0 relative align-middle inline-flex items-center outline-offset-2 transition-colors cursor-pointer
+        @apply shrink-0 relative align-middle inline-flex items-center outline-offset-0 transition-colors cursor-pointer
                 disabled:cursor-not-allowed disabled:opacity-50
-                focus-visible:outline-2
-                active:outline-2
-                has-focus-visible:outline-2;
+                focus-visible:outline-1
+                focus:outline-1
+                active:outline-1
+                has-focus-visible:outline-1;
 
         & .el-loader {
             @apply hidden absolute left-px top-px bottom-px right-px gap-2 items-center justify-center;

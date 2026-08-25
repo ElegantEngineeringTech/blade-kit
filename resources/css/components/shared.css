@@ -233,7 +233,7 @@
     .el-outline {
         &[data-color="white"],
         &.el-color-white {
-            @apply outline-black;
+            @apply outline-gray-400;
         }
         &[data-color="black"],
         &.el-color-black {
@@ -241,7 +241,7 @@
         }
         &[data-color="gray"],
         &.el-color-gray {
-            @apply outline-gray-200;
+            @apply outline-gray-400;
         }
         &[data-color="gray-light"],
         &.el-color-gray-light {
@@ -249,51 +249,51 @@
         }
         &[data-color="sky"],
         &.el-color-sky {
-            @apply outline-sky-500;
+            @apply outline-sky-600;
         }
         &[data-color="sky-light"],
         &.el-color-sky-light {
-            @apply outline-sky-500;
+            @apply outline-sky-600;
         }
         &[data-color="emerald"],
         &.el-color-emerald {
-            @apply outline-emerald-500;
+            @apply outline-emerald-600;
         }
         &[data-color="emerald-light"],
         &.el-color-emerald-light {
-            @apply outline-emerald-500;
+            @apply outline-emerald-600;
         }
         &[data-color="rose"],
         &.el-color-rose {
-            @apply outline-rose-500;
+            @apply outline-rose-600;
         }
         &[data-color="rose-light"],
         &.el-color-rose-light {
-            @apply outline-rose-500;
+            @apply outline-rose-600;
         }
         &[data-color="purple"],
         &.el-color-purple {
-            @apply outline-purple-500;
+            @apply outline-purple-600;
         }
         &[data-color="purple-light"],
         &.el-color-purple-light {
-            @apply outline-purple-500;
+            @apply outline-purple-600;
         }
         &[data-color="yellow"],
         &.el-color-yellow {
-            @apply outline-yellow-500;
+            @apply outline-yellow-600;
         }
         &[data-color="yellow-light"],
         &.el-color-yellow-light {
-            @apply outline-yellow-500;
+            @apply outline-yellow-600;
         }
         &[data-color="amber"],
         &.el-color-amber {
-            @apply outline-amber-500;
+            @apply outline-amber-600;
         }
         &[data-color="amber-light"],
         &.el-color-amber-light {
-            @apply outline-amber-500;
+            @apply outline-amber-600;
         }
         &[data-color="glass"],
         &.el-color-glass {

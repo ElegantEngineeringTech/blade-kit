@@ -1,7 +1,7 @@
 @blaze()
 
 @props([
-    'trap' => true,
+    'trap' => false,
     'xData' => '{}',
 ])
 

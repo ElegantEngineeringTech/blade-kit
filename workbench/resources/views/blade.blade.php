@@ -65,6 +65,10 @@
                     Button
                 </x-kit::button>
 
+                <x-kit::button color="gray" class="rounded-md ring-1 ring-inset">
+                    Button
+                </x-kit::button>
+
             </div>
         </div>
 
