@@ -137,7 +137,7 @@
 
         &[data-color="white"] {
             & .el-input-icon {
-                @apply text-black/40;
+                @apply text-gray-400;
             }
         }
         &[data-color="black"] {

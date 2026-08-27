@@ -380,7 +380,7 @@
             <div class="p-3">
                 <h1 class="font-semibold">Input</h1>
             </div>
-            <div class="flex grow items-center justify-center border-b border-gray-200">
+            <div class="flex grow items-center justify-center border-b border-gray-200 p-3">
                 <x-kit::input color="white" size="lg" class="items-center rounded-md ring-1 ring-inset">
 
                     <x-slot:start>
@@ -405,6 +405,33 @@
 
                             <x-slot:icon-right>
                                 <iconify-icon icon="heroicons:plus"></iconify-icon>
+                            </x-slot:icon-right>
+                        </x-kit::button>
+                    </x-slot:end>
+
+                </x-kit::input>
+            </div>
+        </div>
+
+        <div class="isolate flex flex-col">
+            <div class="p-3">
+                <h1 class="font-semibold">Input</h1>
+            </div>
+            <div class="flex grow items-center justify-center border-b border-gray-200 p-3">
+                <x-kit::input color="white" size="lg" class="items-center rounded-md ring-1 ring-inset">
+
+                    <x-kit::input.icon>
+                        <iconify-icon icon="lucide:search"></iconify-icon>
+                    </x-kit::input.icon>
+
+                    <input type="text" placeholder="Hello world" />
+
+                    <x-slot:end>
+                        <x-kit::button size="sm" color="black" class="mr-1 rounded font-semibold">
+                            Discovery
+
+                            <x-slot:icon-right>
+                                <iconify-icon icon="lucide:sparkle"></iconify-icon>
                             </x-slot:icon-right>
                         </x-kit::button>
                     </x-slot:end>
