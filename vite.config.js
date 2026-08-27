@@ -20,7 +20,7 @@ export default defineConfig({
         laravel({
             hotFile: "public/vendor/blade-kit/blade-kit.hot",
             buildDirectory: "vendor/blade-kit",
-            input: ["workbench/resources/css/demo.css", "workbench/resources/js/app.ts"],
+            input: ["workbench/resources/css/demo.css", "workbench/resources/js/vue.ts"],
             refresh: true,
         }),
     ],

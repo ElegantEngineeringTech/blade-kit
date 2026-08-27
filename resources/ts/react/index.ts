@@ -15,6 +15,8 @@ import Tooltip from "./components/Tooltip";
 import Input from "./components/Input";
 import InputGroup from "./components/InputGroup";
 import InputCard from "./components/InputCard";
+import InputIcon from "./components/InputIcon";
+import TagIcon from "./components/TagIcon";
 
 export {
     Badge,
@@ -34,4 +36,6 @@ export {
     Input,
     InputGroup,
     InputCard,
+    InputIcon,
+    TagIcon,
 };

@@ -15,6 +15,8 @@ import Tooltip from "./components/Tooltip.vue";
 import Input from "./components/Input.vue";
 import InputGroup from "./components/InputGroup.vue";
 import InputCard from "./components/InputCard.vue";
+import InputIcon from "./components/InputIcon.vue";
+import TagIcon from "./components/TagIcon.vue";
 
 export {
     Badge,
@@ -34,4 +36,6 @@ export {
     Input,
     InputGroup,
     InputCard,
+    InputIcon,
+    TagIcon,
 };

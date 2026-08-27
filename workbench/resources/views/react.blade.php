@@ -14,7 +14,7 @@
         }
     </style>
 
-    {{ Vite::useHotFile('vendor/blade-kit/blade-kit.hot')->useBuildDirectory('vendor/blade-kit')->withEntryPoints(['workbench/resources/js/vue.ts']) }}
+    {{ Vite::useHotFile('vendor/blade-kit/blade-kit.hot')->useBuildDirectory('vendor/blade-kit')->withEntryPoints(['workbench/resources/js/react.ts']) }}
 </head>
 
 <body class="bg-gray-100 antialiased">
