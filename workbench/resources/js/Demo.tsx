@@ -10,7 +10,7 @@ import {
     Tag,
     Textarea,
     Tooltip,
-} from "@/index";
+} from "@/react/index";
 
 const text = "Occaecat incididunt tempor elit consequat aute Lorem anim minim.";
 

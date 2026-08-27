@@ -12,7 +12,7 @@ import {
     Input,
     InputCard,
     InputGroup,
-} from "@/index";
+} from "@/vue/index";
 </script>
 
 <template>
