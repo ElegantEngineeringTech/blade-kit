@@ -21,8 +21,6 @@ withDefaults(
             <slot name="icon"></slot>
         </span>
 
-        <div>
-            <slot></slot>
-        </div>
+        <slot></slot>
     </div>
 </template>

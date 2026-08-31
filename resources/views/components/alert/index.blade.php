@@ -11,7 +11,5 @@
         </span>
     @endisset
 
-    <div>
-        {{ $slot }}
-    </div>
+    {{ $slot }}
 </div>

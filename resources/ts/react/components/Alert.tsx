@@ -22,7 +22,7 @@ export default function Alert({
             data-size={size}
         >
             {icon && <span className="el-alert-icon -mx-1">{icon}</span>}
-            <div>{children}</div>
+            {children}
         </div>
     );
 }
