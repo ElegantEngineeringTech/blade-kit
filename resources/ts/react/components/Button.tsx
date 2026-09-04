@@ -82,7 +82,7 @@ export default function Button({
             {children && (
                 <span
                     className={clsx(
-                        "relative inline-flex min-w-0",
+                        "el-button-content",
                         icon && offset && "ml-2",
                         iconRight && offset && "mr-2",
                     )}

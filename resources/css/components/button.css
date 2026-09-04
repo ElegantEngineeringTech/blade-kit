@@ -24,6 +24,10 @@
             }
         }
 
+        & .el-button-content {
+            @apply relative inline-flex min-w-0;
+        }
+
         & input {
             @apply pointer-events-none absolute left-0 top-0 size-full appearance-none opacity-0;
         }

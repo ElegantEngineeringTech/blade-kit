@@ -45,11 +45,11 @@
         @endphp
         <span
             {{ $contentAttributes->class([
-                'relative',
-                'inline-flex min-w-0',
+                'el-button-content',
                 'ml-2' => $icon && $offset,
                 'mr-2' => $iconRight && $offset,
             ]) }}>
+
             {{ $content ?? $slot }}
 
             @if (!$icon && $badge)

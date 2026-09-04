@@ -68,7 +68,7 @@ const computedType = computed(() => {
 
         <span
             v-if="slots.default"
-            class="relative inline-flex min-w-0"
+            class="el-button-content"
             :class="{
                 'ml-2': slots.icon && offset,
                 'mr-2': slots['icon-right'] && offset,
