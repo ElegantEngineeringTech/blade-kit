@@ -5,7 +5,8 @@
                 focus-visible:outline-1
                 focus:outline-1
                 active:outline-1
-                has-focus-visible:outline-1;
+                has-focus-visible:outline-1
+                select-none;
 
         & .el-loader {
             @apply hidden absolute left-px top-px bottom-px right-px gap-2 items-center justify-center;
