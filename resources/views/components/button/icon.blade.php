@@ -4,6 +4,6 @@
     {{ $icon }}
 
     @if ($badge)
-        <x-kit::button.badge :count="$badge" />
+        <x-kit::badge class="absolute -right-1 -top-1" :count="$badge" />
     @endif
 </span>

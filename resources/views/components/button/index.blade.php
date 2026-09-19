@@ -53,7 +53,7 @@
             {{ $content ?? $slot }}
 
             @if (!$icon && $badge)
-                <x-kit::button.badge :count="$badge" />
+                <x-kit::badge class="absolute -right-3 -top-1" :count="$badge" />
             @endif
         </span>
     @endif
