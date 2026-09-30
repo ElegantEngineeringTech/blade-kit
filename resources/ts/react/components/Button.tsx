@@ -96,7 +96,7 @@ export default function Button({
             {iconRight && <ButtonIcon offset={offset}>{iconRight}</ButtonIcon>}
 
             <span className="el-loader">
-                <span className="size-4 animate-spin-loader rounded-full border-2 border-current border-t-transparent border-r-transparent" />
+                <span className="el-loader-spin"></span>
                 {loader}
             </span>
 

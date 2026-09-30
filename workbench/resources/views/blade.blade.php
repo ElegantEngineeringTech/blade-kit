@@ -83,7 +83,11 @@
                 </x-kit::button>
 
                 <x-kit::button color="sky-light" class="el-loading rounded-md ring-1 ring-inset">
-                    Button
+                    A button with cycling loading
+
+                    <x-slot:loader>
+                        <x-kit::button.loaders :delay="5_000" :items="['Loading…', 'This may take a moment…', 'Just a little longer…']" />
+                    </x-slot:loader>
                 </x-kit::button>
 
             </div>

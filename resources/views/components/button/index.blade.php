@@ -69,8 +69,7 @@
     @endif
 
     <span class="el-loader">
-        <span
-            class="animate-spin-loader size-4 rounded-full border-2 border-current border-r-transparent border-t-transparent"></span>
+        <span class="el-loader-spin"></span>
         {{ $loader }}
     </span>
 
