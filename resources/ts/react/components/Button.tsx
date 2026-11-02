@@ -51,7 +51,7 @@ export default function Button({
 }: ButtonProps) {
     const computedTag = tag ?? (input ? "label" : "button");
 
-    const computedType = type ?? (tag === "button" ? "button" : undefined);
+    const computedType = type ?? (computedTag === "button" ? "button" : undefined);
 
     const Component = computedTag;
 

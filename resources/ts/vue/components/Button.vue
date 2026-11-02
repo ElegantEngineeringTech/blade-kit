@@ -42,7 +42,7 @@ const computedTag = computed(() => {
 
 const computedType = computed(() => {
     if (props.type) return props.type;
-    if (props.tag === "button") return "button";
+    if (computedTag.value === "button") return "button";
     return null;
 });
 </script>
