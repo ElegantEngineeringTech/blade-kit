@@ -5,7 +5,7 @@
 
 <div {{ $attributes }} x-data="{
     expanded: {{ Js::from($expanded) }},
-}">
+}" x-id="['accordion']">
 
     @if (is_string($button))
         <x-kit::accordion.button class="w-full font-semibold" icon-right="heroicon-o-chevron-down">
@@ -15,7 +15,7 @@
         {{ $button }}
     @endif
 
-    <div x-show="expanded" x-collapse x-cloak class="overflow-auto">
+    <div x-show="expanded" x-collapse x-cloak class="overflow-auto" x-bind:id="$id('accordion')">
         {{ $slot }}
     </div>
 </div>
