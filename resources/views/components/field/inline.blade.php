@@ -6,18 +6,19 @@
     'for' => null,
 ])
 
-<div {!! $attributes->class(['flex gap-1.5 items-start']) !!} @if ($tooltip) x-tooltip.raw="{{ $tooltip }}" @endif>
+<div {{ $attributes->class(['flex gap-1.5 items-start']) }}
+    @if ($tooltip) x-tooltip.raw="{{ $tooltip }}" @endif>
 
     <div class="mr-auto">
         @if ($label)
             <x-kit::field.label :for="$for">
-                {!! $label !!}
+                {{ $label }}
             </x-kit::field.label>
         @endif
 
         @if ($help)
             <x-kit::field.help>
-                {!! $help !!}
+                {{ $help }}
             </x-kit::field.help>
         @endif
 

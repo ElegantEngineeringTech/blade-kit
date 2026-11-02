@@ -9,10 +9,10 @@
 
     @if (is_string($button))
         <x-kit::accordion.button class="w-full font-semibold" icon-right="heroicon-o-chevron-down">
-            {!! $button !!}
+            {{ $button }}
         </x-kit::accordion.button>
     @else
-        {!! $button !!}
+        {{ $button }}
     @endif
 
     <div x-show="expanded" x-collapse x-cloak class="overflow-auto">

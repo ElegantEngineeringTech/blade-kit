@@ -26,8 +26,8 @@
         'wire:loading.class' => 'el-loading',
     ]),
 )" :size="$size" :color-checked="$_colorChecked" :tag="$_tag">
-    {!! $before !!}
-    {!! $input !!}
+    {{ $before }}
+    {{ $input }}
 
     @if ($icon)
         @php
@@ -73,5 +73,5 @@
         {{ $loader }}
     </span>
 
-    {!! $after !!}
+    {{ $after }}
 </x-kit::button.base>
