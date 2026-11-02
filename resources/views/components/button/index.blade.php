@@ -19,10 +19,12 @@
     $_colorChecked = $colorChecked ?? ($input ? 'black' : null);
 @endphp
 
+{{-- The `.busy` modifier only makes the attribute name unique, Livewire ignores it --}}
 <x-kit::button.base :attributes="$attributes->when(
     $target,
     fn($a) => $a->merge([
         'wire:loading.attr' => 'disabled',
+        'wire:loading.attr.busy' => 'aria-busy',
         'wire:loading.class' => 'el-loading',
     ]),
 )" :size="$size" :color-checked="$_colorChecked" :tag="$_tag">
@@ -69,7 +71,7 @@
     @endif
 
     <span class="el-loader">
-        <span class="el-loader-spin"></span>
+        <span class="el-loader-spin" aria-hidden="true"></span>
         {{ $loader }}
     </span>
 

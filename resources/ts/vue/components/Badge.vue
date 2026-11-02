@@ -6,6 +6,7 @@ const props = withDefaults(
         count?: number;
         max?: number;
         color?: string;
+        label?: string;
     }>(),
     {
         count: 0,
@@ -15,7 +16,10 @@ const props = withDefaults(
 );
 
 const computedCount = computed(() => {
-    return props.count > 1 ? Math.min(props.count, props.max) : null;
+    if (props.count > props.max) return `${props.max}+`;
+    if (props.count < -props.max) return `-${props.max}+`;
+    if (props.count > 1 || props.count < 0) return props.count;
+    return null;
 });
 </script>
 
@@ -23,11 +27,14 @@ const computedCount = computed(() => {
     <span
         :class="{
             'el-badge el-text el-bg el-outline': true,
-            'size-5': count > 1,
-            'size-3': count <= 1,
+            'h-5 min-w-5 px-0.5': computedCount !== null,
+            'size-3': computedCount === null,
         }"
         :data-color="color"
     >
-        {{ computedCount }}
+        <span v-if="computedCount !== null" :aria-hidden="label ? 'true' : undefined">
+            {{ computedCount }}
+        </span>
+        <span v-if="label" class="sr-only">{{ label }}</span>
     </span>
 </template>

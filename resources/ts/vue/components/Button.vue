@@ -58,6 +58,7 @@ const computedType = computed(() => {
         :type="computedType"
         :download="download || null"
         :data-loading="loading || null"
+        :aria-busy="loading || null"
     >
         <slot name="before" />
         <slot name="input" />
@@ -83,7 +84,7 @@ const computedType = computed(() => {
         </ButtonIcon>
 
         <span class="el-loader">
-            <span class="el-loader-spin"></span>
+            <span class="el-loader-spin" aria-hidden="true"></span>
             <slot name="loader" />
         </span>
 

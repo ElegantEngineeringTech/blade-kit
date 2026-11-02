@@ -69,6 +69,7 @@ export default function Button({
             type={computedType}
             download={download || undefined}
             data-loading={loading || undefined}
+            aria-busy={loading || undefined}
         >
             {before}
             {input}
@@ -96,7 +97,7 @@ export default function Button({
             {iconRight && <ButtonIcon offset={offset}>{iconRight}</ButtonIcon>}
 
             <span className="el-loader">
-                <span className="el-loader-spin"></span>
+                <span className="el-loader-spin" aria-hidden="true"></span>
                 {loader}
             </span>
 
