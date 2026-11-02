@@ -8,5 +8,5 @@
     'type' => 'checkbox',
 ])
 
-<input {{ $attributes->class(['el-switch']) }} data-color="{{ $color }}" type="{{ $type }}" @disabled($disabled)
+<input {{ $attributes->class(['el-switch'])->merge($type === 'checkbox' ? ['role' => 'switch'] : []) }} data-color="{{ $color }}" type="{{ $type }}" @disabled($disabled)
     @checked($checked) @required($required) />

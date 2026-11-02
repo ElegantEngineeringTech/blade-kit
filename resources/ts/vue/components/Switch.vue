@@ -22,6 +22,7 @@ withDefaults(
         class="el-switch"
         :data-color="color"
         :type="type"
+        :role="type === 'checkbox' ? 'switch' : undefined"
         :disabled="disabled"
         :checked="checked"
         :required="required"
