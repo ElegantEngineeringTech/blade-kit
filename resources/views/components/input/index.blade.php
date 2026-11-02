@@ -32,7 +32,7 @@
 
         @if ($iconRight)
             @php
-                $iconAttributes = is_object($icon)
+                $iconAttributes = is_object($iconRight)
                     ? $iconRight->attributes
                     : new \Illuminate\View\ComponentAttributeBag();
             @endphp

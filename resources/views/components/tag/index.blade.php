@@ -32,7 +32,7 @@
 
     @if ($iconRight)
         @php
-            $iconAttributes = is_object($icon) ? $iconRight->attributes : new \Illuminate\View\ComponentAttributeBag();
+            $iconAttributes = is_object($iconRight) ? $iconRight->attributes : new \Illuminate\View\ComponentAttributeBag();
         @endphp
         <x-kit::tag.icon :icon="$iconRight" :unoffset="$unoffset" :size="$size" :attributes="$iconAttributes" />
     @endif
