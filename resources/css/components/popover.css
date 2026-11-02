@@ -22,6 +22,12 @@
         animation: el-popover-enter-default 0.15s ease-out both;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+        .el-popover[data-animation="default"] > * {
+            animation-name: el-popover-enter-reduced;
+        }
+    }
+
     .el-popover[data-placement="top"] > * {
         transform-origin: bottom;
     }
@@ -79,5 +85,14 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes el-popover-enter-reduced {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

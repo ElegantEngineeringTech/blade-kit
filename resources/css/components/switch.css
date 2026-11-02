@@ -28,6 +28,13 @@
             transform: translateX(calc(100% - calc(var(--spacing))));
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            &::after,
+            &:checked::after {
+                transition-duration: 0s;
+            }
+        }
+
         &.rounded::after {
             @apply rounded-xs;
         }
