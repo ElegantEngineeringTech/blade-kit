@@ -14,5 +14,6 @@
         "resources/ts/**/*.d.ts",
         "resources/ts/**/*.tsx",
         "resources/ts/**/*.vue"
-    ]
+    ],
+    "exclude": ["resources/ts/react/**"]
 }

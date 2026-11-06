@@ -1,0 +1,18 @@
+{
+    "extends": ["@vue/tsconfig/tsconfig.dom.json", "@vue/tsconfig/tsconfig.lib.json"],
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "paths": {
+            "@/*": ["./resources/ts/*"],
+            "@workbench/*": ["./workbench/resources/js/*"]
+        }
+    },
+    "include": [
+        "resources/ts/react/**/*.ts",
+        "resources/ts/react/**/*.tsx",
+        "workbench/resources/js/**/*.tsx",
+        "workbench/resources/js/react-env.d.ts"
+    ]
+}
