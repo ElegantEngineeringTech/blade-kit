@@ -1,4 +1,4 @@
-import { useState, type ComponentProps, type ReactNode } from "react";
+import { useState, type ComponentProps, type MouseEvent, type ReactNode } from "react";
 import Button from "./Button";
 import Tooltip from "./Tooltip";
 
@@ -19,7 +19,7 @@ export default function ButtonCopy({
 }: ButtonCopyProps) {
     const [copied, setCopied] = useState(false);
 
-    const onCopy = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const onCopy = (event: MouseEvent<HTMLButtonElement | HTMLLabelElement>) => {
         onClick?.(event);
         if (copy) {
             setCopied(true);

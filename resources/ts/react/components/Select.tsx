@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import clsx from "clsx";
 
-type SelectProps = ComponentProps<"select"> & { size?: string; color?: string };
+type SelectProps = Omit<ComponentProps<"select">, "size"> & { size?: string; color?: string };
 export default function Select({
     size = "base",
     color = "white",

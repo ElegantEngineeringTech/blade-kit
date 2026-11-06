@@ -3,6 +3,8 @@ import type { ButtonHTMLAttributes, ElementType, LabelHTMLAttributes, ReactNode 
 import ButtonBadge from "./ButtonBadge";
 import ButtonIcon from "./ButtonIcon";
 
+type ButtonElement = HTMLButtonElement | HTMLLabelElement;
+
 type ButtonProps = {
     tag?: ElementType;
     type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
@@ -22,7 +24,7 @@ type ButtonProps = {
     loader?: ReactNode;
     after?: ReactNode;
 } & Omit<
-    ButtonHTMLAttributes<HTMLButtonElement> & LabelHTMLAttributes<HTMLLabelElement>,
+    ButtonHTMLAttributes<ButtonElement> & LabelHTMLAttributes<ButtonElement>,
     "children" | "type" | "color"
 >;
 
